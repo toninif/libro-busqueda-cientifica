@@ -22,8 +22,9 @@ Cuando un artículo entra en una base de datos, queda descrito de dos maneras:
 | **Desventaja** | Hay que pensar todos los sinónimos y variantes. | No todos los artículos están indizados; los descriptores cambian lentamente; cada base tiene el suyo. |
 | **Dónde se busca** | Título, resumen, palabras clave de autor. | Campo de descriptores o materias (*MeSH*, *Subject*, *DE*). |
 
-> [!IMPORTANT]
-> Las búsquedas de calidad **combinan ambas estrategias**: para cada concepto se unen con `OR` el descriptor del tesauro y las palabras clave en título y resumen. Así se aprovecha la precisión del vocabulario controlado sin perder lo que no está indizado.
+::: {.callout-important}
+Las búsquedas de calidad **combinan ambas estrategias**: para cada concepto se unen con `OR` el descriptor del tesauro y las palabras clave en título y resumen. Así se aprovecha la precisión del vocabulario controlado sin perder lo que no está indizado.
+:::
 
 ## 4.2 Cómo funciona un tesauro
 
@@ -62,8 +63,9 @@ Therapeutics
 | **Tesauro de la UNESCO** | Varios catálogos y repositorios | Español, inglés, francés, ruso y árabe | Educación, ciencia, cultura, comunicación, ciencias sociales |
 | **Art & Architecture Thesaurus** | Avery, catálogos de arte | Inglés (con equivalentes en otros idiomas) | Arte, arquitectura, diseño |
 
-> [!TIP]
-> **DeCS es un diccionario técnico trilingüe.** Aunque no busques en LILACS, podés usar DeCS para averiguar cómo se dice un concepto de salud en inglés y en portugués, y cuál es su descriptor MeSH equivalente. Es una de las herramientas más útiles para la búsqueda bilingüe (capítulo 6).
+::: {.callout-tip title="DeCS es un diccionario técnico trilingüe"}
+Aunque no busques en LILACS, podés usar DeCS para averiguar cómo se dice un concepto de salud en inglés y en portugués, y cuál es su descriptor MeSH equivalente. Es una de las herramientas más útiles para la búsqueda bilingüe (capítulo 6).
+:::
 
 ## 4.3 Cómo encontrar los descriptores
 
@@ -72,8 +74,9 @@ Therapeutics
 3. **Usá herramientas de apoyo.** En salud, **MeSH on Demand** sugiere descriptores a partir de un texto (por ejemplo, tu pregunta o un resumen) y el **Yale MeSH Analyzer** compara los descriptores de varios artículos a la vez.
 4. **Revisá la cadena de una revisión sistemática.** Las revisiones publicadas suelen incluir su estrategia completa en un anexo: es una fuente excelente de términos ya probados.
 
-> [!WARNING]
-> **Error frecuente: inventar descriptores.** Escribir `"academic stress"[Mesh]` en PubMed no funciona porque ese descriptor no existe (el más cercano es *Stress, Psychological*). Verificá siempre en el tesauro que el término exista tal como lo escribiste. Esto es especialmente importante si una herramienta de IA te sugirió los términos (capítulo 10).
+::: {.callout-warning title="Error frecuente: inventar descriptores"}
+Escribir `"academic stress"[Mesh]` en PubMed no funciona porque ese descriptor no existe (el más cercano es *Stress, Psychological*). Verificá siempre en el tesauro que el término exista tal como lo escribiste. Esto es especialmente importante si una herramienta de IA te sugirió los términos (capítulo 10).
+:::
 
 ## 4.4 Buscar con palabras clave
 
@@ -103,8 +106,9 @@ estrés académico        → recupera documentos con ambas palabras en cualquie
 
 Cuidado: las comillas también pueden dejar afuera variantes (*estrés de tipo académico*, *academic-related stress*). En esos casos sirven los operadores de proximidad (capítulo 5).
 
-> [!NOTE]
-> En **Scopus**, las comillas (`"academic stress"`) buscan una frase "flexible" que tolera plurales y signos de puntuación; las llaves (`{academic stress}`) buscan la cadena exacta, carácter por carácter.
+::: {.callout-note}
+En **Scopus**, las comillas (`"academic stress"`) buscan una frase "flexible" que tolera plurales y signos de puntuación; las llaves (`{academic stress}`) buscan la cadena exacta, carácter por carácter.
+:::
 
 ### c) Truncamiento
 
@@ -134,8 +138,9 @@ Los **comodines** reemplazan uno o más caracteres dentro de una palabra. Su fun
 | EBSCOhost | `?` = un carácter; `#` = cero o un carácter | `colo#r` → *color, colour* |
 | PubMed | No admite comodines internos | Escribí ambas formas: `behavior OR behaviour` |
 
-> [!TIP]
-> Si no estás seguro de cómo funciona un comodín en una base, **escribí las variantes explícitamente con `OR`**. Es más largo pero no falla y funciona en todas partes: `(behavior OR behaviour)`, `(organization OR organisation)`, `(pediatric OR paediatric)`.
+::: {.callout-tip}
+Si no estás seguro de cómo funciona un comodín en una base, **escribí las variantes explícitamente con `OR`**. Es más largo pero no falla y funciona en todas partes: `(behavior OR behaviour)`, `(organization OR organisation)`, `(pediatric OR paediatric)`.
+:::
 
 ## 4.5 Dónde encontrar palabras clave
 
@@ -158,8 +163,9 @@ Al armar la lista, tené en cuenta:
 - **Cambios históricos de terminología:** algunos términos cayeron en desuso o se consideran hoy inadecuados, pero aparecen en la literatura anterior y pueden ser necesarios para encontrarla.
 - **Variantes regionales:** *computadora/ordenador*, *celular/móvil*, *colegio/escuela/instituto* (capítulo 6).
 
-> [!WARNING]
-> **Error frecuente: palabras vacías.** Las bases ignoran o tratan de manera especial palabras muy frecuentes (*the, of, in, el, la, de*). Además, términos como *efecto*, *estudio*, *análisis*, *relación* o *impacto* aparecen en casi todos los resúmenes y no ayudan a filtrar. No los incluyas como conceptos.
+::: {.callout-warning title="Error frecuente: palabras vacías"}
+Las bases ignoran o tratan de manera especial palabras muy frecuentes (*the, of, in, el, la, de*). Además, términos como *efecto*, *estudio*, *análisis*, *relación* o *impacto* aparecen en casi todos los resúmenes y no ayudan a filtrar. No los incluyas como conceptos.
+:::
 
 ## 4.6 El caso guía, término por término
 
@@ -191,6 +197,3 @@ En el próximo capítulo vamos a combinar estas columnas en una cadena de búsqu
 3. Hacé la misma búsqueda simple en "todos los campos" y en "título, resumen y palabras clave". Compará la cantidad y la pertinencia de los primeros veinte resultados.
 4. Probá un truncamiento en tu tema y anotá qué variantes recupera. ¿Alguna es irrelevante?
 
----
-
-[← Capítulo 3](03-donde-buscar.md) · [Índice](../README.md) · [Capítulo 5 →](05-operadores-y-cadenas.md)

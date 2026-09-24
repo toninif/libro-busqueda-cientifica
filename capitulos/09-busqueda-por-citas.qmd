@@ -19,7 +19,7 @@ Aun la mejor cadena de búsqueda pierde estudios: artículos que usan una termin
 
 La idea es simple: los artículos relevantes citan a otros artículos relevantes y son citados por ellos. A partir de un conjunto inicial de artículos **semilla**, se sigue la red de citas en dos direcciones:
 
-```mermaid
+```{mermaid}
 flowchart LR
     A["Artículos más antiguos<br/>(las referencias de la semilla)"] -- "hacia atrás<br/>(backward)" --- S(("Artículo<br/>semilla"))
     S -- "hacia adelante<br/>(forward)" --- B["Artículos más nuevos<br/>(los que citan a la semilla)"]
@@ -49,11 +49,13 @@ Se buscan los **artículos que citaron** a la semilla después de su publicació
 
 Este procedimiento está descrito en detalle por Wohlin (2014), en el contexto de la ingeniería de software, pero se aplica a cualquier disciplina.
 
-> [!TIP]
-> **Empezá por las revisiones.** Una revisión sistemática reciente sobre tu tema es la mejor semilla posible: sus referencias son, casi por definición, los estudios relevantes hasta la fecha de su búsqueda, y los artículos que la citan son en buena medida los posteriores.
+::: {.callout-tip title="Empezá por las revisiones"}
+Una revisión sistemática reciente sobre tu tema es la mejor semilla posible: sus referencias son, casi por definición, los estudios relevantes hasta la fecha de su búsqueda, y los artículos que la citan son en buena medida los posteriores.
+:::
 
-> [!WARNING]
-> **Sesgo de citación.** Los artículos con resultados positivos o de grupos muy visibles se citan más. Si solo seguís citas, tu muestra de antecedentes puede quedar sesgada. Por eso la búsqueda por citas **complementa** a la búsqueda en bases de datos, no la reemplaza.
+::: {.callout-warning title="Sesgo de citación"}
+Los artículos con resultados positivos o de grupos muy visibles se citan más. Si solo seguís citas, tu muestra de antecedentes puede quedar sesgada. Por eso la búsqueda por citas **complementa** a la búsqueda en bases de datos, no la reemplaza.
+:::
 
 ## 9.3 Herramientas de mapas de citas
 
@@ -67,8 +69,9 @@ Existen herramientas que automatizan la búsqueda por citas y la muestran como *
 | **Inciteful** | Construye una red de citas y ordena los artículos por importancia dentro de ella. | Gratuita |
 | **citationchaser** | Hace la búsqueda por citas hacia atrás y hacia adelante de un conjunto de artículos y exporta los resultados (RIS) para cribarlos; pensada para revisiones sistemáticas. | Gratuita, código abierto |
 
-> [!NOTE]
-> Estas herramientas dependen de índices de citas abiertos (como OpenAlex, Semantic Scholar o Crossref), cuya cobertura de revistas latinoamericanas y en español es **incompleta**. Un artículo de una revista regional puede aparecer sin referencias o sin las citas que recibió. Completá siempre a mano con Google Académico.
+::: {.callout-note}
+Estas herramientas dependen de índices de citas abiertos (como OpenAlex, Semantic Scholar o Crossref), cuya cobertura de revistas latinoamericanas y en español es **incompleta**. Un artículo de una revista regional puede aparecer sin referencias o sin las citas que recibió. Completá siempre a mano con Google Académico.
+:::
 
 ## 9.4 Buscar por autor
 
@@ -113,15 +116,16 @@ Dónde buscarla:
 | Gobierno | Sitios de ministerios, institutos de estadística (INDEC en Argentina), boletines oficiales |
 | General | Google (con `site:` y `filetype:pdf`), Google Académico |
 
-> [!TIP]
-> **Google como herramienta de búsqueda de literatura gris.** Dos operadores son muy útiles:
->
-> ```text
-> "estrés académico" universitarios site:edu.ar filetype:pdf
-> "salud mental" estudiantes informe site:gob.ar
-> ```
->
-> `site:` limita a un dominio (por ejemplo, universidades argentinas o sitios del gobierno) y `filetype:pdf` a documentos PDF. Como Google no es reproducible, anotá la fecha, la cadena y cuántas páginas de resultados revisaste (por ejemplo, las primeras 100 entradas).
+::: {.callout-tip title="Google como herramienta de búsqueda de literatura gris"}
+Dos operadores son muy útiles:
+
+```text
+"estrés académico" universitarios site:edu.ar filetype:pdf
+"salud mental" estudiantes informe site:gob.ar
+```
+
+`site:` limita a un dominio (por ejemplo, universidades argentinas o sitios del gobierno) y `filetype:pdf` a documentos PDF. Como Google no es reproducible, anotá la fecha, la cadena y cuántas páginas de resultados revisaste (por ejemplo, las primeras 100 entradas).
+:::
 
 ## 9.7 Alertas: mantener la búsqueda al día
 
@@ -143,8 +147,9 @@ No existe una regla universal, pero hay señales de que la búsqueda está compl
 - Los artículos más recientes que encontrás **citan los mismos antecedentes** que vos ya identificaste.
 - Revisaste todas las fuentes que te propusiste en el protocolo.
 
-> [!IMPORTANT]
-> Parar no es un fracaso: toda búsqueda tiene límites. Lo importante es **documentar dónde paraste y por qué**, para que el lector sepa qué cubre tu revisión y qué no.
+::: {.callout-important}
+Parar no es un fracaso: toda búsqueda tiene límites. Lo importante es **documentar dónde paraste y por qué**, para que el lector sepa qué cubre tu revisión y qué no.
+:::
 
 ---
 
@@ -164,6 +169,3 @@ No existe una regla universal, pero hay señales de que la búsqueda está compl
 4. Buscá literatura gris sobre tu tema en al menos dos fuentes de la tabla de la sección 9.6.
 5. Configurá una alerta de búsqueda y una alerta de citas.
 
----
-
-[← Capítulo 8](08-revisiones-y-prisma.md) · [Índice](../README.md) · [Capítulo 10 →](10-inteligencia-artificial.md)

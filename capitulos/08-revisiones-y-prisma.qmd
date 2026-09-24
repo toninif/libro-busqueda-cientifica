@@ -25,12 +25,13 @@
 | **Paraguas (*umbrella review*)** | Sintetizar revisiones sistemáticas existentes | En bases de revisiones | Sí (de las revisiones) | Narrativa o estadística |
 | **Sistematizada** | Aplicar elementos del método sistemático con recursos limitados (típica de tesis) | Estructurada y documentada, pero acotada | Parcial | Narrativa |
 
-> [!NOTE]
-> **Revisión sistemática no es sinónimo de "revisión con muchas referencias".** Lo que la define es el **método**: una pregunta explícita, una búsqueda reproducible, criterios de selección fijados de antemano, evaluación de la calidad de los estudios y una síntesis transparente.
+::: {.callout-note title="Revisión sistemática no es sinónimo de 'revisión con muchas referencias'"}
+Lo que la define es el **método**: una pregunta explícita, una búsqueda reproducible, criterios de selección fijados de antemano, evaluación de la calidad de los estudios y una síntesis transparente.
+:::
 
 ## 8.2 Etapas de una revisión sistemática
 
-```mermaid
+```{mermaid}
 flowchart TB
     A["1. Pregunta<br/>(PICO o variante)"] --> B["2. Protocolo y registro<br/>(PROSPERO, OSF)"]
     B --> C["3. Búsqueda<br/>(varias bases, literatura gris, citas)"]
@@ -80,8 +81,9 @@ Se leen títulos y resúmenes y se decide, con los criterios de inclusión en la
 - **se excluye** (claramente no cumple los criterios);
 - **pasa** a la siguiente etapa (cumple o hay dudas).
 
-> [!TIP]
-> **En caso de duda, se incluye.** En el cribado por título y resumen, el error más costoso es excluir un estudio relevante: ya no vuelve a aparecer. Un estudio dudoso que pasa se descarta después con el texto completo.
+::: {.callout-tip title="En caso de duda, se incluye"}
+En el cribado por título y resumen, el error más costoso es excluir un estudio relevante: ya no vuelve a aparecer. Un estudio dudoso que pasa se descarta después con el texto completo.
+:::
 
 Buenas prácticas:
 
@@ -95,7 +97,7 @@ Se consiguen los textos completos de los registros que pasaron el cribado y se l
 
 ### 7. Extracción de datos
 
-Con una planilla diseñada de antemano (y probada con dos o tres estudios), se extraen los datos de cada estudio incluido: autores, año, país, diseño, muestra, intervención, comparación, instrumentos, resultados, financiamiento, etc. La matriz del [Anexo A](../anexos/A-plantillas.md) es un buen punto de partida.
+Con una planilla diseñada de antemano (y probada con dos o tres estudios), se extraen los datos de cada estudio incluido: autores, año, país, diseño, muestra, intervención, comparación, instrumentos, resultados, financiamiento, etc. La matriz del [Anexo A](../anexos/A-plantillas.qmd) es un buen punto de partida.
 
 ### 8. Evaluación del riesgo de sesgo o de la calidad
 
@@ -127,8 +129,9 @@ Se escribe siguiendo **PRISMA 2020**, que vemos a continuación.
 
 **PRISMA** (*Preferred Reporting Items for Systematic reviews and Meta-Analyses*) es una **guía de reporte**: indica qué información tiene que contener el informe de una revisión sistemática para que los lectores puedan entender qué se hizo, evaluarlo y reproducirlo. Su versión vigente es **PRISMA 2020** (Page et al., 2021a), que actualizó la de 2009. Existe una traducción oficial al español (Page et al., 2021b).
 
-> [!IMPORTANT]
-> **PRISMA no es un método para hacer revisiones: es una guía para contarlas.** Cumplir con PRISMA no garantiza que una revisión sea buena; garantiza que el lector puede juzgar si lo es. Para el *cómo hacer*, las referencias son manuales como el *Cochrane Handbook* (Higgins et al., 2024) o el *JBI Manual for Evidence Synthesis* (Aromataris et al., 2024).
+::: {.callout-important title="PRISMA no es un método para hacer revisiones: es una guía para contarlas"}
+Cumplir con PRISMA no garantiza que una revisión sea buena; garantiza que el lector puede juzgar si lo es. Para el *cómo hacer*, las referencias son manuales como el *Cochrane Handbook* (Higgins et al., 2024) o el *JBI Manual for Evidence Synthesis* (Aromataris et al., 2024).
+:::
 
 PRISMA 2020 tiene tres componentes principales:
 
@@ -152,8 +155,9 @@ Un resumen de las secciones y los ítems más importantes para quien busca:
 
 La lista completa, con su documento de explicación y ejemplos, está disponible en el sitio oficial de PRISMA y en la traducción al español.
 
-> [!TIP]
-> **Estrategia de búsqueda completa (ítem 7).** "Completa" significa **la cadena textual, tal como se ejecutó, para cada base**, con los límites aplicados. No alcanza con decir "se usaron los términos *mindfulness* y *estrés*". Por eso la bitácora del capítulo 2 es tan importante: es la materia prima de este ítem. Lo habitual es poner las cadenas en un anexo o material suplementario.
+::: {.callout-tip title="Estrategia de búsqueda completa (ítem 7)"}
+"Completa" significa **la cadena textual, tal como se ejecutó, para cada base**, con los límites aplicados. No alcanza con decir "se usaron los términos *mindfulness* y *estrés*". Por eso la bitácora del capítulo 2 es tan importante: es la materia prima de este ítem. Lo habitual es poner las cadenas en un anexo o material suplementario.
+:::
 
 ## 8.5 El diagrama de flujo PRISMA 2020
 
@@ -161,28 +165,22 @@ El diagrama muestra el recorrido de los registros desde la búsqueda hasta la in
 
 Ejemplo con los números del caso guía:
 
-```mermaid
+```{mermaid}
 flowchart TB
-    subgraph ID["IDENTIFICACIÓN"]
-        A["Registros identificados en bases de datos (n = 1248)<br/>PubMed (n = 312) · Scopus (n = 541)<br/>Web of Science (n = 287) · SciELO (n = 108)"]
-        B["Registros eliminados antes del cribado:<br/>duplicados (n = 402)"]
-        O1["Registros identificados por otros métodos (n = 32)<br/>Búsqueda por citas (n = 23) · Sitios web (n = 9)"]
-    end
-    subgraph CR["CRIBADO"]
-        C["Registros cribados<br/>(n = 846)"]
-        D["Registros excluidos<br/>(n = 761)"]
-        E["Informes buscados para recuperar<br/>(n = 85)"]
-        F["Informes no recuperados<br/>(n = 3)"]
-        G["Informes evaluados para elegibilidad<br/>(n = 82)"]
-        H["Informes excluidos (n = 61):<br/>población no pertinente (n = 22)<br/>intervención no basada en mindfulness (n = 17)<br/>sin grupo de comparación (n = 12)<br/>resultado no medido (n = 10)"]
-        O2["Informes buscados para recuperar<br/>(n = 32)"]
-        O3["Informes no recuperados<br/>(n = 2)"]
-        O4["Informes evaluados para elegibilidad<br/>(n = 30)"]
-        O5["Informes excluidos (n = 26):<br/>población no pertinente (n = 14)<br/>diseño no elegible (n = 12)"]
-    end
-    subgraph IN["INCLUIDOS"]
-        I["Estudios incluidos en la revisión (n = 24)<br/>Informes de estudios incluidos (n = 25)"]
-    end
+    A["<b>IDENTIFICACIÓN</b><br/>Registros identificados en bases de datos (n = 1248)<br/>PubMed (n = 312) · Scopus (n = 541)<br/>Web of Science (n = 287) · SciELO (n = 108)"]
+    B["Registros eliminados antes del cribado:<br/>duplicados (n = 402)"]
+    C["<b>CRIBADO</b><br/>Registros cribados (n = 846)"]
+    D["Registros excluidos (n = 761)"]
+    E["Informes buscados para recuperar (n = 85)"]
+    F["Informes no recuperados (n = 3)"]
+    G["Informes evaluados para elegibilidad (n = 82)"]
+    H["Informes excluidos (n = 61):<br/>población no pertinente (n = 22)<br/>intervención no basada en mindfulness (n = 17)<br/>sin grupo de comparación (n = 12)<br/>resultado no medido (n = 10)"]
+    O1["<b>OTROS MÉTODOS</b><br/>Registros identificados (n = 32)<br/>Búsqueda por citas (n = 23) · Sitios web (n = 9)"]
+    O2["Informes buscados para recuperar (n = 32)"]
+    O3["Informes no recuperados (n = 2)"]
+    O4["Informes evaluados para elegibilidad (n = 30)"]
+    O5["Informes excluidos (n = 26):<br/>población no pertinente (n = 14)<br/>diseño no elegible (n = 12)"]
+    I["<b>INCLUIDOS</b><br/>Estudios incluidos en la revisión (n = 24)<br/>Informes de estudios incluidos (n = 25)"]
     A --> B
     A --> C
     C --> D
@@ -206,14 +204,17 @@ Cómo leer los números:
 - Por otros métodos: 32 − 2 no recuperados = 30 evaluados; 30 − 26 excluidos = **4** informes incluidos.
 - Total: 21 + 4 = **25 informes**, que corresponden a **24 estudios** (un estudio se publicó en dos artículos).
 
-> [!NOTE]
-> **Registros, informes y estudios.** PRISMA 2020 distingue tres unidades: un **registro** es una referencia en una base de datos (título, resumen); un **informe** es un documento (artículo, tesis, informe técnico) que describe un estudio; un **estudio** es la investigación en sí, que puede estar publicada en varios informes. Por eso el último recuadro puede tener dos números distintos.
+::: {.callout-note title="Registros, informes y estudios"}
+PRISMA 2020 distingue tres unidades: un **registro** es una referencia en una base de datos (título, resumen); un **informe** es un documento (artículo, tesis, informe técnico) que describe un estudio; un **estudio** es la investigación en sí, que puede estar publicada en varios informes. Por eso el último recuadro puede tener dos números distintos.
+:::
 
-> [!TIP]
-> **Herramientas para dibujar el diagrama.** El sitio oficial de PRISMA ofrece plantillas editables. También existe una aplicación web gratuita basada en el paquete *PRISMA2020* de R (Haddaway et al., 2022) que genera el diagrama a partir de los números. Y herramientas como Rayyan o Covidence llevan la cuenta automáticamente.
+::: {.callout-tip title="Herramientas para dibujar el diagrama"}
+El sitio oficial de PRISMA ofrece plantillas editables. También existe una aplicación web gratuita basada en el paquete *PRISMA2020* de R (Haddaway et al., 2022) que genera el diagrama a partir de los números. Y herramientas como Rayyan o Covidence llevan la cuenta automáticamente.
+:::
 
-> [!WARNING]
-> **Error frecuente: números que no cierran.** Revisá que cada recuadro sea la resta exacta del anterior. Los evaluadores lo verifican y un diagrama con cuentas que no cierran genera desconfianza sobre todo el trabajo.
+::: {.callout-warning title="Error frecuente: números que no cierran"}
+Revisá que cada recuadro sea la resta exacta del anterior. Los evaluadores lo verifican y un diagrama con cuentas que no cierran genera desconfianza sobre todo el trabajo.
+:::
 
 ## 8.6 Extensiones de PRISMA
 
@@ -228,8 +229,9 @@ PRISMA tiene extensiones para situaciones específicas. Las más útiles para la
 | **PRISMA-DTA** | Revisiones de precisión diagnóstica. | — |
 | **PRISMA-Equity** | Revisiones centradas en la equidad. | — |
 
-> [!TIP]
-> **PRISMA-S es la mejor lista de control para tu búsqueda**, aunque no hagas una revisión sistemática formal. Si tu sección de método responde a sus ítems, cualquier lector puede reproducir tu búsqueda.
+::: {.callout-tip title="PRISMA-S es la mejor lista de control para tu búsqueda"}
+, aunque no hagas una revisión sistemática formal. Si tu sección de método responde a sus ítems, cualquier lector puede reproducir tu búsqueda.
+:::
 
 ## 8.7 Herramientas para gestionar una revisión
 
@@ -262,8 +264,9 @@ Una revisión sistemática completa requiere, como mínimo, dos revisores, acces
 | Diagrama de flujo PRISMA | Sí | **Sí** |
 | Metaanálisis | Si corresponde | Raramente |
 
-> [!IMPORTANT]
-> Llamá a tu trabajo por su nombre. Si no hiciste doble revisión ni evaluación del riesgo de sesgo, no es una revisión sistemática en sentido estricto: es una revisión sistematizada, una revisión de la literatura con búsqueda estructurada, o una revisión de alcance si ese era el objetivo. Declararlo con honestidad fortalece tu trabajo; exagerar el método lo debilita.
+::: {.callout-important}
+Llamá a tu trabajo por su nombre. Si no hiciste doble revisión ni evaluación del riesgo de sesgo, no es una revisión sistemática en sentido estricto: es una revisión sistematizada, una revisión de la literatura con búsqueda estructurada, o una revisión de alcance si ese era el objetivo. Declararlo con honestidad fortalece tu trabajo; exagerar el método lo debilita.
+:::
 
 ---
 
@@ -282,6 +285,3 @@ Una revisión sistemática completa requiere, como mínimo, dos revisores, acces
 3. Redactá un mini protocolo de una página para tu propia búsqueda: pregunta PICO, criterios de inclusión y exclusión, bases de datos, idiomas, período y plan de selección.
 4. Con los resultados de tu búsqueda (aunque sea preliminar), armá un diagrama de flujo PRISMA.
 
----
-
-[← Capítulo 7](07-pregunta-pico.md) · [Índice](../README.md) · [Capítulo 9 →](09-busqueda-por-citas.md)

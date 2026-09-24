@@ -8,8 +8,9 @@
 - a escribir instrucciones (*prompts*) útiles para tareas de búsqueda;
 - a verificar lo que produce una IA y a declarar su uso.
 
-> [!NOTE]
-> Este capítulo está actualizado a **septiembre de 2026**. Las herramientas de IA cambian muy rápido: algunas de las que se mencionan pueden cambiar de nombre, de funciones o de condiciones de acceso. Por eso el capítulo se organiza por **tipos de herramientas y usos**, que cambian mucho más lentamente que los productos concretos.
+::: {.callout-note}
+Este capítulo está actualizado a **septiembre de 2026**. Las herramientas de IA cambian muy rápido: algunas de las que se mencionan pueden cambiar de nombre, de funciones o de condiciones de acceso. Por eso el capítulo se organiza por **tipos de herramientas y usos**, que cambian mucho más lentamente que los productos concretos.
+:::
 
 ---
 
@@ -30,8 +31,9 @@ Los **modelos de lenguaje** (como los que están detrás de ChatGPT, Claude, Gem
 - **Un modelo de lenguaje, por sí solo, no consulta una base de datos.** Si le pedís referencias sin que tenga acceso a una fuente, puede generar referencias **plausibles pero inexistentes** (títulos inventados, autores reales con artículos que nunca escribieron, DOI falsos). Este fenómeno se conoce como **alucinación** y está bien documentado en el caso de las referencias bibliográficas (Walters y Wilder, 2023).
 - **Cuando la herramienta está conectada a una fuente** (un índice académico, la web, los PDF que le das), primero recupera documentos y después redacta la respuesta a partir de ellos. Esto se llama **generación aumentada por recuperación** (*RAG*). Reduce mucho las referencias inventadas, pero no las elimina: la herramienta todavía puede **atribuir a un artículo algo que no dice**, resumir mal o elegir fuentes poco representativas.
 
-> [!IMPORTANT]
-> **Regla de oro:** toda referencia y todo dato que venga de una IA se verifica **en la fuente original** antes de usarlo. Sin excepciones.
+::: {.callout-important title="Regla de oro"}
+Toda referencia y todo dato que venga de una IA se verifica **en la fuente original** antes de usarlo. Sin excepciones.
+:::
 
 ## 10.3 Tipos de herramientas
 
@@ -56,8 +58,9 @@ Los **modelos de lenguaje** (como los que están detrás de ChatGPT, Claude, Gem
 | **Cobertura** | La de cada base, conocida y documentada. | La del índice subyacente, a menudo con menor cobertura de revistas en español y de acceso cerrado. |
 | **Uso ideal** | Búsqueda principal y reportable, revisiones sistemáticas. | Exploración inicial, descubrimiento de términos y artículos semilla, verificación complementaria. |
 
-> [!TIP]
-> Una combinación muy productiva: usar la búsqueda semántica **al principio**, para descubrir artículos y términos, y **al final**, para comprobar si la cadena booleana se perdió algo importante. Si la IA encuentra un estudio relevante que tu cadena no recuperó, analizá por qué y corregí la cadena.
+::: {.callout-tip}
+Una combinación muy productiva: usar la búsqueda semántica **al principio**, para descubrir artículos y términos, y **al final**, para comprobar si la cadena booleana se perdió algo importante. Si la IA encuentra un estudio relevante que tu cadena no recuperó, analizá por qué y corregí la cadena.
+:::
 
 ## 10.5 La IA en cada etapa de la búsqueda
 
@@ -125,11 +128,13 @@ Para cada dato, citá textualmente la frase del artículo de donde lo
 tomaste. Si un dato no figura, escribí "no informado".
 ```
 
-> [!TIP]
-> Pedir que **cite textualmente el pasaje** de donde sale cada dato hace mucho más fácil verificar la respuesta: buscás la frase en el PDF y comprobás que esté y que diga eso.
+::: {.callout-tip}
+Pedir que **cite textualmente el pasaje** de donde sale cada dato hace mucho más fácil verificar la respuesta: buscás la frase en el PDF y comprobás que esté y que diga eso.
+:::
 
-> [!WARNING]
-> **Nunca le pidas a un asistente "diez referencias sobre X"** para copiarlas en tu trabajo. Aunque use búsqueda web, puede mezclar datos de artículos distintos o describir mal lo que dicen. Usá las herramientas de IA para **encontrar** artículos, pero cada referencia que cites tiene que haber pasado por tus manos: localizada en una base o en el sitio de la revista, y leída.
+::: {.callout-warning title="Nunca le pidas a un asistente 'diez referencias sobre X'"}
+para copiarlas en tu trabajo. Aunque use búsqueda web, puede mezclar datos de artículos distintos o describir mal lo que dicen. Usá las herramientas de IA para **encontrar** artículos, pero cada referencia que cites tiene que haber pasado por tus manos: localizada en una base o en el sitio de la revista, y leída.
+:::
 
 ## 10.7 Riesgos que hay que conocer
 
@@ -188,8 +193,9 @@ Para citar una herramienta de IA en formato APA, la American Psychological Assoc
 | Curva de aprendizaje | Mayor (sintaxis) | Menor (lenguaje natural) |
 | Riesgo principal | Perder estudios por términos mal elegidos | Información incorrecta presentada con seguridad |
 
-> [!IMPORTANT]
-> La IA es un buen **asistente de investigación**, no un buen **investigador**. Te puede ahorrar tiempo en tareas mecánicas y ayudarte a pensar, pero la responsabilidad sobre lo que buscás, lo que incluís y lo que afirmás sigue siendo tuya.
+::: {.callout-important}
+La IA es un buen **asistente de investigación**, no un buen **investigador**. Te puede ahorrar tiempo en tareas mecánicas y ayudarte a pensar, pero la responsabilidad sobre lo que buscás, lo que incluís y lo que afirmás sigue siendo tuya.
+:::
 
 ---
 
@@ -208,6 +214,3 @@ Para citar una herramienta de IA en formato APA, la American Psychological Assoc
 3. Pedile a un asistente general, **sin búsqueda web**, cinco referencias sobre tu tema. Verificá cada una con el protocolo de la sección 10.8. Anotá cuántas existen, cuántas tienen errores y cuántas son inventadas.
 4. Redactá la declaración de uso de IA para tu trabajo.
 
----
-
-[← Capítulo 9](09-busqueda-por-citas.md) · [Índice](../README.md) · [Capítulo 11 →](11-evaluar-fuentes.md)

@@ -100,6 +100,3 @@ Entre paréntesis, el término equivalente en inglés cuando se usa con frecuenc
 
 **Vocabulario controlado.** Conjunto cerrado de términos autorizados para describir documentos; el tesauro es su forma más común.
 
----
-
-[← Anexo A](A-plantillas.md) · [Índice](../README.md) · [Anexo C →](C-recursos.md)

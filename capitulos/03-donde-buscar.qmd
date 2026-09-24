@@ -24,8 +24,9 @@ Solemos llamar "base de datos" a cualquier buscador académico, pero conviene di
 
 Esta distinción importa porque cada tipo de herramienta **se busca de manera distinta** y tiene **cobertura distinta**. Una búsqueda seria combina varias.
 
-> [!NOTE]
-> **Base de datos y plataforma no son lo mismo.** APA PsycInfo es una base de datos; se puede consultar a través de distintas plataformas (EBSCOhost, Ovid, ProQuest). La sintaxis cambia según la plataforma. Por eso en la bitácora conviene anotar ambas: *"APA PsycInfo (EBSCOhost)"*.
+::: {.callout-note title="Base de datos y plataforma no son lo mismo"}
+APA PsycInfo es una base de datos; se puede consultar a través de distintas plataformas (EBSCOhost, Ovid, ProQuest). La sintaxis cambia según la plataforma. Por eso en la bitácora conviene anotar ambas: *"APA PsycInfo (EBSCOhost)"*.
+:::
 
 ## 3.2 Bases de datos multidisciplinarias
 
@@ -36,8 +37,9 @@ Cubren todas las áreas del conocimiento. Son el punto de partida de casi cualqu
 - **Google Académico** (*Google Scholar*). Gratuito y enorme, se analiza aparte en la sección 3.5.
 - **Dimensions**, **Lens.org** y **OpenAlex**. Alternativas más recientes, con versiones gratuitas o totalmente abiertas. OpenAlex es un índice abierto de la producción científica mundial muy usado por otras herramientas, incluidas varias de las que usan inteligencia artificial (capítulo 10).
 
-> [!TIP]
-> En Argentina, muchas instituciones acceden a Scopus, Web of Science y otras colecciones a través de la **Biblioteca Electrónica de Ciencia y Tecnología**. Preguntá en tu biblioteca si tu universidad está adherida y cómo se accede desde fuera del campus (VPN, *proxy* o usuario institucional).
+::: {.callout-tip}
+En Argentina, muchas instituciones acceden a Scopus, Web of Science y otras colecciones a través de la **Biblioteca Electrónica de Ciencia y Tecnología**. Preguntá en tu biblioteca si tu universidad está adherida y cómo se accede desde fuera del campus (VPN, *proxy* o usuario institucional).
+:::
 
 ## 3.3 Bases de datos por disciplina
 
@@ -55,8 +57,9 @@ Las bases disciplinares suelen tener **vocabulario controlado** (un tesauro prop
 | Arquitectura, arte y diseño | Avery Index, Art & Architecture Source | Art & Architecture Thesaurus (Getty) |
 | Derecho | Bases jurídicas nacionales, HeinOnline, vLex | Varía |
 
-> [!NOTE]
-> **Síntesis de evidencia ya hechas.** Si tu pregunta es sobre efectividad, buscá primero en colecciones de revisiones sistemáticas: **Cochrane Library** (salud), **Campbell Collaboration** (educación, justicia, bienestar social) y **Epistemonikos** (salud, con interfaz multilingüe, incluida en español).
+::: {.callout-note title="Síntesis de evidencia ya hechas"}
+Si tu pregunta es sobre efectividad, buscá primero en colecciones de revisiones sistemáticas: **Cochrane Library** (salud), **Campbell Collaboration** (educación, justicia, bienestar social) y **Epistemonikos** (salud, con interfaz multilingüe, incluida en español).
+:::
 
 ## 3.4 Bases de datos regionales y en español
 
@@ -96,19 +99,19 @@ Google Académico es, probablemente, la herramienta que más vas a usar. Convien
 
 Por estas razones, varios estudios concluyen que Google Académico **no debe ser la fuente principal** de una revisión sistemática, aunque es muy útil como fuente complementaria y para literatura gris (Gusenbauer y Haddaway, 2020; Haddaway et al., 2015).
 
-> [!TIP]
-> **Operadores útiles en Google Académico**
->
-> | Operador | Ejemplo | Qué hace |
-> |---|---|---|
-> | `" "` | `"estrés académico"` | Busca la frase exacta. |
-> | `OR` | `mindfulness OR "atención plena"` | Cualquiera de los términos (en mayúsculas). |
-> | `-` | `mindfulness -children` | Excluye un término. |
-> | `intitle:` | `intitle:mindfulness` | El término debe estar en el título. |
-> | `author:` | `author:"kabat-zinn"` | Busca por autor. |
-> | `source:` | `source:"Revista de Psicología"` | Limita a una fuente (se usa desde la búsqueda avanzada). |
->
-> La **búsqueda avanzada** está en el menú lateral (☰ → Búsqueda avanzada).
+::: {.callout-tip title="Operadores útiles en Google Académico"}
+
+| Operador | Ejemplo | Qué hace |
+|---|---|---|
+| `" "` | `"estrés académico"` | Busca la frase exacta. |
+| `OR` | `mindfulness OR "atención plena"` | Cualquiera de los términos (en mayúsculas). |
+| `-` | `mindfulness -children` | Excluye un término. |
+| `intitle:` | `intitle:mindfulness` | El término debe estar en el título. |
+| `author:` | `author:"kabat-zinn"` | Busca por autor. |
+| `source:` | `source:"Revista de Psicología"` | Limita a una fuente (se usa desde la búsqueda avanzada). |
+
+La **búsqueda avanzada** está en el menú lateral (☰ → Búsqueda avanzada).
+:::
 
 ## 3.6 Acceso abierto y cómo conseguir el texto completo
 
@@ -120,8 +123,9 @@ Encontrar la referencia no es lo mismo que acceder al texto. Si un artículo est
 4. **Préstamo interbibliotecario.** Muchas bibliotecas lo gestionan.
 5. **Escribirle a la autora o al autor.** Es completamente habitual y la mayoría responde con gusto. Su correo suele figurar en el artículo; también podés contactarlos por perfiles académicos.
 
-> [!NOTE]
-> **Rutas de acceso abierto.** La *vía dorada* es la publicación en revistas de acceso abierto (por ejemplo, las listadas en **DOAJ**, SciELO o Redalyc). La *vía verde* es el depósito del artículo en un repositorio. América Latina tiene una tradición muy fuerte de acceso abierto no comercial, sin costos para autores ni lectores.
+::: {.callout-note title="Rutas de acceso abierto"}
+La *vía dorada* es la publicación en revistas de acceso abierto (por ejemplo, las listadas en **DOAJ**, SciELO o Redalyc). La *vía verde* es el depósito del artículo en un repositorio. América Latina tiene una tradición muy fuerte de acceso abierto no comercial, sin costos para autores ni lectores.
+:::
 
 ## 3.7 Tesis, preprints y literatura gris
 
@@ -155,6 +159,3 @@ Anotá siempre en la bitácora **qué bases usaste y por qué**.
 3. Configurá Google Académico con el vínculo a tu biblioteca y creá una alerta para tu tema.
 4. Buscá un artículo de pago que te interese y tratá de conseguir una versión legal gratuita siguiendo los pasos de la sección 3.6.
 
----
-
-[← Capítulo 2](02-planificar.md) · [Índice](../README.md) · [Capítulo 4 →](04-busqueda-por-terminos.md)

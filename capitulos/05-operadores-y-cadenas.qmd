@@ -33,15 +33,17 @@ A NOT B  →  1, 2               (lo que tenga A pero no B)
 
 Una regla sencilla para recordar:
 
-> [!IMPORTANT]
-> **`OR` une sinónimos dentro de un mismo concepto. `AND` une conceptos distintos.**
+::: {.callout-important title="Para recordar"}
+**`OR` une sinónimos dentro de un mismo concepto. `AND` une conceptos distintos.**
+:::
 
 ### El peligro de `NOT`
 
 `NOT` excluye **cualquier** documento que mencione el término, aunque sea de pasada. Si buscás `adolescentes NOT niños` para quitar los estudios sobre infancia, también vas a eliminar un estudio sobre adolescentes cuyo resumen dice "a diferencia de lo observado en niños…". Usá `NOT` con mucha cautela y, en una revisión sistemática, casi nunca. Es preferible excluir manualmente durante el cribado (capítulo 8) o usar los filtros de la base.
 
-> [!NOTE]
-> En **Scopus** el operador de exclusión se escribe `AND NOT`. En **Google Académico** se usa el signo menos pegado al término: `-niños`.
+::: {.callout-note}
+En **Scopus** el operador de exclusión se escribe `AND NOT`. En **Google Académico** se usa el signo menos pegado al término: `-niños`.
+:::
 
 ## 5.2 Los paréntesis y el orden de las operaciones
 
@@ -57,8 +59,9 @@ mindfulness OR meditación AND estrés
 (mindfulness OR meditación) AND estrés
 ```
 
-> [!WARNING]
-> **Error frecuente: olvidar los paréntesis.** Siempre agrupá con paréntesis los sinónimos de cada concepto, aunque creas que la base lo va a interpretar bien. Es la causa más común de resultados absurdos.
+::: {.callout-warning title="Error frecuente: olvidar los paréntesis"}
+Siempre agrupá con paréntesis los sinónimos de cada concepto, aunque creas que la base lo va a interpretar bien. Es la causa más común de resultados absurdos.
+:::
 
 ## 5.3 Operadores de proximidad
 
@@ -121,8 +124,9 @@ Ver la sección 5.5.
 - Si hay demasiado ruido, identificá qué término lo produce. Si faltan estudios, averiguá qué palabras usan y agregalas.
 - Registrá cada versión en la bitácora.
 
-> [!TIP]
-> **Construí la cadena por bloques en el historial de búsqueda.** Casi todas las bases avanzadas (PubMed, Scopus, Web of Science, EBSCO, Ovid) tienen un historial donde cada búsqueda queda numerada (#1, #2, #3). Buscá cada concepto por separado y después combinalos: `#1 AND #2 AND #3`. Así ves cuántos resultados aporta cada bloque y detectás rápido cuál está fallando.
+::: {.callout-tip title="Construí la cadena por bloques en el historial de búsqueda"}
+Casi todas las bases avanzadas (PubMed, Scopus, Web of Science, EBSCO, Ovid) tienen un historial donde cada búsqueda queda numerada (#1, #2, #3). Buscá cada concepto por separado y después combinalos: `#1 AND #2 AND #3`. Así ves cuántos resultados aporta cada bloque y detectás rápido cuál está fallando.
+:::
 
 ## 5.5 La misma cadena en distintas bases
 
@@ -180,8 +184,9 @@ mindfulness "university students" OR "college students" "academic stress"
   OR "university students") AND (estrés OR stress)
 ```
 
-> [!NOTE]
-> **Traducir cadenas entre bases.** Existen herramientas que convierten automáticamente la sintaxis de una base a otra, como **Polyglot Search Translator** (del proyecto *SR-Accelerator*). Ahorran tiempo, pero no traducen los descriptores entre tesauros (MeSH ≠ APA ≠ Emtree): eso hay que hacerlo a mano. También podés pedírselo a un asistente de IA, siempre verificando el resultado (capítulo 10).
+::: {.callout-note title="Traducir cadenas entre bases"}
+Existen herramientas que convierten automáticamente la sintaxis de una base a otra, como **Polyglot Search Translator** (del proyecto *SR-Accelerator*). Ahorran tiempo, pero no traducen los descriptores entre tesauros (MeSH ≠ APA ≠ Emtree): eso hay que hacerlo a mano. También podés pedírselo a un asistente de IA, siempre verificando el resultado (capítulo 10).
+:::
 
 ## 5.6 Resumen de sintaxis por base
 
@@ -230,8 +235,9 @@ Como no conocemos el "total de documentos relevantes que existen", la sensibilid
 - Si recupera todos, es una buena señal.
 - Si se le escapa alguno, abrí ese artículo y fijate por qué: ¿usa un sinónimo que no incluiste? ¿no tiene resumen? ¿no está indizado en esa base?
 
-> [!TIP]
-> En revisiones sistemáticas se recomienda que un bibliotecario o una bibliotecaria revise la estrategia de búsqueda antes de ejecutarla. Existe una guía para esa revisión, **PRESS** (*Peer Review of Electronic Search Strategies*; McGowan et al., 2016), cuya lista de control también sirve para autoevaluar tu cadena: traducción de la pregunta, operadores, vocabulario controlado, sintaxis, ortografía y filtros.
+::: {.callout-tip}
+En revisiones sistemáticas se recomienda que un bibliotecario o una bibliotecaria revise la estrategia de búsqueda antes de ejecutarla. Existe una guía para esa revisión, **PRESS** (*Peer Review of Electronic Search Strategies*; McGowan et al., 2016), cuya lista de control también sirve para autoevaluar tu cadena: traducción de la pregunta, operadores, vocabulario controlado, sintaxis, ortografía y filtros.
+:::
 
 ## 5.8 Filtros y límites
 
@@ -274,6 +280,3 @@ Las bases ofrecen filtros por año, idioma, tipo de documento, área temática, 
 3. Elegí cinco artículos que ya sepas que son relevantes y verificá si tu cadena los recupera. Si alguno falta, averiguá por qué y corregí la cadena.
 4. Probá quitar uno de los conceptos. ¿Cuánto cambia la cantidad de resultados? ¿Y la pertinencia de los primeros veinte?
 
----
-
-[← Capítulo 4](04-busqueda-por-terminos.md) · [Índice](../README.md) · [Capítulo 6 →](06-espanol-e-ingles.md)

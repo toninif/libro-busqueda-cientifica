@@ -30,8 +30,9 @@ Para documentos que no vienen de una base de datos académica (sitios web, infor
 | **A**ccuracy (exactitud) | ¿Cita sus fuentes? ¿Los datos se pueden verificar? ¿Tuvo revisión? |
 | **P**urpose (propósito) | ¿Busca informar, vender, persuadir? ¿Hay conflictos de interés? |
 
-> [!TIP]
-> **Lectura lateral.** Ante una fuente desconocida, los verificadores profesionales no se quedan leyendo la página: abren otras pestañas para averiguar **qué dicen otros** sobre esa fuente, esa organización o ese autor (Wineburg y McGrew, 2019). Es más rápido y más confiable que analizar el documento en sí.
+::: {.callout-tip title="Lectura lateral"}
+Ante una fuente desconocida, los verificadores profesionales no se quedan leyendo la página: abren otras pestañas para averiguar **qué dicen otros** sobre esa fuente, esa organización o ese autor (Wineburg y McGrew, 2019). Es más rápido y más confiable que analizar el documento en sí.
+:::
 
 ## 11.3 ¿Es confiable la revista?
 
@@ -57,8 +58,9 @@ Las **revistas depredadoras** cobran por publicar pero no ofrecen una revisión 
 
 La iniciativa **Think. Check. Submit.** ofrece una lista de control para evaluar revistas, pensada para autores, que también sirve a los lectores.
 
-> [!WARNING]
-> **Acceso abierto no es sinónimo de depredadora.** Muchas de las mejores revistas del mundo, y la gran mayoría de las revistas latinoamericanas de calidad, son de acceso abierto. Lo que define a una revista depredadora es la falta de un proceso editorial genuino, no el modelo de acceso.
+::: {.callout-warning title="Acceso abierto no es sinónimo de depredadora"}
+Muchas de las mejores revistas del mundo, y la gran mayoría de las revistas latinoamericanas de calidad, son de acceso abierto. Lo que define a una revista depredadora es la falta de un proceso editorial genuino, no el modelo de acceso.
+:::
 
 ## 11.4 Métricas: qué miden y qué no
 
@@ -80,8 +82,9 @@ Estas métricas son útiles para orientarse, pero tienen límites importantes:
 
 Por estas razones, iniciativas internacionales como la **Declaración de San Francisco sobre la Evaluación de la Investigación (DORA)** y el **Manifiesto de Leiden** (Hicks et al., 2015) recomiendan no usar las métricas de una revista para juzgar la calidad de un artículo individual.
 
-> [!IMPORTANT]
-> El mejor indicador de la calidad de un estudio es **el estudio mismo**: su pregunta, su diseño, su muestra, sus instrumentos, su análisis y la coherencia entre resultados y conclusiones. Las métricas no reemplazan la lectura.
+::: {.callout-important}
+El mejor indicador de la calidad de un estudio es **el estudio mismo**: su pregunta, su diseño, su muestra, sus instrumentos, su análisis y la coherencia entre resultados y conclusiones. Las métricas no reemplazan la lectura.
+:::
 
 ## 11.5 Artículos retractados
 
@@ -138,6 +141,3 @@ Preguntas para la lectura crítica:
 3. Aplicá la primera pasada de lectura a cinco artículos y decidí cuáles merecen la segunda.
 4. Hacé una lectura crítica completa de un artículo central, respondiendo las preguntas de la sección 11.7.
 
----
-
-[← Capítulo 10](10-inteligencia-artificial.md) · [Índice](../README.md) · [Capítulo 12 →](12-gestionar-y-escribir.md)

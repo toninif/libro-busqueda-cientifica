@@ -15,7 +15,7 @@ El error más común al empezar es buscar un **tema** ("el estrés", "las redes 
 
 Un camino posible:
 
-```mermaid
+```{mermaid}
 flowchart LR
     A["Tema<br/><i>estrés en estudiantes</i>"] --> B["Problema<br/><i>los universitarios reportan<br/>altos niveles de estrés</i>"]
     B --> C["Pregunta<br/><i>¿los programas de mindfulness<br/>reducen el estrés académico<br/>en universitarios?</i>"]
@@ -61,8 +61,9 @@ Dónde hacerla:
 - **Una base de datos de la disciplina**, buscando revisiones (muchas tienen un filtro por tipo de documento: *review*).
 - **Wikipedia**, con precaución: no se cita, pero sus referencias y su terminología pueden orientar.
 
-> [!TIP]
-> **El artículo perla.** Si en la exploración encontrás un artículo que es *exactamente* lo que buscás, guardalo como referencia. Mirá sus palabras clave, los descriptores que le asignó la base de datos, los términos del título y el resumen, sus referencias y quién lo citó después. Esta técnica se llama *pearl growing* ("hacer crecer la perla") y se desarrolla en los capítulos 4 y 9.
+::: {.callout-tip title="El artículo perla"}
+Si en la exploración encontrás un artículo que es *exactamente* lo que buscás, guardalo como referencia. Mirá sus palabras clave, los descriptores que le asignó la base de datos, los términos del título y el resumen, sus referencias y quién lo citó después. Esta técnica se llama *pearl growing* ("hacer crecer la perla") y se desarrolla en los capítulos 4 y 9.
+:::
 
 ## 2.3 Descomponer la pregunta en conceptos
 
@@ -93,7 +94,7 @@ En los capítulos 4, 5 y 6 vas a ver cómo transformar esta tabla en una **caden
 
 Buscar no es un proceso lineal. Es un ciclo que se repite varias veces:
 
-```mermaid
+```{mermaid}
 flowchart TB
     A["1. Formular o ajustar<br/>la pregunta"] --> B["2. Identificar conceptos<br/>y términos"]
     B --> C["3. Elegir fuentes<br/>y bases de datos"]
@@ -105,8 +106,9 @@ flowchart TB
 
 En cada vuelta, los resultados enseñan algo: un término nuevo, un autor clave, una base que no habíamos considerado, un concepto que conviene quitar. El ciclo termina cuando se llega a la **saturación**: nuevas búsquedas devuelven sobre todo documentos que ya conocemos.
 
-> [!WARNING]
-> **Error frecuente: buscar una sola vez.** Escribir tres palabras en una base, quedarse con los diez primeros resultados y empezar a escribir. Así se pierden estudios importantes y, sobre todo, no se puede justificar por qué se eligieron esos y no otros.
+::: {.callout-warning title="Error frecuente: buscar una sola vez"}
+Escribir tres palabras en una base, quedarse con los diez primeros resultados y empezar a escribir. Así se pierden estudios importantes y, sobre todo, no se puede justificar por qué se eligieron esos y no otros.
+:::
 
 ## 2.5 La bitácora de búsqueda
 
@@ -124,10 +126,11 @@ Un modelo mínimo:
 | 2026-04-10 | Scopus | `TITLE-ABS-KEY(mindfulness AND "academic stress")` | Título, resumen, palabras clave | 2016-2026; artículos | 142 | 18 | Muchos de Asia; probar agregar "university students" |
 | 2026-04-10 | SciELO | `mindfulness AND estrés` | Todos los índices | — | 37 | 6 | Aparecen estudios de Chile y Colombia |
 
-En el [Anexo A](../anexos/A-plantillas.md) hay una plantilla completa.
+En el [Anexo A](../anexos/A-plantillas.qmd) hay una plantilla completa.
 
-> [!TIP]
-> Copiá y pegá la cadena **exactamente** como la escribiste, con todas las comillas y paréntesis. Dentro de un mes no vas a recordar si pusiste `stress*` o `stress`.
+::: {.callout-tip}
+Copiá y pegá la cadena **exactamente** como la escribiste, con todas las comillas y paréntesis. Dentro de un mes no vas a recordar si pusiste `stress*` o `stress`.
+:::
 
 ## 2.6 Planificar los tiempos y los recursos
 
@@ -157,6 +160,3 @@ Antes de empezar, conviene responder algunas preguntas prácticas:
 3. Descomponela en dos a cuatro conceptos y armá una tabla con al menos tres sinónimos por concepto.
 4. Creá tu bitácora de búsqueda (en una planilla de cálculo) y registrá una primera búsqueda exploratoria.
 
----
-
-[← Capítulo 1](01-antecedentes.md) · [Índice](../README.md) · [Capítulo 3 →](03-donde-buscar.md)

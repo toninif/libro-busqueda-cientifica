@@ -26,8 +26,9 @@ Un **gestor bibliográfico** es un programa que guarda tus referencias (y sus PD
 | **EndNote** | Pago (Clarivate) | Muy usado en ciencias de la salud; integración con Web of Science. |
 | **JabRef** | Gratuito y de código abierto | Pensado para BibTeX y LaTeX. |
 
-> [!TIP]
-> **Configuración mínima de Zotero.** Instalá el programa de escritorio, el conector para tu navegador y el complemento para tu procesador de texto. Con eso podés guardar un artículo desde la página de la base de datos con un clic y citarlo en tu documento con otro.
+::: {.callout-tip title="Configuración mínima de Zotero"}
+Instalá el programa de escritorio, el conector para tu navegador y el complemento para tu procesador de texto. Con eso podés guardar un artículo desde la página de la base de datos con un clic y citarlo en tu documento con otro.
+:::
 
 ## 12.2 Exportar resultados y eliminar duplicados
 
@@ -38,8 +39,9 @@ Cuando hacés una búsqueda estructurada en varias bases, conviene **exportar to
 3. Copiá todo a una colección general y **eliminá los duplicados**. Zotero, Mendeley, EndNote y Rayyan tienen funciones para detectarlos; revisá los casos dudosos a mano.
 4. Anotá cuántos duplicados eliminaste.
 
-> [!NOTE]
-> Algunas bases limitan la cantidad de registros que se pueden exportar de una vez (por ejemplo, de a 500 o 1.000). Si tenés más, exportá por tandas (ordenando por año o por bloques de resultados) y verificá que el total coincida.
+::: {.callout-note}
+Algunas bases limitan la cantidad de registros que se pueden exportar de una vez (por ejemplo, de a 500 o 1.000). Si tenés más, exportá por tandas (ordenando por año o por bloques de resultados) y verificá que el total coincida.
+:::
 
 ## 12.3 Organizar la biblioteca
 
@@ -69,23 +71,23 @@ Algunas recomendaciones:
 - La columna **"aporte a mi trabajo"** es la más importante: ahí empezás a pensar el texto.
 - Una planilla de cálculo permite **ordenar y filtrar** (por año, por país, por diseño), lo que ayuda a ver patrones.
 
-En el [Anexo A](../anexos/A-plantillas.md) hay una plantilla.
+En el [Anexo A](../anexos/A-plantillas.qmd) hay una plantilla.
 
 ## 12.5 De la matriz al texto: sintetizar, no enumerar
 
 El error más frecuente al escribir los antecedentes es la **enumeración**: un párrafo por artículo, uno detrás de otro.
 
-> [!WARNING]
-> **Ejemplo de enumeración (a evitar):**
->
-> *García (2019) estudió el efecto del mindfulness en estudiantes de medicina y encontró que redujo el estrés. Pérez (2020) realizó un estudio con estudiantes de psicología y encontró resultados similares. López (2021) aplicó un programa de ocho semanas en Chile y observó una disminución del estrés. Smith (2022) no encontró diferencias significativas...*
+::: {.callout-warning title="Ejemplo de enumeración (a evitar)"}
+
+*García (2019) estudió el efecto del mindfulness en estudiantes de medicina y encontró que redujo el estrés. Pérez (2020) realizó un estudio con estudiantes de psicología y encontró resultados similares. López (2021) aplicó un programa de ocho semanas en Chile y observó una disminución del estrés. Smith (2022) no encontró diferencias significativas...*
+:::
 
 El lector no sabe qué conclusiones sacar, qué estudios son mejores ni qué falta investigar. Compará con una versión **sintética**:
 
-> [!TIP]
-> **Ejemplo de síntesis:**
->
-> *La mayoría de los ensayos realizados con estudiantes universitarios informan que los programas de mindfulness reducen el estrés percibido, con efectos entre pequeños y moderados (García, 2019; López, 2021; Pérez, 2020). Sin embargo, los estudios con seguimiento superior a tres meses son escasos y sus resultados, menos consistentes (Smith, 2022). Además, casi toda la evidencia proviene de estudiantes de carreras de salud en Europa y América del Norte: solo un ensayo se llevó a cabo en América Latina (López, 2021) y ninguno evaluó el estrés específicamente académico con instrumentos validados en población argentina. Este vacío justifica el presente estudio.*
+::: {.callout-tip title="Ejemplo de síntesis"}
+
+*La mayoría de los ensayos realizados con estudiantes universitarios informan que los programas de mindfulness reducen el estrés percibido, con efectos entre pequeños y moderados (García, 2019; López, 2021; Pérez, 2020). Sin embargo, los estudios con seguimiento superior a tres meses son escasos y sus resultados, menos consistentes (Smith, 2022). Además, casi toda la evidencia proviene de estudiantes de carreras de salud en Europa y América del Norte: solo un ensayo se llevó a cabo en América Latina (López, 2021) y ninguno evaluó el estrés específicamente académico con instrumentos validados en población argentina. Este vacío justifica el presente estudio.*
+:::
 
 Qué cambia:
 
@@ -166,6 +168,3 @@ Cómo parafrasear bien: leé el fragmento, cerralo, escribí la idea con tus pal
 4. Escribí un párrafo de síntesis que agrupe al menos tres de esos estudios y termine señalando un vacío.
 5. Intercambiá el párrafo con un compañero o compañera y revisen: ¿sintetiza o enumera?
 
----
-
-[← Capítulo 11](11-evaluar-fuentes.md) · [Índice](../README.md) · [Anexo A →](../anexos/A-plantillas.md)

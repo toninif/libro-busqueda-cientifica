@@ -143,6 +143,3 @@ Listado orientativo a septiembre de 2026. Revisá las condiciones de uso y priva
 | JabRef | https://www.jabref.org |
 | APA Style (guía oficial) | https://apastyle.apa.org |
 
----
-
-[← Anexo B](B-glosario.md) · [Índice](../README.md) · [Anexo D →](D-bibliografia.md)

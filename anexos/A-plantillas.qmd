@@ -146,6 +146,3 @@ Basada en PRESS (McGowan et al., 2016) y PRISMA-S (Rethlefsen et al., 2021), sim
 - [ ] Registré qué herramientas de IA usé, para qué y cómo verifiqué.
 - [ ] Las referencias están en un gestor bibliográfico, sin duplicados.
 
----
-
-[← Capítulo 12](../capitulos/12-gestionar-y-escribir.md) · [Índice](../README.md) · [Anexo B →](B-glosario.md)

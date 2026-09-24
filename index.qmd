@@ -10,7 +10,7 @@ Buscar bien no es un talento innato. Es un conjunto de decisiones que se pueden 
 
 El recorrido va de lo general a lo específico y de lo clásico a lo nuevo:
 
-```mermaid
+```{mermaid}
 flowchart LR
     A["Parte I<br/>Fundamentos<br/>(cap. 1-3)"] --> B["Parte II<br/>Técnicas de búsqueda<br/>(cap. 4-6)"]
     B --> C["Parte III<br/>Búsqueda sistemática<br/>(cap. 7-9)"]
@@ -40,17 +40,21 @@ También aparecen ejemplos de otras disciplinas —educación, comunicación, sa
 
 A lo largo del texto vas a encontrar recuadros como estos:
 
-> [!NOTE]
-> **Nota.** Información complementaria o aclaraciones.
+::: {.callout-note title="Nota"}
+Información complementaria o aclaraciones.
+:::
 
-> [!TIP]
-> **En la práctica.** Consejos concretos para aplicar en tu búsqueda.
+::: {.callout-tip title="En la práctica"}
+Consejos concretos para aplicar en tu búsqueda.
+:::
 
-> [!WARNING]
-> **Error frecuente.** Problemas habituales y cómo evitarlos.
+::: {.callout-warning title="Error frecuente"}
+Problemas habituales y cómo evitarlos.
+:::
 
-> [!IMPORTANT]
-> **Para recordar.** La idea central de una sección.
+::: {.callout-important title="Para recordar"}
+La idea central de una sección.
+:::
 
 Las cadenas de búsqueda aparecen en bloques de código, para que se puedan copiar tal cual:
 
@@ -70,6 +74,20 @@ El capítulo de inteligencia artificial está actualizado a **septiembre de 2026
 
 Las bibliotecas universitarias tienen personal especializado en búsqueda de información. Consultar a un bibliotecario o bibliotecaria no es un último recurso: es una de las cosas más eficientes que se pueden hacer al empezar, sobre todo para saber a qué bases de datos tiene acceso tu institución.
 
----
 
-[Índice](../README.md) · [Capítulo 1 →](01-antecedentes.md)
+## Sugerencia de uso en clase
+
+Las actividades de los capítulos están encadenadas. Si cada estudiante trabaja sobre su propio tema desde el capítulo 1, al terminar tiene una pregunta estructurada, una bitácora, cadenas de búsqueda en varias bases y en dos idiomas, un diagrama PRISMA y un primer borrador del apartado de antecedentes.
+
+Una secuencia posible en ocho encuentros:
+
+| Encuentro | Capítulos | Producto de la actividad |
+|---|---|---|
+| 1 | 1 y 2 | Pregunta inicial, tabla de conceptos y bitácora |
+| 2 | 3 | Selección de bases de datos justificada |
+| 3 | 4 | Descriptores y palabras clave por concepto |
+| 4 | 5 y 6 | Cadenas de búsqueda bilingües en dos bases |
+| 5 | 7 | Pregunta PICO (o variante) y criterios de inclusión |
+| 6 | 8 y 9 | Mini protocolo, búsqueda por citas y diagrama PRISMA |
+| 7 | 10 y 11 | Ejercicio de verificación de IA y evaluación de fuentes |
+| 8 | 12 | Matriz de antecedentes y párrafo de síntesis |

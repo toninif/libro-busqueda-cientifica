@@ -1,0 +1,18 @@
+# Quarto
+/.quarto/
+/_book/
+
+# RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+**/*.quarto_ipynb
+
+# Archivos intermedios de render
+*_files/

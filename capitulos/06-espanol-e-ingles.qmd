@@ -16,8 +16,9 @@ El inglés es hoy la lengua dominante de la comunicación científica internacio
 
 Distintos estudios mostraron que la barrera del idioma tiene consecuencias concretas: una proporción considerable de la literatura científica se publica en lenguas distintas del inglés y suele quedar fuera de las síntesis internacionales (Amano et al., 2016, 2021). En el terreno de las revisiones sistemáticas, restringir la búsqueda a un idioma puede introducir un **sesgo de idioma**: los estudios que se publican en inglés y los que se publican en otras lenguas no siempre muestran resultados equivalentes (Egger et al., 1997). La magnitud de ese sesgo varía según el área, pero en temas donde el contexto importa —educación, salud pública, políticas sociales— el riesgo de perder información clave es alto.
 
-> [!IMPORTANT]
-> **Buscar en un solo idioma es una decisión metodológica, no un detalle.** Si la tomás, tenés que justificarla y reconocerla como limitación.
+::: {.callout-important title="Buscar en un solo idioma es una decisión metodológica, no un detalle"}
+Si la tomás, tenés que justificarla y reconocerla como limitación.
+:::
 
 ## 6.2 ¿Qué se pierde si buscamos solo en inglés?
 
@@ -33,8 +34,9 @@ Distintos estudios mostraron que la barrera del idioma tiene consecuencias concr
 - **La terminología técnica de referencia**, que se consolida en inglés y luego se traduce (a veces de varias maneras).
 - **Los descriptores de los tesauros** de las grandes bases, que solo existen en inglés.
 
-> [!NOTE]
-> **¿Y el portugués?** Brasil es el mayor productor de ciencia de América Latina. Si tu tema es regional, conviene incluir también términos en portugués, sobre todo en SciELO y LILACS. Muchas veces basta con agregar dos o tres términos (por ejemplo, *estudantes universitários*, *estresse*).
+::: {.callout-note title="¿Y el portugués?"}
+Brasil es el mayor productor de ciencia de América Latina. Si tu tema es regional, conviene incluir también términos en portugués, sobre todo en SciELO y LILACS. Muchas veces basta con agregar dos o tres términos (por ejemplo, *estudantes universitários*, *estresse*).
+:::
 
 ## 6.4 Cómo funciona el idioma en las bases de datos
 
@@ -49,8 +51,9 @@ Entender dónde está cada idioma en un registro ayuda a buscar mejor:
 | Dialnet, repositorios | Mayoritariamente en español, a veces con resumen en inglés. | Buscar en **español**. |
 | Google Académico | Busca en el texto completo, en el idioma del documento. | Hacer **búsquedas separadas** en cada idioma. |
 
-> [!TIP]
-> **Mirá la configuración de idioma de Google Académico.** En *Configuración → Idiomas* podés elegir si mostrar resultados en todos los idiomas o solo en algunos. Si está configurado solo en español, estás perdiendo la literatura en inglés sin darte cuenta.
+::: {.callout-tip title="Mirá la configuración de idioma de Google Académico"}
+En *Configuración → Idiomas* podés elegir si mostrar resultados en todos los idiomas o solo en algunos. Si está configurado solo en español, estás perdiendo la literatura en inglés sin darte cuenta.
+:::
 
 ## 6.5 La tabla de términos bilingüe
 
@@ -143,8 +146,9 @@ mindfulness "university students" "academic stress"
 
 En ambos casos, **registrá cada cadena por separado** en la bitácora y sumá los resultados después de eliminar duplicados (capítulo 12).
 
-> [!WARNING]
-> **Error frecuente: buscar en español en Scopus o Web of Science.** Como estas bases indizan principalmente en inglés, una cadena en español devuelve pocos resultados y da la falsa impresión de que "no hay nada" sobre el tema en nuestra región. En esas bases, buscá en inglés y, si querés, agregá el filtro de idioma o de país para ver los estudios latinoamericanos.
+::: {.callout-warning title="Error frecuente: buscar en español en Scopus o Web of Science"}
+Como estas bases indizan principalmente en inglés, una cadena en español devuelve pocos resultados y da la falsa impresión de que "no hay nada" sobre el tema en nuestra región. En esas bases, buscá en inglés y, si querés, agregá el filtro de idioma o de país para ver los estudios latinoamericanos.
+:::
 
 ## 6.9 Buscar estudios de un país o una región
 
@@ -166,8 +170,9 @@ Ejemplo:
 
 > *La búsqueda se realizó con términos en español, inglés y portugués. Se incluyeron estudios publicados en cualquiera de esas tres lenguas. Se excluyeron dos estudios publicados en chino por no contar con recursos para su traducción; esta decisión se reconoce como una limitación.*
 
-> [!TIP]
-> Los traductores automáticos y los asistentes de IA son hoy muy buenos para **leer** un artículo en un idioma que no dominás. Eso reduce el argumento para excluir estudios por idioma. Pero para **elegir términos de búsqueda** no reemplazan a los tesauros y a la lectura de la literatura: verificá siempre sus sugerencias (capítulo 10).
+::: {.callout-tip}
+Los traductores automáticos y los asistentes de IA son hoy muy buenos para **leer** un artículo en un idioma que no dominás. Eso reduce el argumento para excluir estudios por idioma. Pero para **elegir términos de búsqueda** no reemplazan a los tesauros y a la lectura de la literatura: verificá siempre sus sugerencias (capítulo 10).
+:::
 
 ---
 
@@ -186,6 +191,3 @@ Ejemplo:
 3. Buscá tu tema en Scopus en español y en inglés. ¿Qué diferencia observás? Filtrá los resultados en inglés por país (Argentina u otro de la región): ¿aparecen estudios que no habías visto?
 4. Identificá en tu campo dos términos que se traduzcan de forma engañosa o que tengan varios equivalentes en inglés.
 
----
-
-[← Capítulo 5](05-operadores-y-cadenas.md) · [Índice](../README.md) · [Capítulo 7 →](07-pregunta-pico.md)

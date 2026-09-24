@@ -2,68 +2,53 @@
 
 **De la búsqueda por términos a la inteligencia artificial**
 
-Guía para orientar a estudiantes en la búsqueda bibliográfica de antecedentes para trabajos prácticos, proyectos, tesinas y tesis. Recorre las herramientas y aproximaciones clásicas —bases de datos, vocabularios controlados, operadores booleanos, cadenas de búsqueda— hasta los estándares de las revisiones sistemáticas (pregunta PICO, PRISMA) y las herramientas basadas en inteligencia artificial, con especial atención a la búsqueda en español y en inglés.
+Libro en [Quarto](https://quarto.org/) para orientar a estudiantes en la búsqueda bibliográfica de antecedentes. Va desde las herramientas y aproximaciones clásicas (bases de datos, vocabularios controlados, operadores booleanos, cadenas de búsqueda) hasta las revisiones sistemáticas (pregunta PICO, PRISMA) y las herramientas con inteligencia artificial. Presta especial atención a la búsqueda en español y en inglés.
 
----
+## Estructura del proyecto
 
-## Índice
+```text
+libro-busqueda-cientifica.Rproj   Proyecto de RStudio
+_quarto.yml                       Configuración del libro (capítulos, partes, formatos)
+index.qmd                         Presentación y sugerencia de uso en clase
+capitulos/                        Capítulos 1 a 12 (.qmd)
+anexos/                           Anexos A a D: plantillas, glosario, recursos, bibliografía
+_book/                            Salida generada (no se versiona)
+```
 
-**[Presentación](capitulos/00-presentacion.md)**
+| Parte | Capítulos |
+|---|---|
+| I. Fundamentos | 1. Qué son los antecedentes · 2. Planificar la búsqueda · 3. Dónde buscar |
+| II. Técnicas de búsqueda | 4. Búsqueda por términos · 5. Operadores y cadenas · 6. Buscar en español y en inglés |
+| III. Búsqueda sistemática | 7. Pregunta PICO y variantes · 8. Revisiones sistemáticas y PRISMA · 9. Búsqueda por citas |
+| IV. IA, evaluación y escritura | 10. Inteligencia artificial · 11. Evaluar fuentes · 12. Gestionar referencias y escribir |
 
-### Parte I. Fundamentos
+## Cómo generar el libro
 
-1. [Qué son los antecedentes y por qué buscarlos](capitulos/01-antecedentes.md)
-2. [Planificar la búsqueda](capitulos/02-planificar.md)
-3. [Dónde buscar: fuentes y herramientas clásicas](capitulos/03-donde-buscar.md)
+Hace falta tener [Quarto](https://quarto.org/docs/get-started/) instalado (RStudio ya lo trae incluido). No se necesita R: los capítulos no tienen código ejecutable.
 
-### Parte II. Técnicas de búsqueda
+**Desde RStudio:** abrí `libro-busqueda-cientifica.Rproj` y, en el panel *Build*, usá **Render Book**. Para ver los cambios en vivo mientras editás, usá el botón *Render* sobre cualquier `.qmd`.
 
-4. [Búsqueda por términos: palabras clave y vocabulario controlado](capitulos/04-busqueda-por-terminos.md)
-5. [Operadores y cadenas de búsqueda](capitulos/05-operadores-y-cadenas.md)
-6. [Buscar en español y en inglés](capitulos/06-espanol-e-ingles.md)
+**Desde la terminal:**
 
-### Parte III. Búsqueda sistemática
+```bash
+quarto preview            # vista previa en el navegador, se actualiza al guardar
+quarto render             # genera HTML y Word en _book/
+quarto render --to html   # solo la versión web
+```
 
-7. [La pregunta PICO y sus variantes](capitulos/07-pregunta-pico.md)
-8. [Revisiones sistemáticas y la declaración PRISMA](capitulos/08-revisiones-y-prisma.md)
-9. [Búsqueda por citas y estrategias complementarias](capitulos/09-busqueda-por-citas.md)
+Formatos configurados en `_quarto.yml`:
 
-### Parte IV. Inteligencia artificial, evaluación y escritura
+- **HTML:** sitio web del libro, con buscador, modo claro y oscuro, y botón para copiar las cadenas de búsqueda.
+- **Word (.docx):** para imprimir o editar.
 
-10. [Inteligencia artificial para la búsqueda de antecedentes](capitulos/10-inteligencia-artificial.md)
-11. [Evaluar lo que encontramos](capitulos/11-evaluar-fuentes.md)
-12. [Gestionar referencias y escribir los antecedentes](capitulos/12-gestionar-y-escribir.md)
+Los diagramas usan [Mermaid](https://quarto.org/docs/authoring/diagrams.html), que Quarto dibuja sin herramientas adicionales. En Word se insertan como imágenes, para lo cual Quarto usa un navegador Chrome o Edge instalado.
 
-### Anexos
+Para agregar PDF, sumá `pdf:` en la sección `format` de `_quarto.yml` y ejecutá una vez `quarto install tinytex`. Antes, conviene reemplazar los emojis de acceso (🟢 🟡 🔴) del Anexo C, que LaTeX no dibuja con las fuentes por defecto.
 
-- A. [Plantillas](anexos/A-plantillas.md): bitácora, tabla de términos bilingüe, tabla PICO, mini protocolo, matriz de antecedentes, registro de cribado, números PRISMA y lista de control final
-- B. [Glosario](anexos/B-glosario.md)
-- C. [Directorio de recursos](anexos/C-recursos.md)
-- D. [Bibliografía](anexos/D-bibliografia.md)
+## Publicar
 
----
-
-## Sugerencia de uso en clase
-
-Cada capítulo termina con un resumen y una actividad. Las actividades están encadenadas: si cada estudiante trabaja sobre su propio tema desde el capítulo 1, al terminar tiene una pregunta estructurada, una bitácora, cadenas de búsqueda en varias bases y en dos idiomas, un diagrama PRISMA y un primer borrador del apartado de antecedentes.
-
-Una secuencia posible en ocho encuentros:
-
-| Encuentro | Capítulos | Producto de la actividad |
-|---|---|---|
-| 1 | 1 y 2 | Pregunta inicial, tabla de conceptos y bitácora |
-| 2 | 3 | Selección de bases de datos justificada |
-| 3 | 4 | Descriptores y palabras clave por concepto |
-| 4 | 5 y 6 | Cadenas de búsqueda bilingües en dos bases |
-| 5 | 7 | Pregunta PICO (o variante) y criterios de inclusión |
-| 6 | 8 y 9 | Mini protocolo, búsqueda por citas y diagrama PRISMA |
-| 7 | 10 y 11 | Ejercicio de verificación de IA y evaluación de fuentes |
-| 8 | 12 | Matriz de antecedentes y párrafo de síntesis |
-
-## Formato
-
-El libro está escrito en Markdown y se lee directamente en GitHub (los diagramas usan [Mermaid](https://mermaid.js.org/), que GitHub muestra como gráficos). Para generar un PDF o un EPUB se puede usar, por ejemplo, [Pandoc](https://pandoc.org/) con un filtro para Mermaid.
+Para tener el libro en línea con GitHub Pages: `quarto publish gh-pages`. Ver la [guía de Quarto](https://quarto.org/docs/publishing/github-pages.html).
 
 ## Estado
 
-Primera versión completa, septiembre de 2026. El capítulo 10 (inteligencia artificial) y el Anexo C (recursos) son los que más rápido envejecen y conviene revisarlos cada cuatrimestre.
+Primera versión completa, septiembre de 2026. El capítulo 10 (inteligencia artificial) y el Anexo C (recursos) son los que envejecen más rápido y conviene revisarlos cada cuatrimestre.

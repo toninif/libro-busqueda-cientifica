@@ -23,8 +23,9 @@ En muchos proyectos, tesinas y tesis los antecedentes forman un apartado propio,
 
 En la práctica, los dos apartados se alimentan de la misma búsqueda bibliográfica, y algunas instituciones los integran en un único capítulo ("estado del arte", "revisión de la literatura"). Revisá siempre qué pide tu reglamento o tu docente.
 
-> [!NOTE]
-> **Estado del arte, estado de la cuestión, revisión de la literatura.** Son expresiones que se usan casi como sinónimos. Todas remiten a un panorama organizado de lo que se sabe sobre un tema en un momento dado.
+::: {.callout-note title="Estado del arte, estado de la cuestión, revisión de la literatura"}
+Son expresiones que se usan casi como sinónimos. Todas remiten a un panorama organizado de lo que se sabe sobre un tema en un momento dado.
+:::
 
 ## 1.2 ¿Para qué sirve buscar antecedentes?
 
@@ -37,8 +38,9 @@ Buscar antecedentes no es un trámite para "llenar" un capítulo. Cumple funcion
 5. **Interpretar los resultados propios**: al final del trabajo, la discusión compara lo que encontramos con lo que ya se sabía.
 6. **Ubicar la contribución**: decir con precisión en qué se diferencia nuestro trabajo de los anteriores.
 
-> [!IMPORTANT]
-> Una buena búsqueda de antecedentes cambia la investigación. Si después de buscar tu pregunta sigue exactamente igual que antes, probablemente buscaste poco o leíste poco.
+::: {.callout-important}
+Una buena búsqueda de antecedentes cambia la investigación. Si después de buscar tu pregunta sigue exactamente igual que antes, probablemente buscaste poco o leíste poco.
+:::
 
 ## 1.3 Tipos de fuentes
 
@@ -71,7 +73,7 @@ La mayoría de las revistas académicas someten los artículos a **revisión por
 
 Cuando la pregunta es sobre la **efectividad de una intervención** (¿funciona este tratamiento, este programa, esta estrategia didáctica?), suele usarse una jerarquía de la evidencia:
 
-```mermaid
+```{mermaid}
 flowchart TB
     A["Revisiones sistemáticas y metaanálisis"] --- B["Ensayos controlados aleatorizados"]
     B --- C["Estudios cuasiexperimentales y de cohortes"]
@@ -85,8 +87,9 @@ Arriba están los diseños que controlan mejor los sesgos. Pero esta jerarquía 
 - **El diseño no garantiza la calidad.** Un ensayo mal hecho puede valer menos que un estudio observacional bien hecho.
 - **Una revisión sistemática es tan buena como los estudios que incluye** y como la búsqueda que la sostiene.
 
-> [!TIP]
-> Si al empezar encontrás una **revisión sistemática reciente** sobre tu tema, tenés un tesoro: te da un panorama, una lista de estudios ya evaluados y, casi siempre, la cadena de búsqueda que usaron los autores. Buscar revisiones primero es una de las mejores estrategias iniciales.
+::: {.callout-tip}
+Si al empezar encontrás una **revisión sistemática reciente** sobre tu tema, tenés un tesoro: te da un panorama, una lista de estudios ya evaluados y, casi siempre, la cadena de búsqueda que usaron los autores. Buscar revisiones primero es una de las mejores estrategias iniciales.
+:::
 
 ## 1.5 Búsqueda exploratoria y búsqueda sistemática
 
@@ -119,6 +122,3 @@ Este libro sigue ese recorrido: primero las herramientas para explorar, después
 2. Buscalo en Google Académico agregando la palabra *revisión* o *review* (por ejemplo: `mindfulness estrés universitarios revisión`).
 3. Elegí un resultado y clasificalo: ¿es fuente primaria o secundaria? ¿Qué tipo de documento es? ¿Tiene revisión por pares? ¿Cómo lo sabés?
 
----
-
-[← Presentación](00-presentacion.md) · [Índice](../README.md) · [Capítulo 2 →](02-planificar.md)

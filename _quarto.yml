@@ -1,0 +1,57 @@
+project:
+  type: book
+  output-dir: _book
+
+lang: es
+
+book:
+  title: "Buscar antecedentes"
+  subtitle: "Guía para estudiantes: de la búsqueda por términos a la inteligencia artificial"
+  date: "2026-09"
+  date-format: "MMMM YYYY"
+  search: true
+  repo-url: https://github.com/toninif/libro-busqueda-cientifica
+  chapters:
+    - index.qmd
+    - part: "Parte I. Fundamentos"
+      chapters:
+        - capitulos/01-antecedentes.qmd
+        - capitulos/02-planificar.qmd
+        - capitulos/03-donde-buscar.qmd
+    - part: "Parte II. Técnicas de búsqueda"
+      chapters:
+        - capitulos/04-busqueda-por-terminos.qmd
+        - capitulos/05-operadores-y-cadenas.qmd
+        - capitulos/06-espanol-e-ingles.qmd
+    - part: "Parte III. Búsqueda sistemática"
+      chapters:
+        - capitulos/07-pregunta-pico.qmd
+        - capitulos/08-revisiones-y-prisma.qmd
+        - capitulos/09-busqueda-por-citas.qmd
+    - part: "Parte IV. Inteligencia artificial, evaluación y escritura"
+      chapters:
+        - capitulos/10-inteligencia-artificial.qmd
+        - capitulos/11-evaluar-fuentes.qmd
+        - capitulos/12-gestionar-y-escribir.qmd
+  appendices:
+    - anexos/A-plantillas.qmd
+    - anexos/B-glosario.qmd
+    - anexos/C-recursos.qmd
+    - anexos/D-bibliografia.qmd
+
+# Los capítulos y secciones ya llevan su numeración en el título
+# ("Capítulo 5", "5.4"), a la que remite el texto.
+number-sections: false
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    callout-appearance: default
+  docx:
+    toc: true
+    toc-depth: 2

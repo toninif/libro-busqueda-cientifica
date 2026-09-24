@@ -117,7 +117,7 @@ PICO nació para preguntas sobre **efectividad de intervenciones**. Para otros t
 
 Cada componente de PICO es un **concepto candidato** para la cadena. El procedimiento es el que vimos en el capítulo 5:
 
-```mermaid
+```{mermaid}
 flowchart LR
     A["Pregunta PICO"] --> B["Tabla de conceptos<br/>(un bloque por componente)"]
     B --> C["Sinónimos, descriptores<br/>y términos en español e inglés"]
@@ -139,8 +139,9 @@ Pero **no todos los componentes van a la cadena**. Una regla práctica:
 
 Para el caso guía, la cadena del capítulo 5 usa **P + I + O**. Una versión más sensible usaría solo **P + I** y dejaría que el cribado decida cuáles miden estrés.
 
-> [!TIP]
-> **Tabla PICO extendida.** Armá una tabla donde las filas sean los componentes PICO y las columnas sean: *términos en español*, *términos en inglés*, *descriptores (MeSH, DeCS, APA...)*, *¿va a la cadena?* y *criterio de inclusión*. Así tenés en una sola hoja la pregunta, la búsqueda y la selección. Hay una plantilla en el [Anexo A](../anexos/A-plantillas.md).
+::: {.callout-tip title="Tabla PICO extendida"}
+Armá una tabla donde las filas sean los componentes PICO y las columnas sean: *términos en español*, *términos en inglés*, *descriptores (MeSH, DeCS, APA...)*, *¿va a la cadena?* y *criterio de inclusión*. Así tenés en una sola hoja la pregunta, la búsqueda y la selección. Hay una plantilla en el [Anexo A](../anexos/A-plantillas.qmd).
+:::
 
 ## 7.6 De PICO a los criterios de inclusión y exclusión
 
@@ -181,6 +182,3 @@ Los criterios se definen **antes** de ver los resultados y se registran en el pr
 3. Decidí qué componentes van a la cadena y cuáles quedan como criterios de inclusión. Explicá por qué.
 4. Redactá los criterios de inclusión y exclusión para cada componente.
 
----
-
-[← Capítulo 6](06-espanol-e-ingles.md) · [Índice](../README.md) · [Capítulo 8 →](08-revisiones-y-prisma.md)

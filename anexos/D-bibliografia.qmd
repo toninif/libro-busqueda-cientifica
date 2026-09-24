@@ -98,6 +98,3 @@ Hernández-Sampieri, R., y Mendoza, C. P. (2018). *Metodología de la investigac
 
 Kitchenham, B., y Charters, S. (2007). *Guidelines for performing systematic literature reviews in software engineering* (EBSE Technical Report EBSE-2007-01). Keele University y Durham University.
 
----
-
-[← Anexo C](C-recursos.md) · [Índice](../README.md)
