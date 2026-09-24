@@ -1,0 +1,160 @@
+# Capítulo 3. Dónde buscar: fuentes y herramientas clásicas
+
+**En este capítulo vas a aprender:**
+
+- qué tipos de herramientas de búsqueda existen y en qué se diferencian;
+- cuáles son las principales bases de datos multidisciplinarias, disciplinares y regionales;
+- qué aporta (y qué no) Google Académico;
+- cómo acceder legalmente al texto completo de un artículo.
+
+---
+
+## 3.1 No todo es "una base de datos"
+
+Solemos llamar "base de datos" a cualquier buscador académico, pero conviene distinguir:
+
+| Tipo de herramienta | Qué hace | Ejemplos |
+|---|---|---|
+| **Catálogo de biblioteca** | Describe lo que tiene una biblioteca (libros, revistas, tesis) y dónde está. | Catálogo de tu universidad, catálogos colectivos. |
+| **Base de datos bibliográfica (referencial)** | Registra artículos con sus metadatos: título, autores, resumen, palabras clave, descriptores. No siempre da el texto completo. | Scopus, Web of Science, PubMed, APA PsycInfo, ERIC, LILACS. |
+| **Base de datos o plataforma de texto completo** | Además de los metadatos, da acceso al documento. | SciELO, Redalyc, JSTOR, ScienceDirect, plataformas de EBSCO y ProQuest. |
+| **Motor de búsqueda académico** | Rastrea automáticamente la web académica. Gran cobertura, poco control. | Google Académico, Semantic Scholar, BASE, CORE, OpenAlex. |
+| **Repositorio** | Guarda y difunde la producción de una institución o una disciplina, en acceso abierto. | Repositorios universitarios, CONICET Digital, arXiv, PsyArXiv. |
+| **Directorio o índice de revistas** | Lista revistas que cumplen ciertos criterios de calidad. No busca artículos (o lo hace de forma limitada). | Latindex (Directorio y Catálogo), DOAJ. |
+
+Esta distinción importa porque cada tipo de herramienta **se busca de manera distinta** y tiene **cobertura distinta**. Una búsqueda seria combina varias.
+
+> [!NOTE]
+> **Base de datos y plataforma no son lo mismo.** APA PsycInfo es una base de datos; se puede consultar a través de distintas plataformas (EBSCOhost, Ovid, ProQuest). La sintaxis cambia según la plataforma. Por eso en la bitácora conviene anotar ambas: *"APA PsycInfo (EBSCOhost)"*.
+
+## 3.2 Bases de datos multidisciplinarias
+
+Cubren todas las áreas del conocimiento. Son el punto de partida de casi cualquier búsqueda.
+
+- **Scopus** (Elsevier). Gran cobertura de revistas revisadas por pares, actas y libros. Permite búsquedas avanzadas por campos, análisis de resultados y seguimiento de citas. Es de suscripción.
+- **Web of Science** (Clarivate). Conjunto de índices de citas con una larga trayectoria histórica. Muy usada para análisis bibliométricos y para el factor de impacto de las revistas. Es de suscripción.
+- **Google Académico** (*Google Scholar*). Gratuito y enorme, se analiza aparte en la sección 3.5.
+- **Dimensions**, **Lens.org** y **OpenAlex**. Alternativas más recientes, con versiones gratuitas o totalmente abiertas. OpenAlex es un índice abierto de la producción científica mundial muy usado por otras herramientas, incluidas varias de las que usan inteligencia artificial (capítulo 10).
+
+> [!TIP]
+> En Argentina, muchas instituciones acceden a Scopus, Web of Science y otras colecciones a través de la **Biblioteca Electrónica de Ciencia y Tecnología**. Preguntá en tu biblioteca si tu universidad está adherida y cómo se accede desde fuera del campus (VPN, *proxy* o usuario institucional).
+
+## 3.3 Bases de datos por disciplina
+
+Las bases disciplinares suelen tener **vocabulario controlado** (un tesauro propio, capítulo 4) y una indización más cuidada que las multidisciplinarias.
+
+| Área | Bases principales | Tesauro |
+|---|---|---|
+| Ciencias de la salud | PubMed/MEDLINE (gratuita), Embase, CINAHL (enfermería), Cochrane Library, LILACS | MeSH, Emtree, DeCS |
+| Psicología | APA PsycInfo, PsycArticles, PubMed (para temas de salud mental) | APA Thesaurus of Psychological Index Terms |
+| Educación | ERIC (gratuita), Education Source | ERIC Thesaurus |
+| Ciencias sociales | Sociological Abstracts, JSTOR, CLACSO (biblioteca virtual) | Tesauros propios |
+| Economía y gestión | EconLit, Business Source, ABI/INFORM, RePEc (gratuita) | JEL (clasificación) |
+| Comunicación | Communication & Mass Media Complete | Tesauro propio |
+| Ingeniería e informática | IEEE Xplore, ACM Digital Library, Engineering Village (Compendex), dblp | INSPEC, ACM CCS |
+| Arquitectura, arte y diseño | Avery Index, Art & Architecture Source | Art & Architecture Thesaurus (Getty) |
+| Derecho | Bases jurídicas nacionales, HeinOnline, vLex | Varía |
+
+> [!NOTE]
+> **Síntesis de evidencia ya hechas.** Si tu pregunta es sobre efectividad, buscá primero en colecciones de revisiones sistemáticas: **Cochrane Library** (salud), **Campbell Collaboration** (educación, justicia, bienestar social) y **Epistemonikos** (salud, con interfaz multilingüe, incluida en español).
+
+## 3.4 Bases de datos regionales y en español
+
+La producción científica de América Latina, España y Portugal está **subrepresentada** en las grandes bases internacionales. Ignorar las fuentes regionales significa perder justo los estudios más cercanos a nuestro contexto. El capítulo 6 profundiza en este punto.
+
+| Recurso | Qué es | Para qué sirve |
+|---|---|---|
+| **SciELO** | Red de colecciones de revistas de acceso abierto de América Latina, España, Portugal y Sudáfrica. | Artículos en texto completo en español, portugués e inglés. |
+| **Redalyc** | Sistema de información científica de revistas de acceso abierto de Iberoamérica. | Muy fuerte en ciencias sociales y humanidades. |
+| **LILACS / BVS** | Literatura latinoamericana y del Caribe en ciencias de la salud, dentro de la Biblioteca Virtual en Salud. | Salud pública, enfermería, psicología clínica. Usa el tesauro DeCS. |
+| **Dialnet** | Portal bibliográfico de la Universidad de La Rioja (España). | Artículos, capítulos y tesis de España y, cada vez más, de América Latina. |
+| **Latindex** | Sistema regional de información sobre revistas. | Verificar si una revista cumple criterios editoriales (Catálogo). No es un buscador de artículos. |
+| **Biblat** | Bibliografía latinoamericana (UNAM), heredera de las bases CLASE y PERIÓDICA. | Revistas latinoamericanas de ciencias sociales y ciencias exactas. |
+| **La Referencia** | Red federada de repositorios de América Latina. | Tesis y artículos depositados en repositorios de la región. |
+| **Repositorios nacionales** | En Argentina: el Sistema Nacional de Repositorios Digitales (SNRD), CONICET Digital y los repositorios de cada universidad. | Tesis, artículos y documentos de investigadores argentinos. |
+| **CLACSO** | Biblioteca virtual del Consejo Latinoamericano de Ciencias Sociales. | Libros, documentos de trabajo y literatura gris de ciencias sociales. |
+
+## 3.5 Google Académico: virtudes y límites
+
+Google Académico es, probablemente, la herramienta que más vas a usar. Conviene conocer bien sus fortalezas y sus limitaciones.
+
+**Virtudes**
+
+- Cobertura enorme: artículos, libros, tesis, actas, preprints, literatura gris.
+- Busca en el **texto completo** de muchos documentos, no solo en el título y el resumen.
+- Muestra **quién citó** cada documento ("Citado por"), ideal para la búsqueda por citas (capítulo 9).
+- Enlaza versiones gratuitas y, si configurás tu biblioteca en *Configuración → Vínculos de bibliotecas*, también las suscripciones de tu universidad.
+- Permite crear alertas y guardar resultados en una biblioteca personal.
+
+**Límites**
+
+- **No es transparente**: no se sabe exactamente qué incluye ni cómo ordena los resultados, y el orden cambia con el tiempo.
+- **No es reproducible**: la misma búsqueda puede dar resultados distintos en otro momento.
+- **Sintaxis limitada**: no admite truncamiento (`educa*`), las cadenas largas se cortan y los paréntesis no siempre se respetan.
+- **Solo muestra los primeros 1.000 resultados** de cada búsqueda.
+- **Mezcla calidades**: aparecen documentos no revisados, duplicados y revistas de dudosa calidad.
+
+Por estas razones, varios estudios concluyen que Google Académico **no debe ser la fuente principal** de una revisión sistemática, aunque es muy útil como fuente complementaria y para literatura gris (Gusenbauer y Haddaway, 2020; Haddaway et al., 2015).
+
+> [!TIP]
+> **Operadores útiles en Google Académico**
+>
+> | Operador | Ejemplo | Qué hace |
+> |---|---|---|
+> | `" "` | `"estrés académico"` | Busca la frase exacta. |
+> | `OR` | `mindfulness OR "atención plena"` | Cualquiera de los términos (en mayúsculas). |
+> | `-` | `mindfulness -children` | Excluye un término. |
+> | `intitle:` | `intitle:mindfulness` | El término debe estar en el título. |
+> | `author:` | `author:"kabat-zinn"` | Busca por autor. |
+> | `source:` | `source:"Revista de Psicología"` | Limita a una fuente (se usa desde la búsqueda avanzada). |
+>
+> La **búsqueda avanzada** está en el menú lateral (☰ → Búsqueda avanzada).
+
+## 3.6 Acceso abierto y cómo conseguir el texto completo
+
+Encontrar la referencia no es lo mismo que acceder al texto. Si un artículo está detrás de un muro de pago, antes de rendirte probá, en este orden:
+
+1. **Acceso institucional.** Entrá a la base desde la página de tu biblioteca o con la VPN de la universidad.
+2. **Buscadores de versiones abiertas.** Extensiones y servicios como **Unpaywall** o la opción "Todas las versiones" de Google Académico encuentran copias legales en repositorios.
+3. **Repositorios.** Buscá el título en **CORE**, **BASE** o en el repositorio de la institución del autor.
+4. **Préstamo interbibliotecario.** Muchas bibliotecas lo gestionan.
+5. **Escribirle a la autora o al autor.** Es completamente habitual y la mayoría responde con gusto. Su correo suele figurar en el artículo; también podés contactarlos por perfiles académicos.
+
+> [!NOTE]
+> **Rutas de acceso abierto.** La *vía dorada* es la publicación en revistas de acceso abierto (por ejemplo, las listadas en **DOAJ**, SciELO o Redalyc). La *vía verde* es el depósito del artículo en un repositorio. América Latina tiene una tradición muy fuerte de acceso abierto no comercial, sin costos para autores ni lectores.
+
+## 3.7 Tesis, preprints y literatura gris
+
+- **Tesis.** Además de los repositorios nacionales y La Referencia, existen buscadores internacionales como **OATD** (*Open Access Theses and Dissertations*), **NDLTD**, **ProQuest Dissertations & Theses** (suscripción) y **TESEO** (tesis doctorales de España).
+- **Preprints.** Servidores como **arXiv** (física, matemática, informática), **PsyArXiv** (psicología), **SocArXiv** (ciencias sociales), **medRxiv** (salud) y **SciELO Preprints**.
+- **Literatura gris.** Informes y documentos de organismos como la **CEPAL**, la **OPS/OMS** (repositorio IRIS), la **UNESCO** (UNESDOC), el **Banco Mundial**, ministerios y agencias estatales. Se desarrolla en el capítulo 9.
+
+## 3.8 ¿Cuántas bases de datos?
+
+No hay un número mágico, pero sí algunas orientaciones:
+
+- Para un **trabajo práctico**: una base multidisciplinaria + Google Académico + una base regional.
+- Para una **tesina o tesis**: al menos una base multidisciplinaria, una o dos bases disciplinares, una base regional y búsqueda por citas.
+- Para una **revisión sistemática**: varias bases, incluyendo las disciplinares con tesauro, fuentes regionales, literatura gris y búsqueda por citas. En salud, un estudio encontró que combinar Embase, MEDLINE, Web of Science y Google Académico recuperaba la gran mayoría de los estudios incluidos en un conjunto de revisiones (Bramer et al., 2017); la combinación ideal varía según el área.
+
+Anotá siempre en la bitácora **qué bases usaste y por qué**.
+
+---
+
+## Resumen
+
+- Catálogos, bases referenciales, plataformas de texto completo, motores académicos, repositorios y directorios cumplen funciones distintas.
+- Combiná bases multidisciplinarias (Scopus, Web of Science), disciplinares (con tesauro) y regionales (SciELO, Redalyc, LILACS, repositorios).
+- Google Académico es excelente para explorar y seguir citas, pero no es transparente ni reproducible.
+- Casi siempre hay una vía legal para conseguir el texto completo: biblioteca, repositorios, Unpaywall o la propia autora o autor.
+
+## Actividad
+
+1. Averiguá en la página de tu biblioteca a qué bases de datos tenés acceso y cómo se ingresa desde tu casa.
+2. Para tu tema, elegí: una base multidisciplinaria, una disciplinar y una regional. Justificá la elección en dos líneas.
+3. Configurá Google Académico con el vínculo a tu biblioteca y creá una alerta para tu tema.
+4. Buscá un artículo de pago que te interese y tratá de conseguir una versión legal gratuita siguiendo los pasos de la sección 3.6.
+
+---
+
+[← Capítulo 2](02-planificar.md) · [Índice](../README.md) · [Capítulo 4 →](04-busqueda-por-terminos.md)

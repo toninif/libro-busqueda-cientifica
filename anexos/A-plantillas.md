@@ -1,0 +1,151 @@
+# Anexo A. Plantillas
+
+Plantillas listas para copiar a una planilla de cálculo o a un procesador de texto. Cada una remite al capítulo donde se explica.
+
+---
+
+## A.1 Bitácora de búsqueda (capítulo 2)
+
+| N.º | Fecha | Base de datos (plataforma) | Cadena de búsqueda (textual) | Campos | Filtros / límites | Resultados | Exportados | Observaciones |
+|---|---|---|---|---|---|---|---|---|
+| 1 | AAAA-MM-DD | | | | | | | |
+| 2 | | | | | | | | |
+| 3 | | | | | | | | |
+
+**Consejos:** copiá la cadena tal cual la ejecutaste; anotá la plataforma (por ejemplo, *APA PsycInfo (EBSCOhost)*); en "Observaciones" registrá qué aprendiste para la próxima versión.
+
+---
+
+## A.2 Tabla de conceptos y términos bilingüe (capítulos 4, 5 y 6)
+
+| | Concepto 1: ______ | Concepto 2: ______ | Concepto 3: ______ |
+|---|---|---|---|
+| **Términos en español** | | | |
+| **Términos en inglés** | | | |
+| **Términos en portugués** (opcional) | | | |
+| **Descriptor MeSH / DeCS** | | | |
+| **Descriptor APA / ERIC / UNESCO / otro** | | | |
+| **Bloque con `OR`** | `( ... OR ... )` | `( ... OR ... )` | `( ... OR ... )` |
+
+**Cadena final:** `(bloque 1) AND (bloque 2) AND (bloque 3)`
+
+---
+
+## A.3 Tabla PICO extendida (capítulo 7)
+
+**Pregunta:** ____________________________________________
+
+**Formato elegido:** PICO / PICOC / PEO / SPIDER / PCC / otro: ______
+
+| Componente | Descripción | Términos en español | Términos en inglés | Descriptores | ¿Va a la cadena? | Criterio de inclusión | Criterio de exclusión |
+|---|---|---|---|---|---|---|---|
+| P | | | | | Sí / No | | |
+| I (o E) | | | | | Sí / No | | |
+| C | | | | | Sí / No | | |
+| O | | | | | Sí / No | | |
+| Otro (S, T, contexto) | | | | | Sí / No | | |
+
+---
+
+## A.4 Mini protocolo de búsqueda (capítulo 8)
+
+1. **Título provisorio:**
+2. **Pregunta (con formato PICO o variante):**
+3. **Tipo de revisión:** narrativa con búsqueda estructurada / sistematizada / de alcance / sistemática.
+4. **Criterios de inclusión:** población, intervención o exposición, comparación, resultados, diseños, idiomas, período, tipo de documento.
+5. **Criterios de exclusión:**
+6. **Fuentes de información:**
+   - Bases de datos (con plataforma):
+   - Fuentes regionales:
+   - Literatura gris:
+   - Búsqueda por citas (semillas):
+7. **Idiomas de búsqueda:**
+8. **Estrategia de búsqueda preliminar** (adjuntar la cadena de al menos una base):
+9. **Proceso de selección:** quién criba, cómo se resuelven las dudas, con qué herramienta.
+10. **Datos que se van a extraer:** (columnas de la matriz A.5)
+11. **Evaluación de la calidad** (si corresponde) y herramienta:
+12. **Síntesis prevista:**
+13. **Uso previsto de herramientas de IA** y cómo se verificará:
+14. **Cronograma:**
+
+---
+
+## A.5 Matriz de antecedentes (capítulo 12)
+
+| ID | Autor/es (año) | País | Objetivo / pregunta | Diseño | Muestra (n y características) | Intervención / variables | Comparación | Instrumentos | Resultados principales | Limitaciones | Calidad / riesgo de sesgo | Aporte a mi trabajo |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | | | | | | | | | | | | |
+| 2 | | | | | | | | | | | | |
+
+---
+
+## A.6 Registro de cribado (capítulo 8)
+
+| ID | Referencia breve | Fuente | Decisión título/resumen (incluir / excluir / dudoso) | Decisión texto completo | Motivo de exclusión | Revisor/a | Observaciones |
+|---|---|---|---|---|---|---|---|
+| 1 | | | | | | | |
+
+**Motivos de exclusión sugeridos** (definirlos antes de empezar): población no pertinente · intervención/exposición no pertinente · sin grupo de comparación · resultado no medido · diseño no elegible · idioma · duplicado · texto completo no disponible.
+
+---
+
+## A.7 Números para el diagrama de flujo PRISMA (capítulo 8)
+
+| Etapa | Bases de datos | Otros métodos |
+|---|---|---|
+| Registros identificados (por fuente) | | |
+| Duplicados eliminados | | — |
+| Otros eliminados antes del cribado | | — |
+| Registros cribados | | — |
+| Registros excluidos | | — |
+| Informes buscados para recuperar | | |
+| Informes no recuperados | | |
+| Informes evaluados para elegibilidad | | |
+| Informes excluidos (con motivos) | | |
+| **Estudios incluidos** / **informes incluidos** | | |
+
+Verificá que cada fila sea la resta exacta de la anterior.
+
+---
+
+## A.8 Lista de control final de la búsqueda
+
+Basada en PRESS (McGowan et al., 2016) y PRISMA-S (Rethlefsen et al., 2021), simplificada para trabajos estudiantiles.
+
+**La pregunta**
+
+- [ ] Está formulada con una estructura (PICO o variante).
+- [ ] Los criterios de inclusión y exclusión están escritos antes de buscar.
+
+**Los términos**
+
+- [ ] Cada concepto tiene sinónimos, variantes y siglas.
+- [ ] Busqué descriptores en el tesauro de cada base que lo tenga y verifiqué que existen.
+- [ ] Incluí términos en español y en inglés (y portugués si corresponde).
+- [ ] Los truncamientos no son demasiado cortos ni traen ruido.
+
+**La cadena**
+
+- [ ] Los sinónimos están unidos con `OR` y entre paréntesis.
+- [ ] Los conceptos están unidos con `AND`.
+- [ ] No usé `NOT` o, si lo usé, está justificado.
+- [ ] Busqué en los campos adecuados (título, resumen, palabras clave; descriptores).
+- [ ] Adapté la sintaxis a cada base.
+- [ ] La cadena recupera mi conjunto de validación.
+
+**Las fuentes**
+
+- [ ] Usé al menos una base multidisciplinaria, una disciplinar y una regional.
+- [ ] Hice búsqueda por citas (hacia atrás y hacia adelante).
+- [ ] Busqué literatura gris si corresponde.
+
+**La documentación**
+
+- [ ] Registré en la bitácora cada cadena textual, base, fecha, filtros y resultados.
+- [ ] Anoté los números para el diagrama de flujo.
+- [ ] Registré qué herramientas de IA usé, para qué y cómo verifiqué.
+- [ ] Las referencias están en un gestor bibliográfico, sin duplicados.
+
+---
+
+[← Capítulo 12](../capitulos/12-gestionar-y-escribir.md) · [Índice](../README.md) · [Anexo B →](B-glosario.md)

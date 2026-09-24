@@ -1,0 +1,169 @@
+# Capítulo 9. Búsqueda por citas y estrategias complementarias
+
+**En este capítulo vas a aprender:**
+
+- a seguir las citas hacia atrás y hacia adelante a partir de un artículo;
+- a usar herramientas de mapas de citas;
+- a buscar por autor y por revista;
+- a encontrar literatura gris;
+- a mantener tu búsqueda actualizada con alertas;
+- a decidir cuándo parar.
+
+---
+
+## 9.1 Por qué la cadena no alcanza
+
+Aun la mejor cadena de búsqueda pierde estudios: artículos que usan una terminología inesperada, que no tienen resumen, que no están indizados en las bases elegidas o que se publicaron como capítulos de libro o informes. Por eso las búsquedas completas combinan la cadena con **estrategias complementarias**. En las revisiones sistemáticas, algunas de ellas —sobre todo la búsqueda por citas— son prácticamente obligatorias y se reportan en la columna "otros métodos" del diagrama PRISMA (capítulo 8).
+
+## 9.2 Búsqueda por citas (*snowballing*)
+
+La idea es simple: los artículos relevantes citan a otros artículos relevantes y son citados por ellos. A partir de un conjunto inicial de artículos **semilla**, se sigue la red de citas en dos direcciones:
+
+```mermaid
+flowchart LR
+    A["Artículos más antiguos<br/>(las referencias de la semilla)"] -- "hacia atrás<br/>(backward)" --- S(("Artículo<br/>semilla"))
+    S -- "hacia adelante<br/>(forward)" --- B["Artículos más nuevos<br/>(los que citan a la semilla)"]
+```
+
+### Hacia atrás (*backward citation searching*)
+
+Se revisa la **lista de referencias** de cada artículo semilla y se identifican las que pueden ser relevantes. Es la técnica más antigua y la más fácil: solo hace falta leer la bibliografía.
+
+### Hacia adelante (*forward citation searching*)
+
+Se buscan los **artículos que citaron** a la semilla después de su publicación. Permite encontrar investigaciones más recientes que continuaron, discutieron o refutaron ese trabajo. Dónde hacerlo:
+
+- **Google Académico**: enlace "Citado por" debajo de cada resultado.
+- **Scopus**: "Cited by" en el registro del artículo.
+- **Web of Science**: "Times Cited" / "Citing articles".
+- **Semantic Scholar**, **OpenAlex** y **Lens.org**: gratuitas.
+
+### El procedimiento, paso a paso
+
+1. Elegí un **conjunto de semillas**: de 3 a 10 artículos muy relevantes, variados (distintos autores, años y países).
+2. Para cada semilla, revisá las referencias (hacia atrás) y los artículos que la citan (hacia adelante).
+3. Aplicá los **mismos criterios de inclusión** que usaste para la cadena.
+4. Los nuevos artículos incluidos se convierten en **semillas de la siguiente iteración**.
+5. Repetí hasta que no aparezcan artículos nuevos relevantes (**saturación**).
+6. Registrá cada iteración: qué semillas, cuántos candidatos, cuántos incluidos.
+
+Este procedimiento está descrito en detalle por Wohlin (2014), en el contexto de la ingeniería de software, pero se aplica a cualquier disciplina.
+
+> [!TIP]
+> **Empezá por las revisiones.** Una revisión sistemática reciente sobre tu tema es la mejor semilla posible: sus referencias son, casi por definición, los estudios relevantes hasta la fecha de su búsqueda, y los artículos que la citan son en buena medida los posteriores.
+
+> [!WARNING]
+> **Sesgo de citación.** Los artículos con resultados positivos o de grupos muy visibles se citan más. Si solo seguís citas, tu muestra de antecedentes puede quedar sesgada. Por eso la búsqueda por citas **complementa** a la búsqueda en bases de datos, no la reemplaza.
+
+## 9.3 Herramientas de mapas de citas
+
+Existen herramientas que automatizan la búsqueda por citas y la muestran como **mapas** o redes: a partir de uno o varios artículos semilla, dibujan los artículos conectados por citas o por similitud. Algunas usan algoritmos de recomendación o aprendizaje automático; se retoman en el capítulo 10.
+
+| Herramienta | Qué hace | Acceso |
+|---|---|---|
+| **Connected Papers** | Construye un grafo de artículos similares a una semilla, según citas compartidas (cocitación y acoplamiento bibliográfico). | Gratuita con límite mensual |
+| **Litmaps** | Mapas de citas a partir de una o varias semillas, con línea de tiempo; permite alertas. | Versión gratuita limitada |
+| **ResearchRabbit** | Colecciones de artículos a partir de las cuales sugiere trabajos similares, anteriores, posteriores y autores. | Gratuita (con planes pagos) |
+| **Inciteful** | Construye una red de citas y ordena los artículos por importancia dentro de ella. | Gratuita |
+| **citationchaser** | Hace la búsqueda por citas hacia atrás y hacia adelante de un conjunto de artículos y exporta los resultados (RIS) para cribarlos; pensada para revisiones sistemáticas. | Gratuita, código abierto |
+
+> [!NOTE]
+> Estas herramientas dependen de índices de citas abiertos (como OpenAlex, Semantic Scholar o Crossref), cuya cobertura de revistas latinoamericanas y en español es **incompleta**. Un artículo de una revista regional puede aparecer sin referencias o sin las citas que recibió. Completá siempre a mano con Google Académico.
+
+## 9.4 Buscar por autor
+
+Cuando identificás autores que publican con frecuencia sobre tu tema:
+
+- Buscá su **perfil** en Google Académico, Scopus (*Author search*), ORCID o en la página de su institución.
+- Revisá su **producción completa**: es probable que tengan otros trabajos relevantes, incluidas tesis dirigidas y capítulos de libro.
+- Ojo con los **nombres ambiguos** y las **variantes del apellido** (con o sin tilde, con uno o dos apellidos, con o sin guion). Los investigadores latinoamericanos aparecen a menudo con el nombre partido de formas distintas: *García-López, M.*, *García López, M.*, *López, M. G.* El identificador **ORCID** resuelve esta ambigüedad.
+- Si un estudio te genera dudas o no conseguís el texto, **escribile**: es una práctica aceptada en todas las disciplinas, y en las revisiones sistemáticas se reporta como "contacto con autores".
+
+## 9.5 Búsqueda manual en revistas (*hand searching*)
+
+Consiste en revisar, número por número, el índice de las revistas más importantes para tu tema durante un período. Parece anticuado, pero encuentra artículos que las bases indizan mal: editoriales, cartas, artículos sin resumen, números especiales. Es especialmente útil para revistas regionales o de disciplinas pequeñas.
+
+## 9.6 Literatura gris
+
+Se llama **literatura gris** a los documentos producidos por gobiernos, universidades, empresas y organizaciones que no se publican a través de editoriales académicas o comerciales. Incluye:
+
+- **tesis** de maestría y doctorado;
+- **informes técnicos** y de investigación;
+- **documentos de organismos** internacionales y regionales;
+- **documentos de trabajo** (*working papers*);
+- **actas de congresos** y pósteres;
+- **normas, políticas, legislación** y documentos oficiales;
+- **registros de ensayos clínicos** y de estudios;
+- **datos** abiertos.
+
+Por qué importa:
+
+- **Sesgo de publicación.** Los estudios con resultados "negativos" o no significativos se publican menos en revistas. Parte de ellos sobrevive en tesis e informes.
+- **Contexto local.** Mucha información sobre políticas, programas y poblaciones de América Latina solo existe en informes de ministerios, universidades y organismos.
+- **Actualidad.** Los informes técnicos suelen adelantarse a los artículos.
+
+Dónde buscarla:
+
+| Tipo | Fuentes |
+|---|---|
+| Tesis | Repositorios institucionales, SNRD y CONICET Digital (Argentina), La Referencia, OATD, NDLTD, TESEO (España) |
+| Organismos regionales e internacionales | CEPAL (repositorio digital), OPS/OMS (IRIS), UNESCO (UNESDOC), UNICEF, Banco Mundial (*Open Knowledge Repository*), BID, OCDE |
+| Ciencias sociales | Biblioteca virtual de CLACSO, SSRN, RePEc |
+| Salud | Registros de ensayos (ClinicalTrials.gov, ICTRP de la OMS), BVS |
+| Gobierno | Sitios de ministerios, institutos de estadística (INDEC en Argentina), boletines oficiales |
+| General | Google (con `site:` y `filetype:pdf`), Google Académico |
+
+> [!TIP]
+> **Google como herramienta de búsqueda de literatura gris.** Dos operadores son muy útiles:
+>
+> ```text
+> "estrés académico" universitarios site:edu.ar filetype:pdf
+> "salud mental" estudiantes informe site:gob.ar
+> ```
+>
+> `site:` limita a un dominio (por ejemplo, universidades argentinas o sitios del gobierno) y `filetype:pdf` a documentos PDF. Como Google no es reproducible, anotá la fecha, la cadena y cuántas páginas de resultados revisaste (por ejemplo, las primeras 100 entradas).
+
+## 9.7 Alertas: mantener la búsqueda al día
+
+Una búsqueda es una foto de un momento. Si tu trabajo dura meses, van a aparecer artículos nuevos. Para no perderlos:
+
+- **Alertas de búsqueda**: guardá tu cadena en Scopus, Web of Science, PubMed (*My NCBI*), EBSCO o Google Académico, y activá el aviso por correo cuando haya resultados nuevos.
+- **Alertas de citas**: pedí que te avisen cuando alguien cite un artículo clave.
+- **Alertas de revistas**: suscribite a los índices de las revistas centrales de tu tema (por correo o RSS).
+- **Herramientas de mapas de citas**: algunas, como Litmaps o ResearchRabbit, avisan cuando aparece un artículo conectado con tu colección.
+
+En una revisión sistemática, antes de terminar se hace una **actualización de la búsqueda** y se reporta su fecha.
+
+## 9.8 ¿Cuándo parar?
+
+No existe una regla universal, pero hay señales de que la búsqueda está completa:
+
+- Las nuevas búsquedas y las nuevas iteraciones de citas devuelven **artículos que ya tenés**.
+- Tu **conjunto de validación** (capítulo 5) se recupera completo.
+- Los artículos más recientes que encontrás **citan los mismos antecedentes** que vos ya identificaste.
+- Revisaste todas las fuentes que te propusiste en el protocolo.
+
+> [!IMPORTANT]
+> Parar no es un fracaso: toda búsqueda tiene límites. Lo importante es **documentar dónde paraste y por qué**, para que el lector sepa qué cubre tu revisión y qué no.
+
+---
+
+## Resumen
+
+- La búsqueda por citas, hacia atrás (referencias) y hacia adelante (quién cita), encuentra estudios que la cadena pierde.
+- Las herramientas de mapas de citas (Connected Papers, Litmaps, ResearchRabbit, Inciteful, citationchaser) aceleran el proceso, pero su cobertura de la literatura regional es limitada.
+- Buscar por autor, revisar revistas a mano y contactar autores son estrategias complementarias legítimas.
+- La literatura gris reduce el sesgo de publicación y aporta el contexto local.
+- Las alertas mantienen la búsqueda actualizada; se para cuando los resultados se saturan, y se documenta.
+
+## Actividad
+
+1. Elegí tres artículos semilla de tu tema (idealmente, una revisión y dos estudios empíricos).
+2. Hacé una iteración de búsqueda hacia atrás y hacia adelante. ¿Cuántos artículos nuevos relevantes encontraste que no había devuelto tu cadena?
+3. Cargá las mismas semillas en una herramienta de mapas de citas y compará los resultados con los de tu búsqueda manual.
+4. Buscá literatura gris sobre tu tema en al menos dos fuentes de la tabla de la sección 9.6.
+5. Configurá una alerta de búsqueda y una alerta de citas.
+
+---
+
+[← Capítulo 8](08-revisiones-y-prisma.md) · [Índice](../README.md) · [Capítulo 10 →](10-inteligencia-artificial.md)

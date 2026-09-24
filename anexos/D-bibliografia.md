@@ -1,0 +1,103 @@
+# Anexo D. Bibliografía
+
+Referencias citadas en la guía, en formato APA 7 adaptado al español. Por razones de espacio, en las referencias con muchos autores se abrevia la lista con "et al."; en tus trabajos, seguí la regla completa de APA 7 (hasta 20 autores).
+
+---
+
+## D.1 Referencias citadas
+
+American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7.ª ed.). https://doi.org/10.1037/0000165-000
+
+Amano, T., González-Varo, J. P., y Sutherland, W. J. (2016). Languages are still a major barrier to global science. *PLOS Biology, 14*(12), e2000933. https://doi.org/10.1371/journal.pbio.2000933
+
+Amano, T., Berdejo-Espinola, V., Christie, A. P., et al. (2021). Tapping into non-English-language science for the conservation of global biodiversity. *PLOS Biology, 19*(10), e3001296. https://doi.org/10.1371/journal.pbio.3001296
+
+Aromataris, E., Lockwood, C., Porritt, K., Pilla, B., y Jordan, Z. (Eds.). (2024). *JBI manual for evidence synthesis*. JBI. https://doi.org/10.46658/JBIMES-24-01
+
+Blakeslee, S. (2004). The CRAAP test. *LOEX Quarterly, 31*(3), 6-7.
+
+Booth, A. (2006). Clear and present questions: Formulating questions for evidence based practice. *Library Hi Tech, 24*(3), 355-368. https://doi.org/10.1108/07378830610692127
+
+Bramer, W. M., Rethlefsen, M. L., Kleijnen, J., y Franco, O. H. (2017). Optimal database combinations for literature searches in systematic reviews: A prospective exploratory study. *Systematic Reviews, 6*, 245. https://doi.org/10.1186/s13643-017-0644-y
+
+Cohen, J. (1960). A coefficient of agreement for nominal scales. *Educational and Psychological Measurement, 20*(1), 37-46. https://doi.org/10.1177/001316446002000104
+
+Cooke, A., Smith, D., y Booth, A. (2012). Beyond PICO: The SPIDER tool for qualitative evidence synthesis. *Qualitative Health Research, 22*(10), 1435-1443. https://doi.org/10.1177/1049732312452938
+
+Denyer, D., Tranfield, D., y van Aken, J. E. (2008). Developing design propositions through research synthesis. *Organization Studies, 29*(3), 393-413. https://doi.org/10.1177/0170840607088020
+
+Egger, M., Zellweger-Zähner, T., Schneider, M., Junker, C., Lengeler, C., y Antes, G. (1997). Language bias in randomised controlled trials published in English and German. *The Lancet, 350*(9074), 326-329.
+
+Flemyng, E., Noel-Storr, A., Macura, B., et al. (2025). Position statement on artificial intelligence (AI) use in evidence synthesis across Cochrane, the Campbell Collaboration, JBI and the Collaboration for Environmental Evidence 2025. *Environmental Evidence, 14*, 20. https://doi.org/10.1186/s13750-025-00374-5
+
+Grant, M. J., y Booth, A. (2009). A typology of reviews: An analysis of 14 review types and associated methodologies. *Health Information & Libraries Journal, 26*(2), 91-108. https://doi.org/10.1111/j.1471-1842.2009.00848.x
+
+Grudniewicz, A., Moher, D., Cobey, K. D., et al. (2019). Predatory journals: No definition, no defence. *Nature, 576*(7786), 210-212. https://doi.org/10.1038/d41586-019-03759-y
+
+Gusenbauer, M., y Haddaway, N. R. (2020). Which academic search systems are suitable for systematic reviews or meta-analyses? Evaluating retrieval qualities of Google Scholar, PubMed, and 26 other resources. *Research Synthesis Methods, 11*(2), 181-217. https://doi.org/10.1002/jrsm.1378
+
+Haddaway, N. R., Collins, A. M., Coughlin, D., y Kirk, S. (2015). The role of Google Scholar in evidence reviews and its applicability to grey literature searching. *PLOS ONE, 10*(9), e0138237. https://doi.org/10.1371/journal.pone.0138237
+
+Haddaway, N. R., Page, M. J., Pritchard, C. C., y McGuinness, L. A. (2022). PRISMA2020: An R package and Shiny app for producing PRISMA 2020-compliant flow diagrams, with interactivity for optimised digital transparency and Open Synthesis. *Campbell Systematic Reviews, 18*(2), e1230. https://doi.org/10.1002/cl2.1230
+
+Hicks, D., Wouters, P., Waltman, L., de Rijcke, S., y Rafols, I. (2015). Bibliometrics: The Leiden Manifesto for research metrics. *Nature, 520*(7548), 429-431. https://doi.org/10.1038/520429a
+
+Higgins, J. P. T., Thomas, J., Chandler, J., Cumpston, M., Li, T., Page, M. J., y Welch, V. A. (Eds.). (2024). *Cochrane handbook for systematic reviews of interventions* (versión 6.5). Cochrane. https://training.cochrane.org/handbook
+
+Hong, Q. N., Fàbregues, S., Bartlett, G., et al. (2018). The Mixed Methods Appraisal Tool (MMAT) version 2018 for information professionals and researchers. *Education for Information, 34*(4), 285-291. https://doi.org/10.3233/EFI-180221
+
+Hulley, S. B., Cummings, S. R., Browner, W. S., Grady, D. G., y Newman, T. B. (2013). *Designing clinical research* (4.ª ed.). Lippincott Williams & Wilkins.
+
+Keshav, S. (2007). How to read a paper. *ACM SIGCOMM Computer Communication Review, 37*(3), 83-84. https://doi.org/10.1145/1273445.1273458
+
+Landis, J. R., y Koch, G. G. (1977). The measurement of observer agreement for categorical data. *Biometrics, 33*(1), 159-174. https://doi.org/10.2307/2529310
+
+McAdoo, T. (2023, 7 de abril). *How to cite ChatGPT*. APA Style Blog. https://apastyle.apa.org/blog/how-to-cite-chatgpt
+
+McGowan, J., Sampson, M., Salzwedel, D. M., Cogo, E., Foerster, V., y Lefebvre, C. (2016). PRESS Peer Review of Electronic Search Strategies: 2015 guideline statement. *Journal of Clinical Epidemiology, 75*, 40-46. https://doi.org/10.1016/j.jclinepi.2016.01.021
+
+Moher, D., Shamseer, L., Clarke, M., et al. (2015). Preferred reporting items for systematic review and meta-analysis protocols (PRISMA-P) 2015 statement. *Systematic Reviews, 4*, 1. https://doi.org/10.1186/2046-4053-4-1
+
+Ouzzani, M., Hammady, H., Fedorowicz, Z., y Elmagarmid, A. (2016). Rayyan—a web and mobile app for systematic reviews. *Systematic Reviews, 5*, 210. https://doi.org/10.1186/s13643-016-0384-4
+
+Page, M. J., McKenzie, J. E., Bossuyt, P. M., et al. (2021a). The PRISMA 2020 statement: An updated guideline for reporting systematic reviews. *BMJ, 372*, n71. https://doi.org/10.1136/bmj.n71
+
+Page, M. J., McKenzie, J. E., Bossuyt, P. M., et al. (2021b). Declaración PRISMA 2020: una guía actualizada para la publicación de revisiones sistemáticas. *Revista Española de Cardiología, 74*(9), 790-799. https://doi.org/10.1016/j.recesp.2021.06.016
+
+Petticrew, M., y Roberts, H. (2006). *Systematic reviews in the social sciences: A practical guide*. Blackwell.
+
+Rethlefsen, M. L., Kirtley, S., Waffenschmidt, S., et al. (2021). PRISMA-S: An extension to the PRISMA Statement for Reporting Literature Searches in Systematic Reviews. *Systematic Reviews, 10*, 39. https://doi.org/10.1186/s13643-020-01542-z
+
+Richardson, W. S., Wilson, M. C., Nishikawa, J., y Hayward, R. S. (1995). The well-built clinical question: A key to evidence-based decisions. *ACP Journal Club, 123*(3), A12-A13. https://doi.org/10.7326/ACPJC-1995-123-3-A12
+
+Sterne, J. A. C., Savović, J., Page, M. J., et al. (2019). RoB 2: A revised tool for assessing risk of bias in randomised trials. *BMJ, 366*, l4898. https://doi.org/10.1136/bmj.l4898
+
+Tricco, A. C., Lillie, E., Zarin, W., et al. (2018). PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and explanation. *Annals of Internal Medicine, 169*(7), 467-473. https://doi.org/10.7326/M18-0850
+
+van de Schoot, R., de Bruin, J., Schram, R., et al. (2021). An open source machine learning framework for efficient and transparent systematic reviews. *Nature Machine Intelligence, 3*(2), 125-133. https://doi.org/10.1038/s42256-020-00287-7
+
+Walters, W. H., y Wilder, E. I. (2023). Fabrication and errors in the bibliographic citations generated by ChatGPT. *Scientific Reports, 13*, 14045. https://doi.org/10.1038/s41598-023-41032-5
+
+Wildridge, V., y Bell, L. (2002). How CLIP became ECLIPSE: A mnemonic to assist in searching for health policy/management information. *Health Information and Libraries Journal, 19*(2), 113-115. https://doi.org/10.1046/j.1471-1842.2002.00378.x
+
+Wineburg, S., y McGrew, S. (2019). Lateral reading and the nature of expertise: Reading less and learning more when evaluating digital information. *Teachers College Record, 121*(11), 1-40.
+
+Wohlin, C. (2014). Guidelines for snowballing in systematic literature studies and a replication in software engineering. En *Proceedings of the 18th International Conference on Evaluation and Assessment in Software Engineering* (artículo 38). ACM. https://doi.org/10.1145/2601248.2601268
+
+---
+
+## D.2 Para profundizar
+
+Arksey, H., y O'Malley, L. (2005). Scoping studies: Towards a methodological framework. *International Journal of Social Research Methodology, 8*(1), 19-32. https://doi.org/10.1080/1364557032000119616
+
+Booth, A., Sutton, A., Clowes, M., y Martyn-St James, M. (2022). *Systematic approaches to a successful literature review* (3.ª ed.). SAGE.
+
+Codina, L. (2020). Cómo hacer revisiones bibliográficas tradicionales o sistemáticas utilizando bases de datos académicas. *Revista ORL, 11*(2), 139-153. https://doi.org/10.14201/orl.22977
+
+Hernández-Sampieri, R., y Mendoza, C. P. (2018). *Metodología de la investigación: Las rutas cuantitativa, cualitativa y mixta*. McGraw-Hill Education.
+
+Kitchenham, B., y Charters, S. (2007). *Guidelines for performing systematic literature reviews in software engineering* (EBSE Technical Report EBSE-2007-01). Keele University y Durham University.
+
+---
+
+[← Anexo C](C-recursos.md) · [Índice](../README.md)

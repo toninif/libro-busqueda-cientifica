@@ -1,0 +1,279 @@
+# Capítulo 5. Operadores y cadenas de búsqueda
+
+**En este capítulo vas a aprender:**
+
+- a combinar términos con los operadores booleanos `AND`, `OR` y `NOT`;
+- a usar paréntesis y operadores de proximidad;
+- a construir una cadena de búsqueda paso a paso a partir de una tabla de conceptos;
+- a adaptar la misma cadena a distintas bases de datos;
+- a evaluar si una cadena es buena: sensibilidad y precisión.
+
+---
+
+## 5.1 Los operadores booleanos
+
+Los operadores booleanos (por el matemático George Boole) indican cómo se relacionan los términos entre sí. Se escriben **en mayúsculas** en casi todas las bases.
+
+| Operador | Significado | Efecto | Ejemplo |
+|---|---|---|---|
+| `OR` | Cualquiera de los términos | **Amplía**: más resultados | `estrés OR distrés` |
+| `AND` | Todos los términos | **Restringe**: menos resultados | `mindfulness AND estrés` |
+| `NOT` | Excluye un término | **Restringe** (con riesgo) | `adolescentes NOT niños` |
+
+Un ejemplo con seis documentos numerados:
+
+```text
+Documentos que contienen A: 1, 2, 3, 4
+Documentos que contienen B:       3, 4, 5, 6
+
+A OR B   →  1, 2, 3, 4, 5, 6   (todo lo que tenga A, B o ambos)
+A AND B  →        3, 4         (solo lo que tenga A y B a la vez)
+A NOT B  →  1, 2               (lo que tenga A pero no B)
+```
+
+Una regla sencilla para recordar:
+
+> [!IMPORTANT]
+> **`OR` une sinónimos dentro de un mismo concepto. `AND` une conceptos distintos.**
+
+### El peligro de `NOT`
+
+`NOT` excluye **cualquier** documento que mencione el término, aunque sea de pasada. Si buscás `adolescentes NOT niños` para quitar los estudios sobre infancia, también vas a eliminar un estudio sobre adolescentes cuyo resumen dice "a diferencia de lo observado en niños…". Usá `NOT` con mucha cautela y, en una revisión sistemática, casi nunca. Es preferible excluir manualmente durante el cribado (capítulo 8) o usar los filtros de la base.
+
+> [!NOTE]
+> En **Scopus** el operador de exclusión se escribe `AND NOT`. En **Google Académico** se usa el signo menos pegado al término: `-niños`.
+
+## 5.2 Los paréntesis y el orden de las operaciones
+
+Cuando una cadena combina `AND` y `OR`, los **paréntesis** indican qué se resuelve primero, igual que en matemática.
+
+```text
+mindfulness OR meditación AND estrés
+```
+
+¿Significa "(mindfulness o meditación) y estrés" o "mindfulness o (meditación y estrés)"? Depende de la base: cada una tiene su propio orden de precedencia. Por ejemplo, en Scopus `OR` se resuelve antes que `AND`, mientras que otras bases resuelven `AND` primero o leen de izquierda a derecha. La solución es no depender de esas reglas:
+
+```text
+(mindfulness OR meditación) AND estrés
+```
+
+> [!WARNING]
+> **Error frecuente: olvidar los paréntesis.** Siempre agrupá con paréntesis los sinónimos de cada concepto, aunque creas que la base lo va a interpretar bien. Es la causa más común de resultados absurdos.
+
+## 5.3 Operadores de proximidad
+
+Los operadores de proximidad buscan términos **cerca** uno del otro, a una distancia máxima de *n* palabras. Están a mitad de camino entre `AND` (en cualquier lugar del documento) y la frase exacta (juntos y en ese orden).
+
+Ejemplo: queremos *academic stress*, pero también *stress in academic settings*, *academic-related stress* o *stress of academic origin*.
+
+| Base | Sintaxis | Orden |
+|---|---|---|
+| Scopus | `academic W/3 stress` | Cualquier orden |
+| Scopus | `academic PRE/3 stress` | El primero antes del segundo |
+| Web of Science | `academic NEAR/3 stress` | Cualquier orden |
+| EBSCOhost | `academic N3 stress` | Cualquier orden |
+| EBSCOhost | `academic W3 stress` | En ese orden |
+| Ovid | `(academic adj3 stress).ti,ab.` | Cualquier orden |
+| PubMed | `"academic stress"[tiab:~3]` | Cualquier orden, en título o resumen |
+
+La forma exacta de contar la distancia (si *n* incluye o no a los propios términos) varía entre bases, y no todas permiten combinar proximidad con frases o truncamientos. Google Académico, SciELO y la mayoría de las bases regionales **no** tienen operadores de proximidad.
+
+## 5.4 Construir una cadena paso a paso
+
+Vamos a transformar la tabla de conceptos del caso guía (capítulo 2) en una cadena. El método es siempre el mismo:
+
+### Paso 1: una columna por concepto
+
+| Población | Intervención | Resultado |
+|---|---|---|
+| "university student\*" | mindfulness | stress |
+| "college student\*" | mindful\* | distress |
+| undergraduate\* | meditat\* | "academic stress" |
+| "higher education" | MBSR | burnout |
+| | "mindfulness-based stress reduction" | |
+
+### Paso 2: unir los términos de cada columna con `OR` y encerrarlos entre paréntesis
+
+```text
+("university student*" OR "college student*" OR undergraduate* OR "higher education")
+(mindful* OR meditat* OR MBSR OR "mindfulness-based stress reduction")
+(stress OR distress OR burnout)
+```
+
+(`mindful*` ya incluye *mindfulness*, y `stress` ya aparece dentro de la frase *academic stress*, por eso algunos términos de la tabla no hace falta escribirlos.)
+
+### Paso 3: unir los bloques con `AND`
+
+```text
+("university student*" OR "college student*" OR undergraduate* OR "higher education")
+AND (mindful* OR meditat* OR MBSR OR "mindfulness-based stress reduction")
+AND (stress OR distress OR burnout)
+```
+
+### Paso 4: adaptar a los campos y la sintaxis de cada base
+
+Ver la sección 5.5.
+
+### Paso 5: probar, revisar y ajustar
+
+- Mirá los primeros 50 resultados: ¿cuántos son pertinentes?
+- Verificá que la cadena encuentre los **artículos que ya sabés que son relevantes** (tu conjunto de validación, sección 5.7).
+- Si hay demasiado ruido, identificá qué término lo produce. Si faltan estudios, averiguá qué palabras usan y agregalas.
+- Registrá cada versión en la bitácora.
+
+> [!TIP]
+> **Construí la cadena por bloques en el historial de búsqueda.** Casi todas las bases avanzadas (PubMed, Scopus, Web of Science, EBSCO, Ovid) tienen un historial donde cada búsqueda queda numerada (#1, #2, #3). Buscá cada concepto por separado y después combinalos: `#1 AND #2 AND #3`. Así ves cuántos resultados aporta cada bloque y detectás rápido cuál está fallando.
+
+## 5.5 La misma cadena en distintas bases
+
+Cada base tiene su propia sintaxis. Estas son las versiones del caso guía:
+
+**PubMed** (combinando MeSH y palabras en título/resumen):
+
+```text
+("Students"[Mesh] OR "university student*"[tiab] OR "college student*"[tiab]
+  OR undergraduate*[tiab] OR "higher education"[tiab])
+AND ("Mindfulness"[Mesh] OR "Meditation"[Mesh] OR mindful*[tiab]
+  OR meditat*[tiab] OR MBSR[tiab])
+AND ("Stress, Psychological"[Mesh] OR stress[tiab] OR distress[tiab]
+  OR burnout[tiab])
+```
+
+**Scopus**:
+
+```text
+TITLE-ABS-KEY(
+  ("university student*" OR "college student*" OR undergraduate* OR "higher education")
+  AND (mindful* OR meditat* OR mbsr OR "mindfulness-based stress reduction")
+  AND (stress OR distress OR burnout)
+)
+```
+
+**Web of Science** (búsqueda avanzada):
+
+```text
+TS=(("university student*" OR "college student*" OR undergraduate* OR "higher education")
+AND (mindful* OR meditat* OR MBSR OR "mindfulness-based stress reduction")
+AND (stress OR distress OR burnout))
+```
+
+**APA PsycInfo en EBSCOhost** (combinando descriptores `DE` y palabras en título `TI` y resumen `AB`):
+
+```text
+(DE "College Students" OR TI ("university student*" OR "college student*" OR undergraduate*)
+  OR AB ("university student*" OR "college student*" OR undergraduate*))
+AND (DE "Mindfulness" OR DE "Meditation" OR TI (mindful* OR meditat* OR MBSR)
+  OR AB (mindful* OR meditat* OR MBSR))
+AND (TI (stress OR distress OR burnout) OR AB (stress OR distress OR burnout))
+```
+
+**Google Académico** (sin truncamiento ni paréntesis anidados; conviene ser breve):
+
+```text
+mindfulness "university students" OR "college students" "academic stress"
+```
+
+**SciELO** (bilingüe; ver capítulo 6):
+
+```text
+(mindfulness OR "atención plena") AND (universitarios OR "estudiantes universitarios"
+  OR "university students") AND (estrés OR stress)
+```
+
+> [!NOTE]
+> **Traducir cadenas entre bases.** Existen herramientas que convierten automáticamente la sintaxis de una base a otra, como **Polyglot Search Translator** (del proyecto *SR-Accelerator*). Ahorran tiempo, pero no traducen los descriptores entre tesauros (MeSH ≠ APA ≠ Emtree): eso hay que hacerlo a mano. También podés pedírselo a un asistente de IA, siempre verificando el resultado (capítulo 10).
+
+## 5.6 Resumen de sintaxis por base
+
+| Función | PubMed | Scopus | Web of Science | EBSCOhost | Google Académico |
+|---|---|---|---|---|---|
+| Y | `AND` | `AND` | `AND` | `AND` | espacio |
+| O | `OR` | `OR` | `OR` | `OR` | `OR` |
+| Excluir | `NOT` | `AND NOT` | `NOT` | `NOT` | `-término` |
+| Frase | `"..."` | `"..."` (flexible) / `{...}` (exacta) | `"..."` | `"..."` | `"..."` |
+| Truncamiento | `*` | `*` | `*` | `*` | No |
+| Proximidad | `"a b"[tiab:~n]` | `W/n`, `PRE/n` | `NEAR/n` | `Nn`, `Wn` | No |
+| Título/resumen | `[tiab]` | `TITLE-ABS-KEY()` / `TITLE-ABS()` | `TS=` / `TI=` / `AB=` | `TI`, `AB` | `intitle:` (solo título) |
+| Vocabulario controlado | `[Mesh]` | `INDEXTERMS()` | — (no tiene tesauro general) | `DE` o `SU` (según la base) | — |
+
+Estas convenciones cambian con el tiempo. Ante la duda, consultá la ayuda de cada base (*Search tips*, *Help*, *Syntax*).
+
+## 5.7 ¿Es buena mi cadena? Sensibilidad y precisión
+
+Toda búsqueda enfrenta un equilibrio entre dos propiedades:
+
+- **Sensibilidad** (*recall*, exhaustividad): qué proporción de los documentos relevantes que existen recupera la búsqueda.
+- **Precisión**: qué proporción de los documentos recuperados son relevantes.
+
+```text
+                    documentos relevantes recuperados
+Sensibilidad = ────────────────────────────────────────────
+                 total de documentos relevantes que existen
+
+                    documentos relevantes recuperados
+Precisión    = ────────────────────────────────────────────
+                       total de documentos recuperados
+```
+
+Casi siempre, **aumentar una disminuye la otra**. Agregar sinónimos con `OR` sube la sensibilidad y baja la precisión; agregar conceptos con `AND` o buscar solo en el título hace lo contrario.
+
+| Objetivo | Prioridad | Estrategia |
+|---|---|---|
+| Exploración, trabajo práctico | Precisión | Pocos conceptos bien elegidos, búsqueda en título, filtros. |
+| Tesina o tesis | Equilibrio | Dos o tres conceptos con sinónimos, título-resumen-palabras clave. |
+| Revisión sistemática | Sensibilidad | Muchos sinónimos, vocabulario controlado + palabras clave, pocos filtros, varias bases. Se acepta revisar miles de resultados. |
+
+### El conjunto de validación
+
+Como no conocemos el "total de documentos relevantes que existen", la sensibilidad no se puede calcular directamente. Una técnica práctica es armar un **conjunto de validación** (*gold standard*): de 5 a 20 artículos que sabés que son relevantes (por tu exploración, por una revisión previa o porque te los recomendaron). Después verificás si la cadena los recupera:
+
+- Si recupera todos, es una buena señal.
+- Si se le escapa alguno, abrí ese artículo y fijate por qué: ¿usa un sinónimo que no incluiste? ¿no tiene resumen? ¿no está indizado en esa base?
+
+> [!TIP]
+> En revisiones sistemáticas se recomienda que un bibliotecario o una bibliotecaria revise la estrategia de búsqueda antes de ejecutarla. Existe una guía para esa revisión, **PRESS** (*Peer Review of Electronic Search Strategies*; McGowan et al., 2016), cuya lista de control también sirve para autoevaluar tu cadena: traducción de la pregunta, operadores, vocabulario controlado, sintaxis, ortografía y filtros.
+
+## 5.8 Filtros y límites
+
+Las bases ofrecen filtros por año, idioma, tipo de documento, área temática, acceso abierto, edad de los participantes, etc. Son útiles, pero:
+
+- **Todo filtro se reporta.** Si limitaste a 2016-2026 o a artículos en inglés, tiene que constar en la bitácora y en el método.
+- **Los filtros dependen de la indización.** Un filtro por "adolescentes" o por "ensayo clínico" solo funciona si la base asignó bien esa etiqueta; los artículos recientes, aún no indizados, pueden quedar afuera.
+- **Filtrar por idioma introduce sesgo** (capítulo 6). Justificalo o evitalo.
+- **Filtros metodológicos validados.** En salud existen cadenas probadas para recuperar ciertos diseños, como la *Cochrane Highly Sensitive Search Strategy* para ensayos controlados aleatorizados en MEDLINE. Usá esas en lugar de inventar la tuya.
+
+## 5.9 Errores frecuentes
+
+| Error | Consecuencia | Solución |
+|---|---|---|
+| Unir sinónimos con `AND` | Muy pocos resultados | Sinónimos con `OR`, conceptos con `AND`. |
+| Olvidar paréntesis | Resultados absurdos | Agrupar cada concepto entre paréntesis. |
+| Demasiados conceptos unidos con `AND` | Se pierden estudios relevantes | Dejar los dos o tres conceptos centrales. |
+| Buscar en "todos los campos" | Mucho ruido | Título, resumen y palabras clave. |
+| Truncar demasiado pronto (`ed*`) | Ruido | Truncar después de la raíz significativa. |
+| Usar `NOT` para limpiar | Se pierden estudios relevantes | Excluir durante el cribado. |
+| Copiar la cadena de PubMed en Scopus sin adaptarla | Errores o resultados vacíos | Adaptar campos, tesauro y operadores. |
+| Buscar solo en inglés | Se pierde literatura regional | Cadena bilingüe (capítulo 6). |
+| No guardar la cadena | No se puede reproducir ni reportar | Bitácora desde el primer día. |
+
+---
+
+## Resumen
+
+- `OR` une sinónimos, `AND` une conceptos, `NOT` se usa con mucho cuidado.
+- Los paréntesis son obligatorios cuando se combinan operadores.
+- Los operadores de proximidad (`W/n`, `NEAR/n`, `Nn`) están entre `AND` y la frase exacta.
+- Una cadena se construye por bloques: una columna de sinónimos por concepto, unidos con `OR`; los bloques, unidos con `AND`.
+- La misma lógica se adapta a la sintaxis de cada base.
+- Sensibilidad y precisión se equilibran según el objetivo; un conjunto de validación ayuda a evaluar la cadena.
+
+## Actividad
+
+1. Con la tabla de conceptos de tu tema, armá una cadena general siguiendo los pasos de la sección 5.4.
+2. Adaptala a dos bases de datos distintas (por ejemplo, Scopus y una base regional). Registrá ambas en la bitácora con la cantidad de resultados.
+3. Elegí cinco artículos que ya sepas que son relevantes y verificá si tu cadena los recupera. Si alguno falta, averiguá por qué y corregí la cadena.
+4. Probá quitar uno de los conceptos. ¿Cuánto cambia la cantidad de resultados? ¿Y la pertinencia de los primeros veinte?
+
+---
+
+[← Capítulo 4](04-busqueda-por-terminos.md) · [Índice](../README.md) · [Capítulo 6 →](06-espanol-e-ingles.md)

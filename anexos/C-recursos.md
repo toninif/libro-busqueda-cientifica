@@ -1,0 +1,148 @@
+# Anexo C. Directorio de recursos
+
+Direcciones a septiembre de 2026. Pueden cambiar: si un enlace no funciona, buscá el nombre del recurso. Para los recursos de suscripción, ingresá desde la página de tu biblioteca.
+
+**Acceso:** 🟢 gratuito · 🟡 gratuito con límites o registro · 🔴 suscripción (consultá tu biblioteca)
+
+---
+
+## C.1 Bases de datos multidisciplinarias y motores académicos
+
+| Recurso | Acceso | Enlace |
+|---|---|---|
+| Google Académico | 🟢 | https://scholar.google.com |
+| Scopus | 🔴 | https://www.scopus.com |
+| Web of Science | 🔴 | https://www.webofscience.com |
+| Semantic Scholar | 🟢 | https://www.semanticscholar.org |
+| OpenAlex | 🟢 | https://openalex.org |
+| Lens.org | 🟢 | https://www.lens.org |
+| Dimensions | 🟡 | https://app.dimensions.ai |
+| BASE (Bielefeld Academic Search Engine) | 🟢 | https://www.base-search.net |
+| CORE | 🟢 | https://core.ac.uk |
+
+## C.2 Bases de datos por disciplina
+
+| Recurso | Área | Acceso | Enlace |
+|---|---|---|---|
+| PubMed | Salud | 🟢 | https://pubmed.ncbi.nlm.nih.gov |
+| Cochrane Library | Salud (revisiones) | 🟡 | https://www.cochranelibrary.com |
+| Epistemonikos | Salud (revisiones; multilingüe) | 🟢 | https://www.epistemonikos.org |
+| Campbell Collaboration | Ciencias sociales, educación (revisiones) | 🟢 | https://www.campbellcollaboration.org |
+| ERIC | Educación | 🟢 | https://eric.ed.gov |
+| APA PsycInfo | Psicología | 🔴 | (vía EBSCOhost, Ovid o ProQuest) |
+| IEEE Xplore | Ingeniería | 🔴 | https://ieeexplore.ieee.org |
+| ACM Digital Library | Informática | 🟡 | https://dl.acm.org |
+| dblp | Informática | 🟢 | https://dblp.org |
+| RePEc / IDEAS | Economía | 🟢 | https://ideas.repec.org |
+| SSRN | Ciencias sociales, derecho, economía | 🟢 | https://www.ssrn.com |
+
+## C.3 Recursos regionales y en español
+
+| Recurso | Acceso | Enlace |
+|---|---|---|
+| SciELO | 🟢 | https://scielo.org (búsqueda: https://search.scielo.org) |
+| Redalyc | 🟢 | https://www.redalyc.org |
+| BVS / LILACS | 🟢 | https://bvsalud.org · https://lilacs.bvsalud.org |
+| Dialnet | 🟡 | https://dialnet.unirioja.es |
+| Latindex | 🟢 | https://www.latindex.org |
+| Biblat | 🟢 | https://biblat.unam.mx |
+| La Referencia | 🟢 | https://www.lareferencia.info |
+| Sistema Nacional de Repositorios Digitales (Argentina) | 🟢 | https://repositoriosdigitales.mincyt.gob.ar |
+| CONICET Digital | 🟢 | https://ri.conicet.gov.ar |
+| Biblioteca Electrónica de Ciencia y Tecnología (Argentina) | 🔴 institucional | https://biblioteca.sicyt.gob.ar |
+| CLACSO – Biblioteca virtual | 🟢 | https://biblioteca-repositorio.clacso.edu.ar |
+
+## C.4 Tesis, preprints y literatura gris
+
+| Recurso | Tipo | Enlace |
+|---|---|---|
+| OATD | Tesis (internacional) | https://oatd.org |
+| NDLTD | Tesis (internacional) | https://ndltd.org |
+| TESEO | Tesis doctorales (España) | https://www.educacion.gob.es/teseo |
+| arXiv | Preprints (física, matemática, informática) | https://arxiv.org |
+| PsyArXiv | Preprints (psicología) | https://osf.io/preprints/psyarxiv |
+| SocArXiv | Preprints (ciencias sociales) | https://osf.io/preprints/socarxiv |
+| medRxiv | Preprints (salud) | https://www.medrxiv.org |
+| SciELO Preprints | Preprints (Iberoamérica) | https://preprints.scielo.org |
+| CEPAL – Repositorio digital | Literatura gris regional | https://repositorio.cepal.org |
+| OPS – IRIS | Literatura gris en salud | https://iris.paho.org |
+| UNESCO – UNESDOC | Educación, ciencia, cultura | https://unesdoc.unesco.org |
+| Banco Mundial – Open Knowledge Repository | Desarrollo, economía | https://openknowledge.worldbank.org |
+| ClinicalTrials.gov | Registro de ensayos | https://clinicaltrials.gov |
+| OMS – ICTRP | Registro de ensayos | https://trialsearch.who.int |
+
+## C.5 Tesauros y apoyo para términos
+
+| Recurso | Enlace |
+|---|---|
+| MeSH (NCBI) | https://www.ncbi.nlm.nih.gov/mesh |
+| MeSH Browser | https://meshb.nlm.nih.gov |
+| MeSH on Demand | https://meshb.nlm.nih.gov/MeSHonDemand |
+| Yale MeSH Analyzer | https://mesh.med.yale.edu |
+| DeCS (español, portugués, inglés, francés) | https://decs.bvsalud.org |
+| Tesauro de la UNESCO | https://vocabularies.unesco.org |
+| ERIC Thesaurus | https://eric.ed.gov/?ti=all |
+| Art & Architecture Thesaurus (Getty) | https://www.getty.edu/research/tools/vocabularies/aat/ |
+
+## C.6 Revisiones sistemáticas
+
+| Recurso | Para qué | Enlace |
+|---|---|---|
+| PRISMA (declaración, listas y diagramas) | Reporte | https://www.prisma-statement.org |
+| Aplicación PRISMA2020 | Diagrama de flujo | https://estech.shinyapps.io/prisma_flowdiagram/ |
+| PROSPERO | Registro de protocolos (salud) | https://www.crd.york.ac.uk/prospero |
+| OSF Registries | Registro de protocolos (cualquier área) | https://osf.io/registries |
+| Cochrane Handbook | Método | https://training.cochrane.org/handbook |
+| Polyglot Search Translator | Traducir cadenas entre bases | https://sr-accelerator.com/#/polyglot |
+| citationchaser | Búsqueda por citas | https://estech.shinyapps.io/citationchaser/ |
+| Rayyan | Cribado | https://www.rayyan.ai |
+| Covidence | Cribado y extracción | https://www.covidence.org |
+| ASReview | Cribado con aprendizaje activo | https://asreview.nl |
+
+## C.7 Mapas de citas
+
+| Recurso | Enlace |
+|---|---|
+| Connected Papers | https://www.connectedpapers.com |
+| Litmaps | https://www.litmaps.com |
+| ResearchRabbit | https://www.researchrabbit.ai |
+| Inciteful | https://inciteful.xyz |
+
+## C.8 Herramientas con inteligencia artificial (capítulo 10)
+
+Listado orientativo a septiembre de 2026. Revisá las condiciones de uso y privacidad de cada una y la política de tu institución.
+
+| Recurso | Tipo | Enlace |
+|---|---|---|
+| Elicit | Buscador académico con IA, extracción de datos | https://elicit.com |
+| Consensus | Buscador académico con IA | https://consensus.app |
+| SciSpace | Buscador y lectura asistida | https://scispace.com |
+| Undermind | Búsqueda académica en profundidad | https://www.undermind.ai |
+| Scite | Contexto de las citas | https://scite.ai |
+| NotebookLM | Lectura asistida sobre tus documentos | https://notebooklm.google.com |
+| Perplexity | Asistente con búsqueda web | https://www.perplexity.ai |
+| Asistentes generales (ChatGPT, Claude, Gemini, Copilot) | Asistentes conversacionales | — |
+
+## C.9 Evaluación de fuentes
+
+| Recurso | Para qué | Enlace |
+|---|---|---|
+| Scimago Journal & Country Rank | Métricas y cuartiles de revistas | https://www.scimagojr.com |
+| DOAJ | Directorio de revistas de acceso abierto | https://doaj.org |
+| Think. Check. Submit. | Evaluar revistas | https://thinkchecksubmit.org |
+| Retraction Watch Database | Artículos retractados | https://retractiondatabase.org |
+| DORA | Evaluación responsable de la investigación | https://sfdora.org |
+| Unpaywall | Encontrar versiones de acceso abierto | https://unpaywall.org |
+
+## C.10 Gestión de referencias y citas
+
+| Recurso | Enlace |
+|---|---|
+| Zotero | https://www.zotero.org |
+| Mendeley | https://www.mendeley.com |
+| JabRef | https://www.jabref.org |
+| APA Style (guía oficial) | https://apastyle.apa.org |
+
+---
+
+[← Anexo B](B-glosario.md) · [Índice](../README.md) · [Anexo D →](D-bibliografia.md)

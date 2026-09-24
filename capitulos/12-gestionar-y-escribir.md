@@ -1,0 +1,171 @@
+# Capítulo 12. Gestionar referencias y escribir los antecedentes
+
+**En este capítulo vas a aprender:**
+
+- a organizar tus referencias con un gestor bibliográfico;
+- a exportar resultados de las bases y eliminar duplicados;
+- a construir una matriz de antecedentes;
+- a pasar de la matriz a un texto que sintetice, y no solo enumere;
+- a citar correctamente y a evitar el plagio.
+
+---
+
+## 12.1 Por qué usar un gestor bibliográfico
+
+Un **gestor bibliográfico** es un programa que guarda tus referencias (y sus PDF), las organiza y genera automáticamente las citas y la bibliografía en el estilo que necesites (APA, Vancouver, Chicago, etc.). Usar uno desde el primer día evita:
+
+- perder referencias ("¿dónde había leído eso?");
+- errores de formato en la bibliografía;
+- citas en el texto que no están en la lista final, o al revés;
+- horas de trabajo manual cuando te piden cambiar de estilo.
+
+| Gestor | Costo | Características |
+|---|---|---|
+| **Zotero** | Gratuito y de código abierto | Captura referencias desde el navegador con un clic; complementos para Word, LibreOffice y Google Docs; grupos compartidos; avisa si un artículo fue retractado. Muy recomendable para estudiantes. |
+| **Mendeley** | Gratuito (Elsevier) | Lector de PDF con anotaciones; complemento para Word. |
+| **EndNote** | Pago (Clarivate) | Muy usado en ciencias de la salud; integración con Web of Science. |
+| **JabRef** | Gratuito y de código abierto | Pensado para BibTeX y LaTeX. |
+
+> [!TIP]
+> **Configuración mínima de Zotero.** Instalá el programa de escritorio, el conector para tu navegador y el complemento para tu procesador de texto. Con eso podés guardar un artículo desde la página de la base de datos con un clic y citarlo en tu documento con otro.
+
+## 12.2 Exportar resultados y eliminar duplicados
+
+Cuando hacés una búsqueda estructurada en varias bases, conviene **exportar todos los resultados** (no solo los que parecen buenos) para cribarlos en un solo lugar:
+
+1. En cada base, seleccioná todos los resultados y usá la opción **Exportar** en formato **RIS** (el más compatible) o BibTeX. Incluí el resumen.
+2. Importá cada archivo al gestor en una **colección separada por base** ("Scopus 2026-04-10", "SciELO 2026-04-10"). Así sabés cuántos registros vinieron de cada una (dato para el diagrama PRISMA).
+3. Copiá todo a una colección general y **eliminá los duplicados**. Zotero, Mendeley, EndNote y Rayyan tienen funciones para detectarlos; revisá los casos dudosos a mano.
+4. Anotá cuántos duplicados eliminaste.
+
+> [!NOTE]
+> Algunas bases limitan la cantidad de registros que se pueden exportar de una vez (por ejemplo, de a 500 o 1.000). Si tenés más, exportá por tandas (ordenando por año o por bloques de resultados) y verificá que el total coincida.
+
+## 12.3 Organizar la biblioteca
+
+Algunas prácticas útiles:
+
+- **Colecciones** (carpetas) por etapa o tema: *Búsqueda Scopus*, *Cribado*, *Incluidos*, *Marco teórico*, *Método*.
+- **Etiquetas** (*tags*) para el estado de cada referencia: `incluido`, `excluido-poblacion`, `excluido-diseño`, `leer`, `clave`.
+- **Notas** vinculadas a cada referencia con tu resumen y tus comentarios.
+- **PDF adjuntos** con nombre normalizado (el gestor puede renombrarlos automáticamente como *Autor - Año - Título*).
+- **Copia de seguridad** o sincronización en la nube.
+
+## 12.4 La matriz de antecedentes
+
+La **matriz de antecedentes** (o matriz de síntesis) es una tabla con una fila por estudio y una columna por aspecto relevante. Es el puente entre la lectura y la escritura.
+
+| Autor/es (año) | País | Objetivo | Diseño | Muestra | Intervención / variables | Instrumentos | Resultados principales | Limitaciones | Aporte a mi trabajo |
+|---|---|---|---|---|---|---|---|---|---|
+| Autora A et al. (2021) | Chile | Evaluar un programa de mindfulness de 8 semanas | Ensayo aleatorizado | 120 estudiantes de grado | MBSR vs. lista de espera | Escala de Estrés Percibido (PSS-10) | Reducción significativa del estrés; efecto moderado | Seguimiento corto; una sola universidad | Primer ensayo en la región; mismo instrumento que pienso usar |
+| Autor B y Autora C (2023) | España | … | Cuasiexperimental | … | … | … | … | … | … |
+
+*(Los estudios de este ejemplo y del siguiente son ficticios; sirven solo para ilustrar el formato.)*
+
+Algunas recomendaciones:
+
+- Definí las columnas **antes** de empezar a leer, según tu pregunta. Podés agregar columnas después, pero implica volver a los artículos ya leídos.
+- Escribí con **tus palabras**. Si copiás una frase textual, ponela entre comillas y con la página.
+- La columna **"aporte a mi trabajo"** es la más importante: ahí empezás a pensar el texto.
+- Una planilla de cálculo permite **ordenar y filtrar** (por año, por país, por diseño), lo que ayuda a ver patrones.
+
+En el [Anexo A](../anexos/A-plantillas.md) hay una plantilla.
+
+## 12.5 De la matriz al texto: sintetizar, no enumerar
+
+El error más frecuente al escribir los antecedentes es la **enumeración**: un párrafo por artículo, uno detrás de otro.
+
+> [!WARNING]
+> **Ejemplo de enumeración (a evitar):**
+>
+> *García (2019) estudió el efecto del mindfulness en estudiantes de medicina y encontró que redujo el estrés. Pérez (2020) realizó un estudio con estudiantes de psicología y encontró resultados similares. López (2021) aplicó un programa de ocho semanas en Chile y observó una disminución del estrés. Smith (2022) no encontró diferencias significativas...*
+
+El lector no sabe qué conclusiones sacar, qué estudios son mejores ni qué falta investigar. Compará con una versión **sintética**:
+
+> [!TIP]
+> **Ejemplo de síntesis:**
+>
+> *La mayoría de los ensayos realizados con estudiantes universitarios informan que los programas de mindfulness reducen el estrés percibido, con efectos entre pequeños y moderados (García, 2019; López, 2021; Pérez, 2020). Sin embargo, los estudios con seguimiento superior a tres meses son escasos y sus resultados, menos consistentes (Smith, 2022). Además, casi toda la evidencia proviene de estudiantes de carreras de salud en Europa y América del Norte: solo un ensayo se llevó a cabo en América Latina (López, 2021) y ninguno evaluó el estrés específicamente académico con instrumentos validados en población argentina. Este vacío justifica el presente estudio.*
+
+Qué cambia:
+
+- Los estudios se **agrupan por hallazgo**, no se listan por autor.
+- Se **compara**: coincidencias, contradicciones, diferencias de calidad.
+- Se **evalúa**: se señalan limitaciones del conjunto de la evidencia.
+- Se **identifica el vacío** y se conecta con el propio trabajo.
+
+### Formas de organizar los antecedentes
+
+| Organización | Cuándo conviene |
+|---|---|
+| **Temática** | La más frecuente: por subtemas, variables o hallazgos. |
+| **Metodológica** | Cuando los resultados difieren según el diseño o el instrumento. |
+| **Cronológica** | Cuando interesa mostrar la evolución de un campo o de una discusión. |
+| **Geográfica / de lo general a lo particular** | Estudios internacionales → regionales → locales. Muy útil para justificar un estudio en nuestro contexto. |
+
+Estas formas se pueden combinar: por ejemplo, una organización temática en la que, dentro de cada tema, se va de lo internacional a lo local.
+
+### Una estructura posible para el apartado
+
+1. **Párrafo de apertura**: cómo se hizo la búsqueda (bases, idiomas, período) y cuántos estudios se identificaron. En un trabajo con revisión sistematizada, esto va en el método.
+2. **Bloques temáticos**: uno por subtema, con síntesis y evaluación.
+3. **Balance**: qué se sabe con solidez, qué es contradictorio y qué falta.
+4. **Vacío y aporte**: qué hace tu trabajo frente a ese panorama.
+
+## 12.6 Citar bien
+
+- **Citá lo que leíste.** Si solo leíste el resumen, tené cuidado con lo que afirmás del estudio. Si un dato viene de una fuente que cita a otra, lo correcto es buscar la original; si no podés, usá la cita secundaria ("Autor, año, citado en Otro, año") y limitala al mínimo.
+- **Usá un estilo de manera consistente.** En ciencias sociales y psicología, el más difundido es el de la **APA, 7.ª edición** (American Psychological Association, 2020). En salud es frecuente Vancouver. Consultá qué pide tu carrera o tu revista.
+- **Incluí el DOI** en las referencias cuando exista, con formato de enlace (`https://doi.org/...`).
+- **Revisá lo que genera el gestor.** Los metadatos importados a veces tienen errores (mayúsculas, nombres de autores, falta de volumen o páginas).
+
+Ejemplos en APA 7:
+
+```text
+Artículo de revista (referencia):
+Gusenbauer, M., y Haddaway, N. R. (2020). Which academic search systems are
+    suitable for systematic reviews or meta-analyses? Evaluating retrieval
+    qualities of Google Scholar, PubMed, and 26 other resources. Research
+    Synthesis Methods, 11(2), 181-217. https://doi.org/10.1002/jrsm.1378
+
+Cita en el texto:
+(Gusenbauer y Haddaway, 2020)   ·   Gusenbauer y Haddaway (2020) señalan que...
+
+Con tres o más autores, desde la primera cita:
+(Page et al., 2021)
+```
+
+En los textos escritos en español se usa *y* en lugar de *&* entre los dos últimos autores. En la lista de referencias, APA 7 incluye hasta 20 autores; si hay más, se escriben los primeros 19, puntos suspensivos y el último.
+
+## 12.7 Evitar el plagio
+
+Se considera **plagio** presentar como propias ideas, datos o palabras de otras personas sin reconocerlo. Incluye:
+
+- copiar texto sin comillas, aunque se cite la fuente;
+- parafrasear cambiando unas pocas palabras (*parafraseo superficial*);
+- usar ideas de otros sin citarlas;
+- presentar como propio un texto generado por una IA, cuando la institución no lo permite o sin declararlo (capítulo 10).
+
+Cómo parafrasear bien: leé el fragmento, cerralo, escribí la idea con tus palabras y tu estructura, y después compará con el original para verificar que no copiaste la forma ni cambiaste el sentido. Siempre con la cita.
+
+---
+
+## Resumen
+
+- Usá un gestor bibliográfico (Zotero es gratuito y muy completo) desde el primer día.
+- Exportá los resultados de cada base en formato RIS a colecciones separadas, eliminá duplicados y anotá los números para PRISMA.
+- La matriz de antecedentes, con una fila por estudio y una columna por aspecto, es el puente entre la lectura y la escritura.
+- Escribí sintetizando: agrupá estudios por hallazgo, compará, evaluá e identificá el vacío. Evitá la enumeración.
+- Citá lo que leíste, en un estilo consistente, y parafraseá de verdad.
+
+## Actividad
+
+1. Instalá Zotero (o el gestor que prefieras) con su conector y su complemento para tu procesador de texto.
+2. Exportá los resultados de una de tus búsquedas en formato RIS, importalos y eliminá los duplicados.
+3. Completá la matriz de antecedentes con al menos cinco estudios.
+4. Escribí un párrafo de síntesis que agrupe al menos tres de esos estudios y termine señalando un vacío.
+5. Intercambiá el párrafo con un compañero o compañera y revisen: ¿sintetiza o enumera?
+
+---
+
+[← Capítulo 11](11-evaluar-fuentes.md) · [Índice](../README.md) · [Anexo A →](../anexos/A-plantillas.md)

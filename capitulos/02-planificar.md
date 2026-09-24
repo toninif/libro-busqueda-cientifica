@@ -1,0 +1,162 @@
+# Capítulo 2. Planificar la búsqueda
+
+**En este capítulo vas a aprender:**
+
+- a pasar de un tema amplio a una pregunta que se pueda buscar;
+- a descomponer la pregunta en conceptos;
+- a organizar el proceso de búsqueda como un ciclo;
+- a llevar una bitácora de búsqueda desde el primer día.
+
+---
+
+## 2.1 Del tema a la pregunta
+
+El error más común al empezar es buscar un **tema** ("el estrés", "las redes sociales", "la inteligencia artificial en educación"). Un tema no se puede buscar bien: devuelve miles de resultados sin un criterio para decidir cuáles importan. Lo que se busca es una **pregunta**.
+
+Un camino posible:
+
+```mermaid
+flowchart LR
+    A["Tema<br/><i>estrés en estudiantes</i>"] --> B["Problema<br/><i>los universitarios reportan<br/>altos niveles de estrés</i>"]
+    B --> C["Pregunta<br/><i>¿los programas de mindfulness<br/>reducen el estrés académico<br/>en universitarios?</i>"]
+```
+
+Para acotar un tema podés preguntarte:
+
+- **¿Quiénes?** Población o participantes (universitarios, docentes de primaria, pymes, usuarios de una aplicación).
+- **¿Qué?** Intervención, exposición, fenómeno o variable (un programa, el uso de redes, una política).
+- **¿Comparado con qué?** Alternativa, grupo control, situación previa.
+- **¿Qué resultado?** Lo que se mide o se observa (estrés, rendimiento, satisfacción, usabilidad).
+- **¿Dónde y cuándo?** Contexto geográfico, institucional o temporal.
+
+Estas preguntas son la base de la **estructura PICO** y sus variantes, que se desarrollan en el capítulo 7. Por ahora alcanza con tenerlas presentes.
+
+### ¿Es una buena pregunta?
+
+Un criterio muy usado para evaluar preguntas de investigación es **FINER** (Hulley et al., 2013). Una buena pregunta es:
+
+| Letra | Criterio | Pregunta de control |
+|---|---|---|
+| **F** | Factible | ¿Tengo tiempo, acceso y recursos para responderla? |
+| **I** | Interesante | ¿Me interesa a mí y a la comunidad académica? |
+| **N** | Novedosa | ¿Aporta algo respecto de lo que ya se sabe? |
+| **E** | Ética | ¿Se puede investigar sin daño para los participantes? |
+| **R** | Relevante | ¿Sirve para la disciplina, la práctica o las políticas? |
+
+Fijate que la **N** no se puede evaluar sin buscar antecedentes. Por eso la pregunta y la búsqueda se ajustan mutuamente: se formula una primera versión, se busca, se lee, se reformula.
+
+## 2.2 La búsqueda exploratoria inicial
+
+Antes de construir cadenas complejas conviene hacer una **exploración rápida** (una o dos horas) para:
+
+- entender cómo se habla del tema en la literatura (¿se dice *mindfulness* o *atención plena*? ¿*estrés académico* o *estrés percibido*?);
+- descubrir los autores, revistas y grupos de investigación más citados;
+- encontrar alguna **revisión** reciente;
+- detectar si hay demasiada literatura (hay que acotar) o muy poca (hay que ampliar).
+
+Dónde hacerla:
+
+- **Google Académico**, con dos o tres palabras clave.
+- **Enciclopedias y manuales** especializados (*handbooks*), que dan un panorama del campo.
+- **Una base de datos de la disciplina**, buscando revisiones (muchas tienen un filtro por tipo de documento: *review*).
+- **Wikipedia**, con precaución: no se cita, pero sus referencias y su terminología pueden orientar.
+
+> [!TIP]
+> **El artículo perla.** Si en la exploración encontrás un artículo que es *exactamente* lo que buscás, guardalo como referencia. Mirá sus palabras clave, los descriptores que le asignó la base de datos, los términos del título y el resumen, sus referencias y quién lo citó después. Esta técnica se llama *pearl growing* ("hacer crecer la perla") y se desarrolla en los capítulos 4 y 9.
+
+## 2.3 Descomponer la pregunta en conceptos
+
+Una base de datos no entiende preguntas: entiende **términos**. El paso central de la planificación es separar la pregunta en **conceptos** (bloques de ideas) y luego buscar todas las formas en que cada concepto aparece escrito.
+
+Para el caso guía:
+
+> ¿Los programas de **mindfulness** reducen el **estrés académico** en **estudiantes universitarios**?
+
+| Concepto 1: población | Concepto 2: intervención | Concepto 3: resultado |
+|---|---|---|
+| estudiantes universitarios | mindfulness | estrés académico |
+| universitarios | atención plena | estrés |
+| alumnos de grado | meditación | estrés percibido |
+| university students | mindfulness-based stress reduction (MBSR) | academic stress |
+| college students | meditation | psychological distress |
+| undergraduates | | |
+
+Algunas observaciones:
+
+- Palabras como *reducen*, *efecto*, *influencia* o *relación* **no son conceptos** para buscar: casi todos los artículos las usan y no ayudan a discriminar.
+- No hace falta incluir todos los conceptos en la búsqueda. Si un concepto está mal descrito en los resúmenes (por ejemplo, el grupo de comparación), agregarlo puede hacer que perdamos estudios relevantes.
+- Los sinónimos se completan a medida que se lee. Esta tabla es un documento vivo.
+
+En los capítulos 4, 5 y 6 vas a ver cómo transformar esta tabla en una **cadena de búsqueda**.
+
+## 2.4 La búsqueda como ciclo
+
+Buscar no es un proceso lineal. Es un ciclo que se repite varias veces:
+
+```mermaid
+flowchart TB
+    A["1. Formular o ajustar<br/>la pregunta"] --> B["2. Identificar conceptos<br/>y términos"]
+    B --> C["3. Elegir fuentes<br/>y bases de datos"]
+    C --> D["4. Construir y ejecutar<br/>la cadena"]
+    D --> E["5. Revisar resultados<br/>(¿demasiados? ¿pocos? ¿pertinentes?)"]
+    E --> F["6. Registrar en la bitácora"]
+    F --> A
+```
+
+En cada vuelta, los resultados enseñan algo: un término nuevo, un autor clave, una base que no habíamos considerado, un concepto que conviene quitar. El ciclo termina cuando se llega a la **saturación**: nuevas búsquedas devuelven sobre todo documentos que ya conocemos.
+
+> [!WARNING]
+> **Error frecuente: buscar una sola vez.** Escribir tres palabras en una base, quedarse con los diez primeros resultados y empezar a escribir. Así se pierden estudios importantes y, sobre todo, no se puede justificar por qué se eligieron esos y no otros.
+
+## 2.5 La bitácora de búsqueda
+
+Una **bitácora** (o registro) de búsqueda es una tabla donde se anota cada búsqueda que se hace. Parece burocrático, pero ahorra muchísimo tiempo:
+
+- evita repetir búsquedas que ya hiciste;
+- permite volver a una búsqueda que dio buenos resultados;
+- es imprescindible para escribir la sección de método (y obligatoria en una revisión sistemática);
+- permite mostrarle al director o a la directora qué hiciste exactamente.
+
+Un modelo mínimo:
+
+| Fecha | Base / fuente | Cadena de búsqueda (copiada textual) | Campos | Filtros | Resultados | Guardados | Observaciones |
+|---|---|---|---|---|---|---|---|
+| 2026-04-10 | Scopus | `TITLE-ABS-KEY(mindfulness AND "academic stress")` | Título, resumen, palabras clave | 2016-2026; artículos | 142 | 18 | Muchos de Asia; probar agregar "university students" |
+| 2026-04-10 | SciELO | `mindfulness AND estrés` | Todos los índices | — | 37 | 6 | Aparecen estudios de Chile y Colombia |
+
+En el [Anexo A](../anexos/A-plantillas.md) hay una plantilla completa.
+
+> [!TIP]
+> Copiá y pegá la cadena **exactamente** como la escribiste, con todas las comillas y paréntesis. Dentro de un mes no vas a recordar si pusiste `stress*` o `stress`.
+
+## 2.6 Planificar los tiempos y los recursos
+
+Antes de empezar, conviene responder algunas preguntas prácticas:
+
+- **¿Cuánto tiempo tengo?** Una búsqueda exploratoria lleva horas; una revisión sistemática, meses.
+- **¿Qué nivel de exhaustividad necesito?** No es lo mismo un trabajo práctico que una tesis de maestría.
+- **¿A qué bases de datos tengo acceso?** Consultá la biblioteca de tu universidad (capítulo 3).
+- **¿Qué idiomas voy a incluir?** Como mínimo, español e inglés (capítulo 6).
+- **¿Qué período de tiempo voy a cubrir?** Los últimos cinco o diez años es habitual, pero depende del tema. Si hay un estudio fundacional anterior, se incluye igual.
+- **¿Dónde voy a guardar las referencias?** Elegí un gestor bibliográfico desde el primer día (capítulo 12).
+
+---
+
+## Resumen
+
+- No se busca un tema: se busca una pregunta. Acotala preguntándote quiénes, qué, comparado con qué, qué resultado y en qué contexto.
+- Antes de buscar en serio, hacé una exploración breve para conocer la terminología y encontrar revisiones y artículos perla.
+- Descomponé la pregunta en conceptos y hacé una lista de sinónimos para cada uno.
+- La búsqueda es un ciclo que termina cuando los resultados se saturan.
+- Registrá cada búsqueda en una bitácora desde el primer día.
+
+## Actividad
+
+1. Tomá el tema que escribiste en la actividad del capítulo 1 y transformalo en una pregunta usando las cinco preguntas de la sección 2.1.
+2. Evaluá la pregunta con los criterios FINER.
+3. Descomponela en dos a cuatro conceptos y armá una tabla con al menos tres sinónimos por concepto.
+4. Creá tu bitácora de búsqueda (en una planilla de cálculo) y registrá una primera búsqueda exploratoria.
+
+---
+
+[← Capítulo 1](01-antecedentes.md) · [Índice](../README.md) · [Capítulo 3 →](03-donde-buscar.md)
