@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Capítulo 10. Inteligencia artificial para la búsqueda de antecedentes – Buscar antecedentes</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../capitulos/11-evaluar-fuentes.html" rel="next">
+<link href="../capitulos/09-busqueda-por-citas.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-21d6fceeb25172fe2fb34cb0b56a437d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/10-inteligencia-artificial.html">Parte IV. Inteligencia artificial, evaluación y escritura</a></li><li class="breadcrumb-item"><a href="../capitulos/10-inteligencia-artificial.html"><span class="chapter-title">Capítulo 10. Inteligencia artificial para la búsqueda de antecedentes</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Buscar antecedentes</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/toninif/libro-busqueda-cientifica" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte I. Fundamentos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/01-antecedentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 1. Qué son los antecedentes y por qué buscarlos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/02-planificar.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 2. Planificar la búsqueda</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/03-donde-buscar.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 3. Dónde buscar: fuentes y herramientas clásicas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte II. Técnicas de búsqueda</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/04-busqueda-por-terminos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 4. Búsqueda por términos: palabras clave y vocabulario controlado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/05-operadores-y-cadenas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 5. Operadores y cadenas de búsqueda</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/06-espanol-e-ingles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 6. Buscar en español y en inglés</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte III. Búsqueda sistemática</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/07-pregunta-pico.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 7. La pregunta PICO y sus variantes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/08-revisiones-y-prisma.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 8. Revisiones sistemáticas y la declaración PRISMA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/09-busqueda-por-citas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 9. Búsqueda por citas y estrategias complementarias</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte IV. Inteligencia artificial, evaluación y escritura</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/10-inteligencia-artificial.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Capítulo 10. Inteligencia artificial para la búsqueda de antecedentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/11-evaluar-fuentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 11. Evaluar lo que encontramos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/12-gestionar-y-escribir.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 12. Gestionar referencias y escribir los antecedentes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../anexos/A-plantillas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anexo A. Plantillas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../anexos/B-glosario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anexo B. Glosario</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../anexos/C-recursos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anexo C. Directorio de recursos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../anexos/D-bibliografia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anexo D. Bibliografía</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#qué-cambió" id="toc-qué-cambió" class="nav-link active" data-scroll-target="#qué-cambió">10.1 Qué cambió</a></li>
+  <li><a href="#cómo-funcionan-lo-mínimo-que-hay-que-saber" id="toc-cómo-funcionan-lo-mínimo-que-hay-que-saber" class="nav-link" data-scroll-target="#cómo-funcionan-lo-mínimo-que-hay-que-saber">10.2 Cómo funcionan (lo mínimo que hay que saber)</a></li>
+  <li><a href="#tipos-de-herramientas" id="toc-tipos-de-herramientas" class="nav-link" data-scroll-target="#tipos-de-herramientas">10.3 Tipos de herramientas</a></li>
+  <li><a href="#búsqueda-semántica-y-búsqueda-booleana" id="toc-búsqueda-semántica-y-búsqueda-booleana" class="nav-link" data-scroll-target="#búsqueda-semántica-y-búsqueda-booleana">10.4 Búsqueda semántica y búsqueda booleana</a></li>
+  <li><a href="#la-ia-en-cada-etapa-de-la-búsqueda" id="toc-la-ia-en-cada-etapa-de-la-búsqueda" class="nav-link" data-scroll-target="#la-ia-en-cada-etapa-de-la-búsqueda">10.5 La IA en cada etapa de la búsqueda</a></li>
+  <li><a href="#instrucciones-prompts-útiles" id="toc-instrucciones-prompts-útiles" class="nav-link" data-scroll-target="#instrucciones-prompts-útiles">10.6 Instrucciones (<em>prompts</em>) útiles</a></li>
+  <li><a href="#riesgos-que-hay-que-conocer" id="toc-riesgos-que-hay-que-conocer" class="nav-link" data-scroll-target="#riesgos-que-hay-que-conocer">10.7 Riesgos que hay que conocer</a></li>
+  <li><a href="#protocolo-de-verificación" id="toc-protocolo-de-verificación" class="nav-link" data-scroll-target="#protocolo-de-verificación">10.8 Protocolo de verificación</a></li>
+  <li><a href="#la-ia-en-revisiones-sistemáticas" id="toc-la-ia-en-revisiones-sistemáticas" class="nav-link" data-scroll-target="#la-ia-en-revisiones-sistemáticas">10.9 La IA en revisiones sistemáticas</a></li>
+  <li><a href="#declarar-el-uso-de-ia" id="toc-declarar-el-uso-de-ia" class="nav-link" data-scroll-target="#declarar-el-uso-de-ia">10.10 Declarar el uso de IA</a></li>
+  <li><a href="#clásico-y-con-ia-un-balance" id="toc-clásico-y-con-ia-un-balance" class="nav-link" data-scroll-target="#clásico-y-con-ia-un-balance">10.11 Clásico y con IA: un balance</a></li>
+  <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen">Resumen</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/10-inteligencia-artificial.html">Parte IV. Inteligencia artificial, evaluación y escritura</a></li><li class="breadcrumb-item"><a href="../capitulos/10-inteligencia-artificial.html"><span class="chapter-title">Capítulo 10. Inteligencia artificial para la búsqueda de antecedentes</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Capítulo 10. Inteligencia artificial para la búsqueda de antecedentes</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>En este capítulo vas a aprender:</strong></p>
+<ul>
+<li>qué tipos de herramientas con inteligencia artificial (IA) existen para buscar y leer literatura académica;</li>
+<li>en qué se diferencia la búsqueda semántica de la búsqueda booleana;</li>
+<li>en qué etapas de la búsqueda la IA ayuda y en cuáles es riesgosa;</li>
+<li>a escribir instrucciones (<em>prompts</em>) útiles para tareas de búsqueda;</li>
+<li>a verificar lo que produce una IA y a declarar su uso.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este capítulo está actualizado a <strong>septiembre de 2026</strong>. Las herramientas de IA cambian muy rápido: algunas de las que se mencionan pueden cambiar de nombre, de funciones o de condiciones de acceso. Por eso el capítulo se organiza por <strong>tipos de herramientas y usos</strong>, que cambian mucho más lentamente que los productos concretos.</p>
+</div>
+</div>
+<hr>
+<section id="qué-cambió" class="level2">
+<h2 class="anchored" data-anchor-id="qué-cambió">10.1 Qué cambió</h2>
+<p>Durante décadas, buscar literatura consistió en elegir términos y combinarlos con operadores (capítulos 4 y 5). Las herramientas con IA agregan tres posibilidades nuevas:</p>
+<ol type="1">
+<li><strong>Buscar por significado.</strong> Escribir una pregunta en lenguaje natural (“¿el mindfulness reduce el estrés en universitarios?”) y recibir artículos relacionados aunque no usen exactamente esas palabras.</li>
+<li><strong>Resumir y extraer.</strong> Obtener un resumen de un artículo, o una tabla con la muestra, el método y los resultados de varios artículos a la vez.</li>
+<li><strong>Conversar sobre la búsqueda.</strong> Pedir sinónimos, traducciones, cadenas de búsqueda, críticas a una estrategia o explicaciones de un método estadístico.</li>
+</ol>
+<p>Estas posibilidades son reales y útiles. Pero la IA <strong>no reemplaza</strong> a lo que vimos en los capítulos anteriores: lo complementa. Y trae riesgos nuevos que hay que conocer.</p>
+</section>
+<section id="cómo-funcionan-lo-mínimo-que-hay-que-saber" class="level2">
+<h2 class="anchored" data-anchor-id="cómo-funcionan-lo-mínimo-que-hay-que-saber">10.2 Cómo funcionan (lo mínimo que hay que saber)</h2>
+<p>Los <strong>modelos de lenguaje</strong> (como los que están detrás de ChatGPT, Claude, Gemini o Copilot) generan texto prediciendo qué palabras son más probables a continuación, a partir de lo que aprendieron durante su entrenamiento. Dos consecuencias importantes:</p>
+<ul>
+<li><strong>Un modelo de lenguaje, por sí solo, no consulta una base de datos.</strong> Si le pedís referencias sin que tenga acceso a una fuente, puede generar referencias <strong>plausibles pero inexistentes</strong> (títulos inventados, autores reales con artículos que nunca escribieron, DOI falsos). Este fenómeno se conoce como <strong>alucinación</strong> y está bien documentado en el caso de las referencias bibliográficas (Walters y Wilder, 2023).</li>
+<li><strong>Cuando la herramienta está conectada a una fuente</strong> (un índice académico, la web, los PDF que le das), primero recupera documentos y después redacta la respuesta a partir de ellos. Esto se llama <strong>generación aumentada por recuperación</strong> (<em>RAG</em>). Reduce mucho las referencias inventadas, pero no las elimina: la herramienta todavía puede <strong>atribuir a un artículo algo que no dice</strong>, resumir mal o elegir fuentes poco representativas.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled" title="Regla de oro">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Regla de oro
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Toda referencia y todo dato que venga de una IA se verifica <strong>en la fuente original</strong> antes de usarlo. Sin excepciones.</p>
+</div>
+</div>
+</section>
+<section id="tipos-de-herramientas" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-herramientas">10.3 Tipos de herramientas</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Qué hace</th>
+<th>Ejemplos (septiembre de 2026)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Asistentes generales</strong></td>
+<td>Conversan sobre cualquier tema. Con búsqueda web o modos de “investigación profunda” (<em>deep research</em>), recorren muchas fuentes y producen un informe con citas.</td>
+<td>ChatGPT, Claude, Gemini, Copilot, Perplexity</td>
+</tr>
+<tr class="even">
+<td><strong>Buscadores académicos con IA</strong></td>
+<td>Buscan en índices académicos (a menudo Semantic Scholar u OpenAlex) a partir de preguntas en lenguaje natural; resumen y extraen datos de los artículos.</td>
+<td>Elicit, Consensus, SciSpace, Undermind, Semantic Scholar</td>
+</tr>
+<tr class="odd">
+<td><strong>IA dentro de bases tradicionales</strong></td>
+<td>Asistentes integrados en bases de datos de suscripción, que responden preguntas usando solo el contenido de esa base.</td>
+<td>Scopus AI, Web of Science Research Assistant, funciones de IA en plataformas como EBSCO o ProQuest</td>
+</tr>
+<tr class="even">
+<td><strong>Análisis del contexto de las citas</strong></td>
+<td>Muestran <em>cómo</em> se cita un artículo: si otros trabajos lo apoyan, lo discuten o solo lo mencionan.</td>
+<td>Scite</td>
+</tr>
+<tr class="odd">
+<td><strong>Mapas y recomendación</strong></td>
+<td>A partir de artículos semilla, recomiendan trabajos relacionados (capítulo 9).</td>
+<td>ResearchRabbit, Litmaps, Connected Papers, Inciteful</td>
+</tr>
+<tr class="even">
+<td><strong>Lectura asistida</strong></td>
+<td>Responden preguntas sobre los documentos que les das (PDF, notas), citando el pasaje.</td>
+<td>NotebookLM, funciones de “chatear con el PDF” en muchos asistentes y gestores</td>
+</tr>
+<tr class="odd">
+<td><strong>Cribado asistido</strong></td>
+<td>Aprenden de tus decisiones de inclusión y exclusión y priorizan los registros más probablemente relevantes.</td>
+<td>ASReview, funciones de IA de Rayyan y Covidence</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="búsqueda-semántica-y-búsqueda-booleana" class="level2">
+<h2 class="anchored" data-anchor-id="búsqueda-semántica-y-búsqueda-booleana">10.4 Búsqueda semántica y búsqueda booleana</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Búsqueda booleana (clásica)</th>
+<th>Búsqueda semántica (con IA)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Entrada</strong></td>
+<td>Términos y operadores: <code>(mindful* OR meditat*) AND stress</code></td>
+<td>Una pregunta: “¿el mindfulness reduce el estrés en universitarios?”</td>
+</tr>
+<tr class="even">
+<td><strong>Cómo recupera</strong></td>
+<td>Coincidencia exacta de términos en los campos indicados.</td>
+<td>Similitud de significado entre la pregunta y los documentos.</td>
+</tr>
+<tr class="odd">
+<td><strong>Ventaja</strong></td>
+<td><strong>Transparente y reproducible</strong>: la misma cadena en la misma base da los mismos resultados; se puede reportar.</td>
+<td>Encuentra artículos relevantes que usan otras palabras; no hay que conocer la sintaxis.</td>
+</tr>
+<tr class="even">
+<td><strong>Desventaja</strong></td>
+<td>Hay que anticipar todos los sinónimos; curva de aprendizaje.</td>
+<td><strong>Opaca y poco reproducible</strong>: no se sabe exactamente por qué aparece cada resultado; el orden puede cambiar; suele mostrar solo una cantidad limitada de resultados.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cobertura</strong></td>
+<td>La de cada base, conocida y documentada.</td>
+<td>La del índice subyacente, a menudo con menor cobertura de revistas en español y de acceso cerrado.</td>
+</tr>
+<tr class="even">
+<td><strong>Uso ideal</strong></td>
+<td>Búsqueda principal y reportable, revisiones sistemáticas.</td>
+<td>Exploración inicial, descubrimiento de términos y artículos semilla, verificación complementaria.</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Una combinación muy productiva: usar la búsqueda semántica <strong>al principio</strong>, para descubrir artículos y términos, y <strong>al final</strong>, para comprobar si la cadena booleana se perdió algo importante. Si la IA encuentra un estudio relevante que tu cadena no recuperó, analizá por qué y corregí la cadena.</p>
+</div>
+</div>
+</section>
+<section id="la-ia-en-cada-etapa-de-la-búsqueda" class="level2">
+<h2 class="anchored" data-anchor-id="la-ia-en-cada-etapa-de-la-búsqueda">10.5 La IA en cada etapa de la búsqueda</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Etapa</th>
+<th>Usos recomendables</th>
+<th>Riesgos</th>
+<th>Cómo mitigarlos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Formular la pregunta (cap. 2 y 7)</td>
+<td>Pedir que critique tu pregunta; que la reformule en PICO u otro formato; que proponga preguntas más acotadas.</td>
+<td>Que termines investigando la pregunta de la IA y no la tuya.</td>
+<td>Usala para discutir, no para decidir.</td>
+</tr>
+<tr class="even">
+<td>Identificar términos (cap. 4 y 6)</td>
+<td>Generar sinónimos, variantes, siglas y traducciones en español, inglés y portugués; sugerir descriptores.</td>
+<td>Descriptores inexistentes; traducciones literales; términos que nadie usa.</td>
+<td>Verificar cada descriptor en el tesauro; comprobar cada término en una base.</td>
+</tr>
+<tr class="odd">
+<td>Construir la cadena (cap. 5)</td>
+<td>Traducir una cadena de una base a otra; detectar errores de paréntesis y operadores; proponer bloques.</td>
+<td>Sintaxis incorrecta o desactualizada; campos que no existen.</td>
+<td>Ejecutar la cadena en la base y revisar resultados; comparar con la ayuda oficial.</td>
+</tr>
+<tr class="even">
+<td>Explorar la literatura</td>
+<td>Buscadores académicos con IA para encontrar artículos semilla y revisiones.</td>
+<td>Sesgo hacia literatura en inglés y de acceso abierto; resultados no reproducibles.</td>
+<td>Complementar con búsqueda booleana y bases regionales.</td>
+</tr>
+<tr class="odd">
+<td>Cribar (cap. 8)</td>
+<td>Priorizar registros con herramientas de aprendizaje activo (ASReview); segunda opinión sobre casos dudosos.</td>
+<td>Exclusión de estudios relevantes sin revisión humana.</td>
+<td>Decisión final siempre humana; reportar la herramienta y el criterio de detención.</td>
+</tr>
+<tr class="even">
+<td>Leer y extraer datos</td>
+<td>Resumir; ubicar en el texto la muestra, el método o un resultado; traducir un artículo en otro idioma.</td>
+<td>Resúmenes incorrectos; datos atribuidos al artículo equivocado; matices perdidos.</td>
+<td>Verificar cada dato extraído en el texto original; leer siempre el método y los resultados.</td>
+</tr>
+<tr class="odd">
+<td>Evaluar fuentes (cap. 11)</td>
+<td>Ver cómo fue citado un artículo (Scite); detectar retracciones.</td>
+<td>Confiar en una etiqueta automática sin leer.</td>
+<td>Leer los pasajes de citas que la herramienta muestra.</td>
+</tr>
+<tr class="even">
+<td>Escribir (cap. 12)</td>
+<td>Revisar claridad y ortografía; sugerir estructura; detectar párrafos que solo enumeran estudios.</td>
+<td>Plagio, referencias inventadas, pérdida de la voz propia, incumplimiento de normas institucionales.</td>
+<td>Escribir vos; citar solo lo que leíste; declarar el uso.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="instrucciones-prompts-útiles" class="level2">
+<h2 class="anchored" data-anchor-id="instrucciones-prompts-útiles">10.6 Instrucciones (<em>prompts</em>) útiles</h2>
+<p>Una buena instrucción da <strong>contexto</strong>, pide una <strong>tarea concreta</strong>, fija un <strong>formato</strong> de respuesta y pide que la IA <strong>señale sus dudas</strong>. Algunos modelos para adaptar:</p>
+<p><strong>Generar términos bilingües</strong></p>
+<pre class="text"><code>Estoy preparando una búsqueda bibliográfica para una tesina de Psicología.
+Pregunta: ¿los programas de mindfulness reducen el estrés académico en
+estudiantes universitarios?
+
+Para cada concepto (población, intervención, resultado) dame una tabla con:
+- sinónimos y variantes en español (incluí variantes regionales),
+- equivalentes en inglés y en portugués,
+- posibles descriptores MeSH, DeCS y del APA Thesaurus.
+
+Marcá con (?) cualquier descriptor del que no estés seguro de que exista
+con ese nombre exacto. No inventes términos.</code></pre>
+<p><strong>Traducir una cadena entre bases</strong></p>
+<pre class="text"><code>Tengo esta estrategia de búsqueda para PubMed:
+[pegar la cadena]
+
+Adaptala a la sintaxis de Scopus (TITLE-ABS-KEY) y de Web of Science (TS=).
+Explicá cada cambio que hagas. Como Scopus y Web of Science no usan MeSH,
+indicá qué palabras clave deberían reemplazar a cada descriptor.</code></pre>
+<p><strong>Revisar una cadena</strong></p>
+<pre class="text"><code>Revisá esta cadena de búsqueda como lo haría un bibliotecario usando la
+lista de control PRESS: [pegar la cadena]
+
+Señalá errores de operadores o paréntesis, sinónimos que falten,
+truncamientos demasiado cortos o largos y términos que puedan traer
+mucho ruido. No reescribas la cadena entera: listá los problemas.</code></pre>
+<p><strong>Extraer datos de un artículo que tenés abierto</strong></p>
+<pre class="text"><code>A partir del artículo adjunto, completá esta tabla: autores y año, país,
+diseño, tamaño y características de la muestra, intervención, grupo de
+comparación, instrumento para medir el estrés, resultado principal.
+
+Para cada dato, citá textualmente la frase del artículo de donde lo
+tomaste. Si un dato no figura, escribí "no informado".</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pedir que <strong>cite textualmente el pasaje</strong> de donde sale cada dato hace mucho más fácil verificar la respuesta: buscás la frase en el PDF y comprobás que esté y que diga eso.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Nunca le pidas a un asistente 'diez referencias sobre X'">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Nunca le pidas a un asistente ‘diez referencias sobre X’
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>para copiarlas en tu trabajo. Aunque use búsqueda web, puede mezclar datos de artículos distintos o describir mal lo que dicen. Usá las herramientas de IA para <strong>encontrar</strong> artículos, pero cada referencia que cites tiene que haber pasado por tus manos: localizada en una base o en el sitio de la revista, y leída.</p>
+</div>
+</div>
+</section>
+<section id="riesgos-que-hay-que-conocer" class="level2">
+<h2 class="anchored" data-anchor-id="riesgos-que-hay-que-conocer">10.7 Riesgos que hay que conocer</h2>
+<ul>
+<li><strong>Referencias inventadas o mal atribuidas.</strong> Ver sección 10.2.</li>
+<li><strong>Cobertura sesgada.</strong> Muchos buscadores con IA se apoyan en índices abiertos donde predominan los artículos en inglés y con resumen disponible. La literatura en español, los libros, las tesis y los informes suelen estar subrepresentados. Una búsqueda solo con IA reproduce, y a veces amplifica, el sesgo de idioma del capítulo 6.</li>
+<li><strong>Falta de reproducibilidad.</strong> La misma pregunta puede devolver resultados distintos otro día o con otra formulación. Esto la hace inadecuada como búsqueda principal de una revisión sistemática.</li>
+<li><strong>Opacidad.</strong> No siempre se sabe qué fuentes consultó la herramienta ni con qué criterio ordenó los resultados.</li>
+<li><strong>Complacencia.</strong> Los asistentes tienden a darle la razón al usuario. Si preguntás “¿verdad que el mindfulness reduce el estrés?”, es más probable que encuentres confirmaciones. Formulá preguntas neutrales y pedí explícitamente la evidencia en contra.</li>
+<li><strong>Resúmenes que aplanan los matices.</strong> Un resumen automático puede omitir limitaciones, tamaños de efecto pequeños o resultados no significativos.</li>
+<li><strong>Privacidad y confidencialidad.</strong> No subas datos personales de participantes, manuscritos inéditos de otras personas ni información confidencial. Revisá las condiciones de uso de cada herramienta y las políticas de tu institución.</li>
+<li><strong>Derechos de autor.</strong> Subir PDFs de suscripción a servicios externos puede violar las licencias de tu biblioteca. Consultá antes.</li>
+<li><strong>Aprendizaje.</strong> Si la IA hace todo el trabajo, no desarrollás el criterio para juzgar la literatura, que es justamente lo que se evalúa en un trabajo académico.</li>
+</ul>
+</section>
+<section id="protocolo-de-verificación" class="level2">
+<h2 class="anchored" data-anchor-id="protocolo-de-verificación">10.8 Protocolo de verificación</h2>
+<p>Antes de usar algo que produjo una herramienta de IA, respondé:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">¿La referencia <strong>existe</strong>? La busqué por título o DOI en una base de datos, en Google Académico o en el sitio de la revista.</label></li>
+<li><label><input type="checkbox">¿Los <strong>metadatos son correctos</strong>? Autores, año, título, revista, volumen, páginas y DOI coinciden con la fuente.</label></li>
+<li><label><input type="checkbox">¿El artículo <strong>dice lo que la IA dice que dice</strong>? Lo verifiqué en el resumen y, para datos concretos, en el texto completo.</label></li>
+<li><label><input type="checkbox">¿El artículo <strong>fue retractado</strong>? (capítulo 11).</label></li>
+<li><label><input type="checkbox">¿Los <strong>descriptores</strong> sugeridos existen en el tesauro con ese nombre exacto?</label></li>
+<li><label><input type="checkbox">¿La <strong>cadena</strong> funciona en la base? La ejecuté, revisé los resultados y la registré en la bitácora.</label></li>
+<li><label><input type="checkbox">¿Busqué también en <strong>español</strong> y en <strong>bases regionales</strong>, o solo usé lo que me dio la IA?</label></li>
+<li><label><input type="checkbox">¿Anoté <strong>qué herramienta, cuándo y para qué</strong> la usé?</label></li>
+</ul>
+</section>
+<section id="la-ia-en-revisiones-sistemáticas" class="level2">
+<h2 class="anchored" data-anchor-id="la-ia-en-revisiones-sistemáticas">10.9 La IA en revisiones sistemáticas</h2>
+<p>En 2025, cuatro de las principales organizaciones dedicadas a la síntesis de evidencia —Cochrane, la Campbell Collaboration, JBI y la Collaboration for Environmental Evidence— publicaron una declaración conjunta sobre el uso de IA en revisiones, en la que adhieren a las recomendaciones <strong>RAISE</strong> (<em>Responsible use of AI in evidence SynthEsis</em>) (Flemyng et al., 2025). Sus ideas centrales, que también sirven para un trabajo estudiantil:</p>
+<ul>
+<li><strong>Quien hace la revisión es responsable</strong> de ella, incluida la decisión de usar IA.</li>
+<li>La IA puede <strong>asistir</strong> en tareas como el diseño de la búsqueda, la priorización del cribado o la extracción de datos, <strong>siempre con supervisión humana</strong> y solo si no compromete el rigor metodológico.</li>
+<li>Las herramientas deben estar <strong>evaluadas</strong> para la tarea en la que se usan, y su uso debe <strong>reportarse</strong> con detalle (qué herramienta, qué versión, para qué, cómo se verificó).</li>
+<li>La búsqueda principal sigue apoyándose en <strong>estrategias booleanas reproducibles</strong> en bases de datos documentadas.</li>
+<li>En el cribado con aprendizaje activo (como ASReview), hay que definir y reportar <strong>cuándo se detuvo</strong> la revisión manual y por qué (por ejemplo, después de una cantidad determinada de registros irrelevantes consecutivos).</li>
+</ul>
+</section>
+<section id="declarar-el-uso-de-ia" class="level2">
+<h2 class="anchored" data-anchor-id="declarar-el-uso-de-ia">10.10 Declarar el uso de IA</h2>
+<p>Cada vez más revistas, universidades y cátedras piden que se declare el uso de IA. Primero, <strong>consultá la política de tu institución y de tu cátedra</strong>: algunas lo permiten con declaración, otras lo restringen para ciertas tareas.</p>
+<p>Una declaración útil dice <strong>qué herramienta</strong>, <strong>para qué tarea</strong> y <strong>cómo se verificó</strong>. Ejemplo para la sección de método:</p>
+<blockquote class="blockquote">
+<p><em>Se utilizó un asistente de inteligencia artificial generativa (nombre de la herramienta, versión, fecha de uso) para generar una lista inicial de sinónimos en español, inglés y portugués y para adaptar la sintaxis de la estrategia de búsqueda de PubMed a Scopus y Web of Science. Todos los descriptores se verificaron en los tesauros MeSH y DeCS, y todas las estrategias se ejecutaron y revisaron manualmente. No se utilizó IA para seleccionar estudios ni para redactar el texto.</em></p>
+</blockquote>
+<p>Para citar una herramienta de IA en formato APA, la American Psychological Association publicó lineamientos en su blog de estilo (McAdoo, 2023).</p>
+<hr>
+</section>
+<section id="clásico-y-con-ia-un-balance" class="level2">
+<h2 class="anchored" data-anchor-id="clásico-y-con-ia-un-balance">10.11 Clásico y con IA: un balance</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Herramientas clásicas</th>
+<th>Herramientas con IA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mejor para</td>
+<td>Búsqueda principal, reproducible y reportable</td>
+<td>Exploración, descubrimiento de términos y artículos, lectura asistida</td>
+</tr>
+<tr class="even">
+<td>Transparencia</td>
+<td>Alta</td>
+<td>Variable, a menudo baja</td>
+</tr>
+<tr class="odd">
+<td>Cobertura en español</td>
+<td>Buena en bases regionales</td>
+<td>En general, limitada</td>
+</tr>
+<tr class="even">
+<td>Curva de aprendizaje</td>
+<td>Mayor (sintaxis)</td>
+<td>Menor (lenguaje natural)</td>
+</tr>
+<tr class="odd">
+<td>Riesgo principal</td>
+<td>Perder estudios por términos mal elegidos</td>
+<td>Información incorrecta presentada con seguridad</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La IA es un buen <strong>asistente de investigación</strong>, no un buen <strong>investigador</strong>. Te puede ahorrar tiempo en tareas mecánicas y ayudarte a pensar, pero la responsabilidad sobre lo que buscás, lo que incluís y lo que afirmás sigue siendo tuya.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="resumen" class="level2">
+<h2 class="anchored" data-anchor-id="resumen">Resumen</h2>
+<ul>
+<li>Hay distintos tipos de herramientas con IA: asistentes generales, buscadores académicos, IA integrada en bases tradicionales, análisis de citas, mapas, lectura asistida y cribado.</li>
+<li>La búsqueda semántica encuentra lo que usa otras palabras, pero es opaca y poco reproducible; la booleana sigue siendo la base de una búsqueda reportable.</li>
+<li>La IA es especialmente útil para generar términos, traducir cadenas, explorar y leer; es riesgosa para producir referencias y para decidir qué incluir.</li>
+<li>Todo lo que produce una IA se verifica en la fuente original.</li>
+<li>El uso de IA se declara: qué herramienta, para qué y cómo se verificó.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<ol type="1">
+<li>Usá el <em>prompt</em> de la sección 10.6 para generar términos bilingües para tu pregunta. Verificá cada descriptor sugerido en el tesauro correspondiente. ¿Cuántos existían tal cual?</li>
+<li>Hacé la misma pregunta en un buscador académico con IA y en tu cadena booleana en Scopus o Web of Science. Compará los diez primeros resultados: ¿cuántos coinciden? ¿Cuántos están en español?</li>
+<li>Pedile a un asistente general, <strong>sin búsqueda web</strong>, cinco referencias sobre tu tema. Verificá cada una con el protocolo de la sección 10.8. Anotá cuántas existen, cuántas tienen errores y cuántas son inventadas.</li>
+<li>Redactá la declaración de uso de IA para tu trabajo.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../capitulos/09-busqueda-por-citas.html" class="pagination-link" aria-label="Capítulo 9. Búsqueda por citas y estrategias complementarias">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Capítulo 9. Búsqueda por citas y estrategias complementarias</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../capitulos/11-evaluar-fuentes.html" class="pagination-link" aria-label="Capítulo 11. Evaluar lo que encontramos">
+        <span class="nav-page-text"><span class="chapter-title">Capítulo 11. Evaluar lo que encontramos</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

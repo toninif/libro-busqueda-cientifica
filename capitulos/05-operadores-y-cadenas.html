@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Capítulo 5. Operadores y cadenas de búsqueda – Buscar antecedentes</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../capitulos/06-espanol-e-ingles.html" rel="next">
+<link href="../capitulos/04-busqueda-por-terminos.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-21d6fceeb25172fe2fb34cb0b56a437d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/04-busqueda-por-terminos.html">Parte II. Técnicas de búsqueda</a></li><li class="breadcrumb-item"><a href="../capitulos/05-operadores-y-cadenas.html"><span class="chapter-title">Capítulo 5. Operadores y cadenas de búsqueda</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Buscar antecedentes</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/toninif/libro-busqueda-cientifica" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte I. Fundamentos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/01-antecedentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 1. Qué son los antecedentes y por qué buscarlos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/02-planificar.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 2. Planificar la búsqueda</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/03-donde-buscar.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 3. Dónde buscar: fuentes y herramientas clásicas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte II. Técnicas de búsqueda</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/04-busqueda-por-terminos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 4. Búsqueda por términos: palabras clave y vocabulario controlado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/05-operadores-y-cadenas.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Capítulo 5. Operadores y cadenas de búsqueda</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/06-espanol-e-ingles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 6. Buscar en español y en inglés</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte III. Búsqueda sistemática</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/07-pregunta-pico.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 7. La pregunta PICO y sus variantes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/08-revisiones-y-prisma.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 8. Revisiones sistemáticas y la declaración PRISMA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/09-busqueda-por-citas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 9. Búsqueda por citas y estrategias complementarias</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte IV. Inteligencia artificial, evaluación y escritura</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/10-inteligencia-artificial.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 10. Inteligencia artificial para la búsqueda de antecedentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/11-evaluar-fuentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 11. Evaluar lo que encontramos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/12-gestionar-y-escribir.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 12. Gestionar referencias y escribir los antecedentes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../anexos/A-plantillas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anexo A. Plantillas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../anexos/B-glosario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anexo B. Glosario</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../anexos/C-recursos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anexo C. Directorio de recursos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../anexos/D-bibliografia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anexo D. Bibliografía</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#los-operadores-booleanos" id="toc-los-operadores-booleanos" class="nav-link active" data-scroll-target="#los-operadores-booleanos">5.1 Los operadores booleanos</a>
+  <ul class="collapse">
+  <li><a href="#el-peligro-de-not" id="toc-el-peligro-de-not" class="nav-link" data-scroll-target="#el-peligro-de-not">El peligro de <code>NOT</code></a></li>
+  </ul></li>
+  <li><a href="#los-paréntesis-y-el-orden-de-las-operaciones" id="toc-los-paréntesis-y-el-orden-de-las-operaciones" class="nav-link" data-scroll-target="#los-paréntesis-y-el-orden-de-las-operaciones">5.2 Los paréntesis y el orden de las operaciones</a></li>
+  <li><a href="#operadores-de-proximidad" id="toc-operadores-de-proximidad" class="nav-link" data-scroll-target="#operadores-de-proximidad">5.3 Operadores de proximidad</a></li>
+  <li><a href="#construir-una-cadena-paso-a-paso" id="toc-construir-una-cadena-paso-a-paso" class="nav-link" data-scroll-target="#construir-una-cadena-paso-a-paso">5.4 Construir una cadena paso a paso</a>
+  <ul class="collapse">
+  <li><a href="#paso-1-una-columna-por-concepto" id="toc-paso-1-una-columna-por-concepto" class="nav-link" data-scroll-target="#paso-1-una-columna-por-concepto">Paso 1: una columna por concepto</a></li>
+  <li><a href="#paso-2-unir-los-términos-de-cada-columna-con-or-y-encerrarlos-entre-paréntesis" id="toc-paso-2-unir-los-términos-de-cada-columna-con-or-y-encerrarlos-entre-paréntesis" class="nav-link" data-scroll-target="#paso-2-unir-los-términos-de-cada-columna-con-or-y-encerrarlos-entre-paréntesis">Paso 2: unir los términos de cada columna con <code>OR</code> y encerrarlos entre paréntesis</a></li>
+  <li><a href="#paso-3-unir-los-bloques-con-and" id="toc-paso-3-unir-los-bloques-con-and" class="nav-link" data-scroll-target="#paso-3-unir-los-bloques-con-and">Paso 3: unir los bloques con <code>AND</code></a></li>
+  <li><a href="#paso-4-adaptar-a-los-campos-y-la-sintaxis-de-cada-base" id="toc-paso-4-adaptar-a-los-campos-y-la-sintaxis-de-cada-base" class="nav-link" data-scroll-target="#paso-4-adaptar-a-los-campos-y-la-sintaxis-de-cada-base">Paso 4: adaptar a los campos y la sintaxis de cada base</a></li>
+  <li><a href="#paso-5-probar-revisar-y-ajustar" id="toc-paso-5-probar-revisar-y-ajustar" class="nav-link" data-scroll-target="#paso-5-probar-revisar-y-ajustar">Paso 5: probar, revisar y ajustar</a></li>
+  </ul></li>
+  <li><a href="#la-misma-cadena-en-distintas-bases" id="toc-la-misma-cadena-en-distintas-bases" class="nav-link" data-scroll-target="#la-misma-cadena-en-distintas-bases">5.5 La misma cadena en distintas bases</a></li>
+  <li><a href="#resumen-de-sintaxis-por-base" id="toc-resumen-de-sintaxis-por-base" class="nav-link" data-scroll-target="#resumen-de-sintaxis-por-base">5.6 Resumen de sintaxis por base</a></li>
+  <li><a href="#es-buena-mi-cadena-sensibilidad-y-precisión" id="toc-es-buena-mi-cadena-sensibilidad-y-precisión" class="nav-link" data-scroll-target="#es-buena-mi-cadena-sensibilidad-y-precisión">5.7 ¿Es buena mi cadena? Sensibilidad y precisión</a>
+  <ul class="collapse">
+  <li><a href="#el-conjunto-de-validación" id="toc-el-conjunto-de-validación" class="nav-link" data-scroll-target="#el-conjunto-de-validación">El conjunto de validación</a></li>
+  </ul></li>
+  <li><a href="#filtros-y-límites" id="toc-filtros-y-límites" class="nav-link" data-scroll-target="#filtros-y-límites">5.8 Filtros y límites</a></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">5.9 Errores frecuentes</a></li>
+  <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen">Resumen</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/04-busqueda-por-terminos.html">Parte II. Técnicas de búsqueda</a></li><li class="breadcrumb-item"><a href="../capitulos/05-operadores-y-cadenas.html"><span class="chapter-title">Capítulo 5. Operadores y cadenas de búsqueda</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Capítulo 5. Operadores y cadenas de búsqueda</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>En este capítulo vas a aprender:</strong></p>
+<ul>
+<li>a combinar términos con los operadores booleanos <code>AND</code>, <code>OR</code> y <code>NOT</code>;</li>
+<li>a usar paréntesis y operadores de proximidad;</li>
+<li>a construir una cadena de búsqueda paso a paso a partir de una tabla de conceptos;</li>
+<li>a adaptar la misma cadena a distintas bases de datos;</li>
+<li>a evaluar si una cadena es buena: sensibilidad y precisión.</li>
+</ul>
+<hr>
+<section id="los-operadores-booleanos" class="level2">
+<h2 class="anchored" data-anchor-id="los-operadores-booleanos">5.1 Los operadores booleanos</h2>
+<p>Los operadores booleanos (por el matemático George Boole) indican cómo se relacionan los términos entre sí. Se escriben <strong>en mayúsculas</strong> en casi todas las bases.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Operador</th>
+<th>Significado</th>
+<th>Efecto</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>OR</code></td>
+<td>Cualquiera de los términos</td>
+<td><strong>Amplía</strong>: más resultados</td>
+<td><code>estrés OR distrés</code></td>
+</tr>
+<tr class="even">
+<td><code>AND</code></td>
+<td>Todos los términos</td>
+<td><strong>Restringe</strong>: menos resultados</td>
+<td><code>mindfulness AND estrés</code></td>
+</tr>
+<tr class="odd">
+<td><code>NOT</code></td>
+<td>Excluye un término</td>
+<td><strong>Restringe</strong> (con riesgo)</td>
+<td><code>adolescentes NOT niños</code></td>
+</tr>
+</tbody>
+</table>
+<p>Un ejemplo con seis documentos numerados:</p>
+<pre class="text"><code>Documentos que contienen A: 1, 2, 3, 4
+Documentos que contienen B:       3, 4, 5, 6
+
+A OR B   →  1, 2, 3, 4, 5, 6   (todo lo que tenga A, B o ambos)
+A AND B  →        3, 4         (solo lo que tenga A y B a la vez)
+A NOT B  →  1, 2               (lo que tenga A pero no B)</code></pre>
+<p>Una regla sencilla para recordar:</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Para recordar">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Para recordar
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><code>OR</code> une sinónimos dentro de un mismo concepto. <code>AND</code> une conceptos distintos.</strong></p>
+</div>
+</div>
+<section id="el-peligro-de-not" class="level3">
+<h3 class="anchored" data-anchor-id="el-peligro-de-not">El peligro de <code>NOT</code></h3>
+<p><code>NOT</code> excluye <strong>cualquier</strong> documento que mencione el término, aunque sea de pasada. Si buscás <code>adolescentes NOT niños</code> para quitar los estudios sobre infancia, también vas a eliminar un estudio sobre adolescentes cuyo resumen dice “a diferencia de lo observado en niños…”. Usá <code>NOT</code> con mucha cautela y, en una revisión sistemática, casi nunca. Es preferible excluir manualmente durante el cribado (capítulo 8) o usar los filtros de la base.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En <strong>Scopus</strong> el operador de exclusión se escribe <code>AND NOT</code>. En <strong>Google Académico</strong> se usa el signo menos pegado al término: <code>-niños</code>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="los-paréntesis-y-el-orden-de-las-operaciones" class="level2">
+<h2 class="anchored" data-anchor-id="los-paréntesis-y-el-orden-de-las-operaciones">5.2 Los paréntesis y el orden de las operaciones</h2>
+<p>Cuando una cadena combina <code>AND</code> y <code>OR</code>, los <strong>paréntesis</strong> indican qué se resuelve primero, igual que en matemática.</p>
+<pre class="text"><code>mindfulness OR meditación AND estrés</code></pre>
+<p>¿Significa “(mindfulness o meditación) y estrés” o “mindfulness o (meditación y estrés)”? Depende de la base: cada una tiene su propio orden de precedencia. Por ejemplo, en Scopus <code>OR</code> se resuelve antes que <code>AND</code>, mientras que otras bases resuelven <code>AND</code> primero o leen de izquierda a derecha. La solución es no depender de esas reglas:</p>
+<pre class="text"><code>(mindfulness OR meditación) AND estrés</code></pre>
+<div class="callout callout-style-default callout-warning callout-titled" title="Error frecuente: olvidar los paréntesis">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Error frecuente: olvidar los paréntesis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Siempre agrupá con paréntesis los sinónimos de cada concepto, aunque creas que la base lo va a interpretar bien. Es la causa más común de resultados absurdos.</p>
+</div>
+</div>
+</section>
+<section id="operadores-de-proximidad" class="level2">
+<h2 class="anchored" data-anchor-id="operadores-de-proximidad">5.3 Operadores de proximidad</h2>
+<p>Los operadores de proximidad buscan términos <strong>cerca</strong> uno del otro, a una distancia máxima de <em>n</em> palabras. Están a mitad de camino entre <code>AND</code> (en cualquier lugar del documento) y la frase exacta (juntos y en ese orden).</p>
+<p>Ejemplo: queremos <em>academic stress</em>, pero también <em>stress in academic settings</em>, <em>academic-related stress</em> o <em>stress of academic origin</em>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Base</th>
+<th>Sintaxis</th>
+<th>Orden</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Scopus</td>
+<td><code>academic W/3 stress</code></td>
+<td>Cualquier orden</td>
+</tr>
+<tr class="even">
+<td>Scopus</td>
+<td><code>academic PRE/3 stress</code></td>
+<td>El primero antes del segundo</td>
+</tr>
+<tr class="odd">
+<td>Web of Science</td>
+<td><code>academic NEAR/3 stress</code></td>
+<td>Cualquier orden</td>
+</tr>
+<tr class="even">
+<td>EBSCOhost</td>
+<td><code>academic N3 stress</code></td>
+<td>Cualquier orden</td>
+</tr>
+<tr class="odd">
+<td>EBSCOhost</td>
+<td><code>academic W3 stress</code></td>
+<td>En ese orden</td>
+</tr>
+<tr class="even">
+<td>Ovid</td>
+<td><code>(academic adj3 stress).ti,ab.</code></td>
+<td>Cualquier orden</td>
+</tr>
+<tr class="odd">
+<td>PubMed</td>
+<td><code>"academic stress"[tiab:~3]</code></td>
+<td>Cualquier orden, en título o resumen</td>
+</tr>
+</tbody>
+</table>
+<p>La forma exacta de contar la distancia (si <em>n</em> incluye o no a los propios términos) varía entre bases, y no todas permiten combinar proximidad con frases o truncamientos. Google Académico, SciELO y la mayoría de las bases regionales <strong>no</strong> tienen operadores de proximidad.</p>
+</section>
+<section id="construir-una-cadena-paso-a-paso" class="level2">
+<h2 class="anchored" data-anchor-id="construir-una-cadena-paso-a-paso">5.4 Construir una cadena paso a paso</h2>
+<p>Vamos a transformar la tabla de conceptos del caso guía (capítulo 2) en una cadena. El método es siempre el mismo:</p>
+<section id="paso-1-una-columna-por-concepto" class="level3">
+<h3 class="anchored" data-anchor-id="paso-1-una-columna-por-concepto">Paso 1: una columna por concepto</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Población</th>
+<th>Intervención</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“university student*”</td>
+<td>mindfulness</td>
+<td>stress</td>
+</tr>
+<tr class="even">
+<td>“college student*”</td>
+<td>mindful*</td>
+<td>distress</td>
+</tr>
+<tr class="odd">
+<td>undergraduate*</td>
+<td>meditat*</td>
+<td>“academic stress”</td>
+</tr>
+<tr class="even">
+<td>“higher education”</td>
+<td>MBSR</td>
+<td>burnout</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>“mindfulness-based stress reduction”</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="paso-2-unir-los-términos-de-cada-columna-con-or-y-encerrarlos-entre-paréntesis" class="level3">
+<h3 class="anchored" data-anchor-id="paso-2-unir-los-términos-de-cada-columna-con-or-y-encerrarlos-entre-paréntesis">Paso 2: unir los términos de cada columna con <code>OR</code> y encerrarlos entre paréntesis</h3>
+<pre class="text"><code>("university student*" OR "college student*" OR undergraduate* OR "higher education")
+(mindful* OR meditat* OR MBSR OR "mindfulness-based stress reduction")
+(stress OR distress OR burnout)</code></pre>
+<p>(<code>mindful*</code> ya incluye <em>mindfulness</em>, y <code>stress</code> ya aparece dentro de la frase <em>academic stress</em>, por eso algunos términos de la tabla no hace falta escribirlos.)</p>
+</section>
+<section id="paso-3-unir-los-bloques-con-and" class="level3">
+<h3 class="anchored" data-anchor-id="paso-3-unir-los-bloques-con-and">Paso 3: unir los bloques con <code>AND</code></h3>
+<pre class="text"><code>("university student*" OR "college student*" OR undergraduate* OR "higher education")
+AND (mindful* OR meditat* OR MBSR OR "mindfulness-based stress reduction")
+AND (stress OR distress OR burnout)</code></pre>
+</section>
+<section id="paso-4-adaptar-a-los-campos-y-la-sintaxis-de-cada-base" class="level3">
+<h3 class="anchored" data-anchor-id="paso-4-adaptar-a-los-campos-y-la-sintaxis-de-cada-base">Paso 4: adaptar a los campos y la sintaxis de cada base</h3>
+<p>Ver la sección 5.5.</p>
+</section>
+<section id="paso-5-probar-revisar-y-ajustar" class="level3">
+<h3 class="anchored" data-anchor-id="paso-5-probar-revisar-y-ajustar">Paso 5: probar, revisar y ajustar</h3>
+<ul>
+<li>Mirá los primeros 50 resultados: ¿cuántos son pertinentes?</li>
+<li>Verificá que la cadena encuentre los <strong>artículos que ya sabés que son relevantes</strong> (tu conjunto de validación, sección 5.7).</li>
+<li>Si hay demasiado ruido, identificá qué término lo produce. Si faltan estudios, averiguá qué palabras usan y agregalas.</li>
+<li>Registrá cada versión en la bitácora.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled" title="Construí la cadena por bloques en el historial de búsqueda">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Construí la cadena por bloques en el historial de búsqueda
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Casi todas las bases avanzadas (PubMed, Scopus, Web of Science, EBSCO, Ovid) tienen un historial donde cada búsqueda queda numerada (#1, #2, #3). Buscá cada concepto por separado y después combinalos: <code>#1 AND #2 AND #3</code>. Así ves cuántos resultados aporta cada bloque y detectás rápido cuál está fallando.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="la-misma-cadena-en-distintas-bases" class="level2">
+<h2 class="anchored" data-anchor-id="la-misma-cadena-en-distintas-bases">5.5 La misma cadena en distintas bases</h2>
+<p>Cada base tiene su propia sintaxis. Estas son las versiones del caso guía:</p>
+<p><strong>PubMed</strong> (combinando MeSH y palabras en título/resumen):</p>
+<pre class="text"><code>("Students"[Mesh] OR "university student*"[tiab] OR "college student*"[tiab]
+  OR undergraduate*[tiab] OR "higher education"[tiab])
+AND ("Mindfulness"[Mesh] OR "Meditation"[Mesh] OR mindful*[tiab]
+  OR meditat*[tiab] OR MBSR[tiab])
+AND ("Stress, Psychological"[Mesh] OR stress[tiab] OR distress[tiab]
+  OR burnout[tiab])</code></pre>
+<p><strong>Scopus</strong>:</p>
+<pre class="text"><code>TITLE-ABS-KEY(
+  ("university student*" OR "college student*" OR undergraduate* OR "higher education")
+  AND (mindful* OR meditat* OR mbsr OR "mindfulness-based stress reduction")
+  AND (stress OR distress OR burnout)
+)</code></pre>
+<p><strong>Web of Science</strong> (búsqueda avanzada):</p>
+<pre class="text"><code>TS=(("university student*" OR "college student*" OR undergraduate* OR "higher education")
+AND (mindful* OR meditat* OR MBSR OR "mindfulness-based stress reduction")
+AND (stress OR distress OR burnout))</code></pre>
+<p><strong>APA PsycInfo en EBSCOhost</strong> (combinando descriptores <code>DE</code> y palabras en título <code>TI</code> y resumen <code>AB</code>):</p>
+<pre class="text"><code>(DE "College Students" OR TI ("university student*" OR "college student*" OR undergraduate*)
+  OR AB ("university student*" OR "college student*" OR undergraduate*))
+AND (DE "Mindfulness" OR DE "Meditation" OR TI (mindful* OR meditat* OR MBSR)
+  OR AB (mindful* OR meditat* OR MBSR))
+AND (TI (stress OR distress OR burnout) OR AB (stress OR distress OR burnout))</code></pre>
+<p><strong>Google Académico</strong> (sin truncamiento ni paréntesis anidados; conviene ser breve):</p>
+<pre class="text"><code>mindfulness "university students" OR "college students" "academic stress"</code></pre>
+<p><strong>SciELO</strong> (bilingüe; ver capítulo 6):</p>
+<pre class="text"><code>(mindfulness OR "atención plena") AND (universitarios OR "estudiantes universitarios"
+  OR "university students") AND (estrés OR stress)</code></pre>
+<div class="callout callout-style-default callout-note callout-titled" title="Traducir cadenas entre bases">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Traducir cadenas entre bases
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Existen herramientas que convierten automáticamente la sintaxis de una base a otra, como <strong>Polyglot Search Translator</strong> (del proyecto <em>SR-Accelerator</em>). Ahorran tiempo, pero no traducen los descriptores entre tesauros (MeSH ≠ APA ≠ Emtree): eso hay que hacerlo a mano. También podés pedírselo a un asistente de IA, siempre verificando el resultado (capítulo 10).</p>
+</div>
+</div>
+</section>
+<section id="resumen-de-sintaxis-por-base" class="level2">
+<h2 class="anchored" data-anchor-id="resumen-de-sintaxis-por-base">5.6 Resumen de sintaxis por base</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Función</th>
+<th>PubMed</th>
+<th>Scopus</th>
+<th>Web of Science</th>
+<th>EBSCOhost</th>
+<th>Google Académico</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Y</td>
+<td><code>AND</code></td>
+<td><code>AND</code></td>
+<td><code>AND</code></td>
+<td><code>AND</code></td>
+<td>espacio</td>
+</tr>
+<tr class="even">
+<td>O</td>
+<td><code>OR</code></td>
+<td><code>OR</code></td>
+<td><code>OR</code></td>
+<td><code>OR</code></td>
+<td><code>OR</code></td>
+</tr>
+<tr class="odd">
+<td>Excluir</td>
+<td><code>NOT</code></td>
+<td><code>AND NOT</code></td>
+<td><code>NOT</code></td>
+<td><code>NOT</code></td>
+<td><code>-término</code></td>
+</tr>
+<tr class="even">
+<td>Frase</td>
+<td><code>"..."</code></td>
+<td><code>"..."</code> (flexible) / <code>{...}</code> (exacta)</td>
+<td><code>"..."</code></td>
+<td><code>"..."</code></td>
+<td><code>"..."</code></td>
+</tr>
+<tr class="odd">
+<td>Truncamiento</td>
+<td><code>*</code></td>
+<td><code>*</code></td>
+<td><code>*</code></td>
+<td><code>*</code></td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Proximidad</td>
+<td><code>"a b"[tiab:~n]</code></td>
+<td><code>W/n</code>, <code>PRE/n</code></td>
+<td><code>NEAR/n</code></td>
+<td><code>Nn</code>, <code>Wn</code></td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Título/resumen</td>
+<td><code>[tiab]</code></td>
+<td><code>TITLE-ABS-KEY()</code> / <code>TITLE-ABS()</code></td>
+<td><code>TS=</code> / <code>TI=</code> / <code>AB=</code></td>
+<td><code>TI</code>, <code>AB</code></td>
+<td><code>intitle:</code> (solo título)</td>
+</tr>
+<tr class="even">
+<td>Vocabulario controlado</td>
+<td><code>[Mesh]</code></td>
+<td><code>INDEXTERMS()</code></td>
+<td>— (no tiene tesauro general)</td>
+<td><code>DE</code> o <code>SU</code> (según la base)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Estas convenciones cambian con el tiempo. Ante la duda, consultá la ayuda de cada base (<em>Search tips</em>, <em>Help</em>, <em>Syntax</em>).</p>
+</section>
+<section id="es-buena-mi-cadena-sensibilidad-y-precisión" class="level2">
+<h2 class="anchored" data-anchor-id="es-buena-mi-cadena-sensibilidad-y-precisión">5.7 ¿Es buena mi cadena? Sensibilidad y precisión</h2>
+<p>Toda búsqueda enfrenta un equilibrio entre dos propiedades:</p>
+<ul>
+<li><strong>Sensibilidad</strong> (<em>recall</em>, exhaustividad): qué proporción de los documentos relevantes que existen recupera la búsqueda.</li>
+<li><strong>Precisión</strong>: qué proporción de los documentos recuperados son relevantes.</li>
+</ul>
+<pre class="text"><code>                    documentos relevantes recuperados
+Sensibilidad = ────────────────────────────────────────────
+                 total de documentos relevantes que existen
+
+                    documentos relevantes recuperados
+Precisión    = ────────────────────────────────────────────
+                       total de documentos recuperados</code></pre>
+<p>Casi siempre, <strong>aumentar una disminuye la otra</strong>. Agregar sinónimos con <code>OR</code> sube la sensibilidad y baja la precisión; agregar conceptos con <code>AND</code> o buscar solo en el título hace lo contrario.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Objetivo</th>
+<th>Prioridad</th>
+<th>Estrategia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exploración, trabajo práctico</td>
+<td>Precisión</td>
+<td>Pocos conceptos bien elegidos, búsqueda en título, filtros.</td>
+</tr>
+<tr class="even">
+<td>Tesina o tesis</td>
+<td>Equilibrio</td>
+<td>Dos o tres conceptos con sinónimos, título-resumen-palabras clave.</td>
+</tr>
+<tr class="odd">
+<td>Revisión sistemática</td>
+<td>Sensibilidad</td>
+<td>Muchos sinónimos, vocabulario controlado + palabras clave, pocos filtros, varias bases. Se acepta revisar miles de resultados.</td>
+</tr>
+</tbody>
+</table>
+<section id="el-conjunto-de-validación" class="level3">
+<h3 class="anchored" data-anchor-id="el-conjunto-de-validación">El conjunto de validación</h3>
+<p>Como no conocemos el “total de documentos relevantes que existen”, la sensibilidad no se puede calcular directamente. Una técnica práctica es armar un <strong>conjunto de validación</strong> (<em>gold standard</em>): de 5 a 20 artículos que sabés que son relevantes (por tu exploración, por una revisión previa o porque te los recomendaron). Después verificás si la cadena los recupera:</p>
+<ul>
+<li>Si recupera todos, es una buena señal.</li>
+<li>Si se le escapa alguno, abrí ese artículo y fijate por qué: ¿usa un sinónimo que no incluiste? ¿no tiene resumen? ¿no está indizado en esa base?</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En revisiones sistemáticas se recomienda que un bibliotecario o una bibliotecaria revise la estrategia de búsqueda antes de ejecutarla. Existe una guía para esa revisión, <strong>PRESS</strong> (<em>Peer Review of Electronic Search Strategies</em>; McGowan et al., 2016), cuya lista de control también sirve para autoevaluar tu cadena: traducción de la pregunta, operadores, vocabulario controlado, sintaxis, ortografía y filtros.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="filtros-y-límites" class="level2">
+<h2 class="anchored" data-anchor-id="filtros-y-límites">5.8 Filtros y límites</h2>
+<p>Las bases ofrecen filtros por año, idioma, tipo de documento, área temática, acceso abierto, edad de los participantes, etc. Son útiles, pero:</p>
+<ul>
+<li><strong>Todo filtro se reporta.</strong> Si limitaste a 2016-2026 o a artículos en inglés, tiene que constar en la bitácora y en el método.</li>
+<li><strong>Los filtros dependen de la indización.</strong> Un filtro por “adolescentes” o por “ensayo clínico” solo funciona si la base asignó bien esa etiqueta; los artículos recientes, aún no indizados, pueden quedar afuera.</li>
+<li><strong>Filtrar por idioma introduce sesgo</strong> (capítulo 6). Justificalo o evitalo.</li>
+<li><strong>Filtros metodológicos validados.</strong> En salud existen cadenas probadas para recuperar ciertos diseños, como la <em>Cochrane Highly Sensitive Search Strategy</em> para ensayos controlados aleatorizados en MEDLINE. Usá esas en lugar de inventar la tuya.</li>
+</ul>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">5.9 Errores frecuentes</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Error</th>
+<th>Consecuencia</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Unir sinónimos con <code>AND</code></td>
+<td>Muy pocos resultados</td>
+<td>Sinónimos con <code>OR</code>, conceptos con <code>AND</code>.</td>
+</tr>
+<tr class="even">
+<td>Olvidar paréntesis</td>
+<td>Resultados absurdos</td>
+<td>Agrupar cada concepto entre paréntesis.</td>
+</tr>
+<tr class="odd">
+<td>Demasiados conceptos unidos con <code>AND</code></td>
+<td>Se pierden estudios relevantes</td>
+<td>Dejar los dos o tres conceptos centrales.</td>
+</tr>
+<tr class="even">
+<td>Buscar en “todos los campos”</td>
+<td>Mucho ruido</td>
+<td>Título, resumen y palabras clave.</td>
+</tr>
+<tr class="odd">
+<td>Truncar demasiado pronto (<code>ed*</code>)</td>
+<td>Ruido</td>
+<td>Truncar después de la raíz significativa.</td>
+</tr>
+<tr class="even">
+<td>Usar <code>NOT</code> para limpiar</td>
+<td>Se pierden estudios relevantes</td>
+<td>Excluir durante el cribado.</td>
+</tr>
+<tr class="odd">
+<td>Copiar la cadena de PubMed en Scopus sin adaptarla</td>
+<td>Errores o resultados vacíos</td>
+<td>Adaptar campos, tesauro y operadores.</td>
+</tr>
+<tr class="even">
+<td>Buscar solo en inglés</td>
+<td>Se pierde literatura regional</td>
+<td>Cadena bilingüe (capítulo 6).</td>
+</tr>
+<tr class="odd">
+<td>No guardar la cadena</td>
+<td>No se puede reproducir ni reportar</td>
+<td>Bitácora desde el primer día.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="resumen" class="level2">
+<h2 class="anchored" data-anchor-id="resumen">Resumen</h2>
+<ul>
+<li><code>OR</code> une sinónimos, <code>AND</code> une conceptos, <code>NOT</code> se usa con mucho cuidado.</li>
+<li>Los paréntesis son obligatorios cuando se combinan operadores.</li>
+<li>Los operadores de proximidad (<code>W/n</code>, <code>NEAR/n</code>, <code>Nn</code>) están entre <code>AND</code> y la frase exacta.</li>
+<li>Una cadena se construye por bloques: una columna de sinónimos por concepto, unidos con <code>OR</code>; los bloques, unidos con <code>AND</code>.</li>
+<li>La misma lógica se adapta a la sintaxis de cada base.</li>
+<li>Sensibilidad y precisión se equilibran según el objetivo; un conjunto de validación ayuda a evaluar la cadena.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<ol type="1">
+<li>Con la tabla de conceptos de tu tema, armá una cadena general siguiendo los pasos de la sección 5.4.</li>
+<li>Adaptala a dos bases de datos distintas (por ejemplo, Scopus y una base regional). Registrá ambas en la bitácora con la cantidad de resultados.</li>
+<li>Elegí cinco artículos que ya sepas que son relevantes y verificá si tu cadena los recupera. Si alguno falta, averiguá por qué y corregí la cadena.</li>
+<li>Probá quitar uno de los conceptos. ¿Cuánto cambia la cantidad de resultados? ¿Y la pertinencia de los primeros veinte?</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../capitulos/04-busqueda-por-terminos.html" class="pagination-link" aria-label="Capítulo 4. Búsqueda por términos: palabras clave y vocabulario controlado">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Capítulo 4. Búsqueda por términos: palabras clave y vocabulario controlado</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../capitulos/06-espanol-e-ingles.html" class="pagination-link" aria-label="Capítulo 6. Buscar en español y en inglés">
+        <span class="nav-page-text"><span class="chapter-title">Capítulo 6. Buscar en español y en inglés</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

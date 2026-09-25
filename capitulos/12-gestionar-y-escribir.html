@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Capítulo 12. Gestionar referencias y escribir los antecedentes – Buscar antecedentes</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../anexos/A-plantillas.html" rel="next">
+<link href="../capitulos/11-evaluar-fuentes.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-21d6fceeb25172fe2fb34cb0b56a437d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e3a0307bf87dea633ae254d873c6233f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/10-inteligencia-artificial.html">Parte IV. Inteligencia artificial, evaluación y escritura</a></li><li class="breadcrumb-item"><a href="../capitulos/12-gestionar-y-escribir.html"><span class="chapter-title">Capítulo 12. Gestionar referencias y escribir los antecedentes</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Buscar antecedentes</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/toninif/libro-busqueda-cientifica" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte I. Fundamentos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/01-antecedentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 1. Qué son los antecedentes y por qué buscarlos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/02-planificar.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 2. Planificar la búsqueda</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/03-donde-buscar.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 3. Dónde buscar: fuentes y herramientas clásicas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte II. Técnicas de búsqueda</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/04-busqueda-por-terminos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 4. Búsqueda por términos: palabras clave y vocabulario controlado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/05-operadores-y-cadenas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 5. Operadores y cadenas de búsqueda</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/06-espanol-e-ingles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 6. Buscar en español y en inglés</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte III. Búsqueda sistemática</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/07-pregunta-pico.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 7. La pregunta PICO y sus variantes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/08-revisiones-y-prisma.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 8. Revisiones sistemáticas y la declaración PRISMA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/09-busqueda-por-citas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 9. Búsqueda por citas y estrategias complementarias</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte IV. Inteligencia artificial, evaluación y escritura</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/10-inteligencia-artificial.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 10. Inteligencia artificial para la búsqueda de antecedentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/11-evaluar-fuentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 11. Evaluar lo que encontramos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/12-gestionar-y-escribir.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Capítulo 12. Gestionar referencias y escribir los antecedentes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../anexos/A-plantillas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anexo A. Plantillas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../anexos/B-glosario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anexo B. Glosario</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../anexos/C-recursos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anexo C. Directorio de recursos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../anexos/D-bibliografia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anexo D. Bibliografía</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#por-qué-usar-un-gestor-bibliográfico" id="toc-por-qué-usar-un-gestor-bibliográfico" class="nav-link active" data-scroll-target="#por-qué-usar-un-gestor-bibliográfico">12.1 Por qué usar un gestor bibliográfico</a></li>
+  <li><a href="#exportar-resultados-y-eliminar-duplicados" id="toc-exportar-resultados-y-eliminar-duplicados" class="nav-link" data-scroll-target="#exportar-resultados-y-eliminar-duplicados">12.2 Exportar resultados y eliminar duplicados</a></li>
+  <li><a href="#organizar-la-biblioteca" id="toc-organizar-la-biblioteca" class="nav-link" data-scroll-target="#organizar-la-biblioteca">12.3 Organizar la biblioteca</a></li>
+  <li><a href="#la-matriz-de-antecedentes" id="toc-la-matriz-de-antecedentes" class="nav-link" data-scroll-target="#la-matriz-de-antecedentes">12.4 La matriz de antecedentes</a></li>
+  <li><a href="#de-la-matriz-al-texto-sintetizar-no-enumerar" id="toc-de-la-matriz-al-texto-sintetizar-no-enumerar" class="nav-link" data-scroll-target="#de-la-matriz-al-texto-sintetizar-no-enumerar">12.5 De la matriz al texto: sintetizar, no enumerar</a>
+  <ul class="collapse">
+  <li><a href="#formas-de-organizar-los-antecedentes" id="toc-formas-de-organizar-los-antecedentes" class="nav-link" data-scroll-target="#formas-de-organizar-los-antecedentes">Formas de organizar los antecedentes</a></li>
+  <li><a href="#una-estructura-posible-para-el-apartado" id="toc-una-estructura-posible-para-el-apartado" class="nav-link" data-scroll-target="#una-estructura-posible-para-el-apartado">Una estructura posible para el apartado</a></li>
+  </ul></li>
+  <li><a href="#citar-bien" id="toc-citar-bien" class="nav-link" data-scroll-target="#citar-bien">12.6 Citar bien</a></li>
+  <li><a href="#evitar-el-plagio" id="toc-evitar-el-plagio" class="nav-link" data-scroll-target="#evitar-el-plagio">12.7 Evitar el plagio</a></li>
+  <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen">Resumen</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/10-inteligencia-artificial.html">Parte IV. Inteligencia artificial, evaluación y escritura</a></li><li class="breadcrumb-item"><a href="../capitulos/12-gestionar-y-escribir.html"><span class="chapter-title">Capítulo 12. Gestionar referencias y escribir los antecedentes</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Capítulo 12. Gestionar referencias y escribir los antecedentes</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>En este capítulo vas a aprender:</strong></p>
+<ul>
+<li>a organizar tus referencias con un gestor bibliográfico;</li>
+<li>a exportar resultados de las bases y eliminar duplicados;</li>
+<li>a construir una matriz de antecedentes;</li>
+<li>a pasar de la matriz a un texto que sintetice, y no solo enumere;</li>
+<li>a citar correctamente y a evitar el plagio.</li>
+</ul>
+<hr>
+<section id="por-qué-usar-un-gestor-bibliográfico" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-usar-un-gestor-bibliográfico">12.1 Por qué usar un gestor bibliográfico</h2>
+<p>Un <strong>gestor bibliográfico</strong> es un programa que guarda tus referencias (y sus PDF), las organiza y genera automáticamente las citas y la bibliografía en el estilo que necesites (APA, Vancouver, Chicago, etc.). Usar uno desde el primer día evita:</p>
+<ul>
+<li>perder referencias (“¿dónde había leído eso?”);</li>
+<li>errores de formato en la bibliografía;</li>
+<li>citas en el texto que no están en la lista final, o al revés;</li>
+<li>horas de trabajo manual cuando te piden cambiar de estilo.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Gestor</th>
+<th>Costo</th>
+<th>Características</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Zotero</strong></td>
+<td>Gratuito y de código abierto</td>
+<td>Captura referencias desde el navegador con un clic; complementos para Word, LibreOffice y Google Docs; grupos compartidos; avisa si un artículo fue retractado. Muy recomendable para estudiantes.</td>
+</tr>
+<tr class="even">
+<td><strong>Mendeley</strong></td>
+<td>Gratuito (Elsevier)</td>
+<td>Lector de PDF con anotaciones; complemento para Word.</td>
+</tr>
+<tr class="odd">
+<td><strong>EndNote</strong></td>
+<td>Pago (Clarivate)</td>
+<td>Muy usado en ciencias de la salud; integración con Web of Science.</td>
+</tr>
+<tr class="even">
+<td><strong>JabRef</strong></td>
+<td>Gratuito y de código abierto</td>
+<td>Pensado para BibTeX y LaTeX.</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled" title="Configuración mínima de Zotero">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Configuración mínima de Zotero
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Instalá el programa de escritorio, el conector para tu navegador y el complemento para tu procesador de texto. Con eso podés guardar un artículo desde la página de la base de datos con un clic y citarlo en tu documento con otro.</p>
+</div>
+</div>
+</section>
+<section id="exportar-resultados-y-eliminar-duplicados" class="level2">
+<h2 class="anchored" data-anchor-id="exportar-resultados-y-eliminar-duplicados">12.2 Exportar resultados y eliminar duplicados</h2>
+<p>Cuando hacés una búsqueda estructurada en varias bases, conviene <strong>exportar todos los resultados</strong> (no solo los que parecen buenos) para cribarlos en un solo lugar:</p>
+<ol type="1">
+<li>En cada base, seleccioná todos los resultados y usá la opción <strong>Exportar</strong> en formato <strong>RIS</strong> (el más compatible) o BibTeX. Incluí el resumen.</li>
+<li>Importá cada archivo al gestor en una <strong>colección separada por base</strong> (“Scopus 2026-04-10”, “SciELO 2026-04-10”). Así sabés cuántos registros vinieron de cada una (dato para el diagrama PRISMA).</li>
+<li>Copiá todo a una colección general y <strong>eliminá los duplicados</strong>. Zotero, Mendeley, EndNote y Rayyan tienen funciones para detectarlos; revisá los casos dudosos a mano.</li>
+<li>Anotá cuántos duplicados eliminaste.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Algunas bases limitan la cantidad de registros que se pueden exportar de una vez (por ejemplo, de a 500 o 1.000). Si tenés más, exportá por tandas (ordenando por año o por bloques de resultados) y verificá que el total coincida.</p>
+</div>
+</div>
+</section>
+<section id="organizar-la-biblioteca" class="level2">
+<h2 class="anchored" data-anchor-id="organizar-la-biblioteca">12.3 Organizar la biblioteca</h2>
+<p>Algunas prácticas útiles:</p>
+<ul>
+<li><strong>Colecciones</strong> (carpetas) por etapa o tema: <em>Búsqueda Scopus</em>, <em>Cribado</em>, <em>Incluidos</em>, <em>Marco teórico</em>, <em>Método</em>.</li>
+<li><strong>Etiquetas</strong> (<em>tags</em>) para el estado de cada referencia: <code>incluido</code>, <code>excluido-poblacion</code>, <code>excluido-diseño</code>, <code>leer</code>, <code>clave</code>.</li>
+<li><strong>Notas</strong> vinculadas a cada referencia con tu resumen y tus comentarios.</li>
+<li><strong>PDF adjuntos</strong> con nombre normalizado (el gestor puede renombrarlos automáticamente como <em>Autor - Año - Título</em>).</li>
+<li><strong>Copia de seguridad</strong> o sincronización en la nube.</li>
+</ul>
+</section>
+<section id="la-matriz-de-antecedentes" class="level2">
+<h2 class="anchored" data-anchor-id="la-matriz-de-antecedentes">12.4 La matriz de antecedentes</h2>
+<p>La <strong>matriz de antecedentes</strong> (o matriz de síntesis) es una tabla con una fila por estudio y una columna por aspecto relevante. Es el puente entre la lectura y la escritura.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Autor/es (año)</th>
+<th>País</th>
+<th>Objetivo</th>
+<th>Diseño</th>
+<th>Muestra</th>
+<th>Intervención / variables</th>
+<th>Instrumentos</th>
+<th>Resultados principales</th>
+<th>Limitaciones</th>
+<th>Aporte a mi trabajo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Autora A et al.&nbsp;(2021)</td>
+<td>Chile</td>
+<td>Evaluar un programa de mindfulness de 8 semanas</td>
+<td>Ensayo aleatorizado</td>
+<td>120 estudiantes de grado</td>
+<td>MBSR vs.&nbsp;lista de espera</td>
+<td>Escala de Estrés Percibido (PSS-10)</td>
+<td>Reducción significativa del estrés; efecto moderado</td>
+<td>Seguimiento corto; una sola universidad</td>
+<td>Primer ensayo en la región; mismo instrumento que pienso usar</td>
+</tr>
+<tr class="even">
+<td>Autor B y Autora C (2023)</td>
+<td>España</td>
+<td>…</td>
+<td>Cuasiexperimental</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Los estudios de este ejemplo y del siguiente son ficticios; sirven solo para ilustrar el formato.)</em></p>
+<p>Algunas recomendaciones:</p>
+<ul>
+<li>Definí las columnas <strong>antes</strong> de empezar a leer, según tu pregunta. Podés agregar columnas después, pero implica volver a los artículos ya leídos.</li>
+<li>Escribí con <strong>tus palabras</strong>. Si copiás una frase textual, ponela entre comillas y con la página.</li>
+<li>La columna <strong>“aporte a mi trabajo”</strong> es la más importante: ahí empezás a pensar el texto.</li>
+<li>Una planilla de cálculo permite <strong>ordenar y filtrar</strong> (por año, por país, por diseño), lo que ayuda a ver patrones.</li>
+</ul>
+<p>En el <a href="../anexos/A-plantillas.html">Anexo A</a> hay una plantilla.</p>
+</section>
+<section id="de-la-matriz-al-texto-sintetizar-no-enumerar" class="level2">
+<h2 class="anchored" data-anchor-id="de-la-matriz-al-texto-sintetizar-no-enumerar">12.5 De la matriz al texto: sintetizar, no enumerar</h2>
+<p>El error más frecuente al escribir los antecedentes es la <strong>enumeración</strong>: un párrafo por artículo, uno detrás de otro.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Ejemplo de enumeración (a evitar)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Ejemplo de enumeración (a evitar)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>García (2019) estudió el efecto del mindfulness en estudiantes de medicina y encontró que redujo el estrés. Pérez (2020) realizó un estudio con estudiantes de psicología y encontró resultados similares. López (2021) aplicó un programa de ocho semanas en Chile y observó una disminución del estrés. Smith (2022) no encontró diferencias significativas…</em></p>
+</div>
+</div>
+<p>El lector no sabe qué conclusiones sacar, qué estudios son mejores ni qué falta investigar. Compará con una versión <strong>sintética</strong>:</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Ejemplo de síntesis">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo de síntesis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>La mayoría de los ensayos realizados con estudiantes universitarios informan que los programas de mindfulness reducen el estrés percibido, con efectos entre pequeños y moderados (García, 2019; López, 2021; Pérez, 2020). Sin embargo, los estudios con seguimiento superior a tres meses son escasos y sus resultados, menos consistentes (Smith, 2022). Además, casi toda la evidencia proviene de estudiantes de carreras de salud en Europa y América del Norte: solo un ensayo se llevó a cabo en América Latina (López, 2021) y ninguno evaluó el estrés específicamente académico con instrumentos validados en población argentina. Este vacío justifica el presente estudio.</em></p>
+</div>
+</div>
+<p>Qué cambia:</p>
+<ul>
+<li>Los estudios se <strong>agrupan por hallazgo</strong>, no se listan por autor.</li>
+<li>Se <strong>compara</strong>: coincidencias, contradicciones, diferencias de calidad.</li>
+<li>Se <strong>evalúa</strong>: se señalan limitaciones del conjunto de la evidencia.</li>
+<li>Se <strong>identifica el vacío</strong> y se conecta con el propio trabajo.</li>
+</ul>
+<section id="formas-de-organizar-los-antecedentes" class="level3">
+<h3 class="anchored" data-anchor-id="formas-de-organizar-los-antecedentes">Formas de organizar los antecedentes</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Organización</th>
+<th>Cuándo conviene</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Temática</strong></td>
+<td>La más frecuente: por subtemas, variables o hallazgos.</td>
+</tr>
+<tr class="even">
+<td><strong>Metodológica</strong></td>
+<td>Cuando los resultados difieren según el diseño o el instrumento.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cronológica</strong></td>
+<td>Cuando interesa mostrar la evolución de un campo o de una discusión.</td>
+</tr>
+<tr class="even">
+<td><strong>Geográfica / de lo general a lo particular</strong></td>
+<td>Estudios internacionales → regionales → locales. Muy útil para justificar un estudio en nuestro contexto.</td>
+</tr>
+</tbody>
+</table>
+<p>Estas formas se pueden combinar: por ejemplo, una organización temática en la que, dentro de cada tema, se va de lo internacional a lo local.</p>
+</section>
+<section id="una-estructura-posible-para-el-apartado" class="level3">
+<h3 class="anchored" data-anchor-id="una-estructura-posible-para-el-apartado">Una estructura posible para el apartado</h3>
+<ol type="1">
+<li><strong>Párrafo de apertura</strong>: cómo se hizo la búsqueda (bases, idiomas, período) y cuántos estudios se identificaron. En un trabajo con revisión sistematizada, esto va en el método.</li>
+<li><strong>Bloques temáticos</strong>: uno por subtema, con síntesis y evaluación.</li>
+<li><strong>Balance</strong>: qué se sabe con solidez, qué es contradictorio y qué falta.</li>
+<li><strong>Vacío y aporte</strong>: qué hace tu trabajo frente a ese panorama.</li>
+</ol>
+</section>
+</section>
+<section id="citar-bien" class="level2">
+<h2 class="anchored" data-anchor-id="citar-bien">12.6 Citar bien</h2>
+<ul>
+<li><strong>Citá lo que leíste.</strong> Si solo leíste el resumen, tené cuidado con lo que afirmás del estudio. Si un dato viene de una fuente que cita a otra, lo correcto es buscar la original; si no podés, usá la cita secundaria (“Autor, año, citado en Otro, año”) y limitala al mínimo.</li>
+<li><strong>Usá un estilo de manera consistente.</strong> En ciencias sociales y psicología, el más difundido es el de la <strong>APA, 7.ª edición</strong> (American Psychological Association, 2020). En salud es frecuente Vancouver. Consultá qué pide tu carrera o tu revista.</li>
+<li><strong>Incluí el DOI</strong> en las referencias cuando exista, con formato de enlace (<code>https://doi.org/...</code>).</li>
+<li><strong>Revisá lo que genera el gestor.</strong> Los metadatos importados a veces tienen errores (mayúsculas, nombres de autores, falta de volumen o páginas).</li>
+</ul>
+<p>Ejemplos en APA 7:</p>
+<pre class="text"><code>Artículo de revista (referencia):
+Gusenbauer, M., y Haddaway, N. R. (2020). Which academic search systems are
+    suitable for systematic reviews or meta-analyses? Evaluating retrieval
+    qualities of Google Scholar, PubMed, and 26 other resources. Research
+    Synthesis Methods, 11(2), 181-217. https://doi.org/10.1002/jrsm.1378
+
+Cita en el texto:
+(Gusenbauer y Haddaway, 2020)   ·   Gusenbauer y Haddaway (2020) señalan que...
+
+Con tres o más autores, desde la primera cita:
+(Page et al., 2021)</code></pre>
+<p>En los textos escritos en español se usa <em>y</em> en lugar de <em>&amp;</em> entre los dos últimos autores. En la lista de referencias, APA 7 incluye hasta 20 autores; si hay más, se escriben los primeros 19, puntos suspensivos y el último.</p>
+</section>
+<section id="evitar-el-plagio" class="level2">
+<h2 class="anchored" data-anchor-id="evitar-el-plagio">12.7 Evitar el plagio</h2>
+<p>Se considera <strong>plagio</strong> presentar como propias ideas, datos o palabras de otras personas sin reconocerlo. Incluye:</p>
+<ul>
+<li>copiar texto sin comillas, aunque se cite la fuente;</li>
+<li>parafrasear cambiando unas pocas palabras (<em>parafraseo superficial</em>);</li>
+<li>usar ideas de otros sin citarlas;</li>
+<li>presentar como propio un texto generado por una IA, cuando la institución no lo permite o sin declararlo (capítulo 10).</li>
+</ul>
+<p>Cómo parafrasear bien: leé el fragmento, cerralo, escribí la idea con tus palabras y tu estructura, y después compará con el original para verificar que no copiaste la forma ni cambiaste el sentido. Siempre con la cita.</p>
+<hr>
+</section>
+<section id="resumen" class="level2">
+<h2 class="anchored" data-anchor-id="resumen">Resumen</h2>
+<ul>
+<li>Usá un gestor bibliográfico (Zotero es gratuito y muy completo) desde el primer día.</li>
+<li>Exportá los resultados de cada base en formato RIS a colecciones separadas, eliminá duplicados y anotá los números para PRISMA.</li>
+<li>La matriz de antecedentes, con una fila por estudio y una columna por aspecto, es el puente entre la lectura y la escritura.</li>
+<li>Escribí sintetizando: agrupá estudios por hallazgo, compará, evaluá e identificá el vacío. Evitá la enumeración.</li>
+<li>Citá lo que leíste, en un estilo consistente, y parafraseá de verdad.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<ol type="1">
+<li>Instalá Zotero (o el gestor que prefieras) con su conector y su complemento para tu procesador de texto.</li>
+<li>Exportá los resultados de una de tus búsquedas en formato RIS, importalos y eliminá los duplicados.</li>
+<li>Completá la matriz de antecedentes con al menos cinco estudios.</li>
+<li>Escribí un párrafo de síntesis que agrupe al menos tres de esos estudios y termine señalando un vacío.</li>
+<li>Intercambiá el párrafo con un compañero o compañera y revisen: ¿sintetiza o enumera?</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../capitulos/11-evaluar-fuentes.html" class="pagination-link" aria-label="Capítulo 11. Evaluar lo que encontramos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Capítulo 11. Evaluar lo que encontramos</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../anexos/A-plantillas.html" class="pagination-link" aria-label="Anexo A. Plantillas">
+        <span class="nav-page-text"><span class="chapter-title">Anexo A. Plantillas</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
