@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850" width="600" height="850" role="img" aria-labelledby="t d">
+  <title id="t">Buscar antecedentes</title>
+  <desc id="d">Portada: una lupa de latón sobre una ficha mecanografiada con una cadena de búsqueda, sobre fondo verde oscuro.</desc>
+  <defs>
+    <linearGradient id="cuero" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#28402f"/>
+      <stop offset="1" stop-color="#17251c"/>
+    </linearGradient>
+    <radialGradient id="luz" cx="0.5" cy="0.62" r="0.55">
+      <stop offset="0" stop-color="#f4d58a" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#f4d58a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vidrio" cx="0.38" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#fffdf5" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#e9dcb8" stop-opacity="0.08"/>
+    </radialGradient>
+    <clipPath id="lente">
+      <circle cx="262" cy="572" r="78"/>
+    </clipPath>
+    <filter id="sombra" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo y marco -->
+  <rect width="600" height="850" fill="url(#cuero)"/>
+  <rect width="600" height="850" fill="url(#luz)"/>
+  <rect x="24" y="24" width="552" height="802" fill="none" stroke="#a8812f" stroke-width="2"/>
+  <rect x="32" y="32" width="536" height="786" fill="none" stroke="#a8812f" stroke-width="0.8" stroke-opacity="0.7"/>
+
+  <!-- Encabezado -->
+  <text x="300" y="98" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="17" letter-spacing="6" fill="#d4b26a">GUÍA PARA ESTUDIANTES</text>
+  <line x1="200" y1="118" x2="400" y2="118" stroke="#a8812f" stroke-width="1"/>
+
+  <text x="300" y="200" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="bold" fill="#f4ecd8">Buscar</text>
+  <text x="300" y="272" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="bold" fill="#f4ecd8">antecedentes</text>
+
+  <text x="300" y="322" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="21" fill="#d9ccae">De la búsqueda por términos</text>
+  <text x="300" y="350" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="21" fill="#d9ccae">a la inteligencia artificial</text>
+
+  <!-- Ficha mecanografiada -->
+  <g transform="rotate(-4 300 580)" filter="url(#sombra)">
+    <rect x="120" y="440" width="360" height="270" fill="#f4ecd8"/>
+    <line x1="120" y1="476" x2="480" y2="476" stroke="#c0564c" stroke-width="1.2"/>
+    <text x="138" y="466" font-family="'Courier New', Courier, monospace" font-size="13" fill="#8c2a22" letter-spacing="1.5">EXPEDIENTE N.º 1 · ANTECEDENTES</text>
+    <g font-family="'Courier New', Courier, monospace" font-size="15" fill="#2a241d">
+      <text x="138" y="512">("estrés académico"</text>
+      <text x="138" y="536">   OR "academic stress")</text>
+      <text x="138" y="566">AND (mindfulness</text>
+      <text x="138" y="590">   OR "atención plena")</text>
+      <text x="138" y="620">AND (universitari*</text>
+      <text x="138" y="644">   OR "university students")</text>
+    </g>
+    <g stroke="#cdbd98" stroke-width="1">
+      <line x1="138" y1="676" x2="462" y2="676"/>
+      <line x1="138" y1="694" x2="400" y2="694"/>
+    </g>
+  </g>
+
+  <!-- Lupa: aumento del texto bajo el lente -->
+  <g clip-path="url(#lente)">
+    <circle cx="262" cy="572" r="78" fill="#f7f0de"/>
+    <g transform="translate(262 572) scale(1.55) translate(-262 -572) rotate(-4 300 580)">
+      <g font-family="'Courier New', Courier, monospace" font-size="15" fill="#2a241d">
+        <text x="138" y="536">   OR "academic stress")</text>
+        <text x="138" y="566">AND (mindfulness</text>
+        <text x="138" y="590">   OR "atención plena")</text>
+      </g>
+    </g>
+    <circle cx="262" cy="572" r="78" fill="url(#vidrio)"/>
+  </g>
+  <line x1="317" y1="627" x2="392" y2="706" stroke="#3b2a1a" stroke-width="22" stroke-linecap="round"/>
+  <line x1="317" y1="627" x2="339" y2="651" stroke="#a8812f" stroke-width="24" stroke-linecap="butt"/>
+  <circle cx="262" cy="572" r="78" fill="none" stroke="#a8812f" stroke-width="12"/>
+  <circle cx="262" cy="572" r="84" fill="none" stroke="#7d5f20" stroke-width="1.5"/>
+  <path d="M219 532 a55 55 0 0 1 40 -22" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Huellas -->
+  <g fill="#a8812f" fill-opacity="0.55">
+    <ellipse cx="96" cy="780" rx="7" ry="11" transform="rotate(-20 96 780)"/>
+    <ellipse cx="124" cy="760" rx="7" ry="11" transform="rotate(-20 124 760)"/>
+    <ellipse cx="156" cy="782" rx="7" ry="11" transform="rotate(-10 156 782)"/>
+    <ellipse cx="184" cy="762" rx="7" ry="11" transform="rotate(-10 184 762)"/>
+  </g>
+
+  <text x="530" y="790" text-anchor="end" font-family="'Courier New', Courier, monospace" font-size="15" letter-spacing="3" fill="#d4b26a">UN CASO A LA VEZ</text>
+</svg>

@@ -45,6 +45,16 @@ Los diagramas usan [Mermaid](https://quarto.org/docs/authoring/diagrams.html), q
 
 Para agregar PDF, sumá `pdf:` en la sección `format` de `_quarto.yml` y ejecutá una vez `quarto install tinytex`. Antes, conviene reemplazar los emojis de acceso (🟢 🟡 🔴) del Anexo C, que LaTeX no dibuja con las fuentes por defecto.
 
+## Estilo
+
+El libro tiene una estética de "expediente de detective" definida en `theme/`:
+
+- `detective.scss`: paleta de papel, tinta, lacre y latón; tipografías (Libre Baskerville, Source Serif 4, Special Elite y Courier Prime, de Google Fonts); recuadros como fichas, tablas como registros y la lupa como ícono de las pistas.
+- `detective-dark.scss`: la misma estética en modo oscuro ("noche en Baker Street"); solo redefine los colores.
+- `images/portada.svg` e `images/favicon.svg`: portada e ícono de la pestaña.
+
+Los títulos por defecto de los recuadros ("Pista", "Nota al margen", "Clave del caso", "Cuidado") se definen en `_quarto.yml`, en la sección `language`.
+
 ## Publicar
 
 El libro se publica solo en **https://toninif.github.io/libro-busqueda-cientifica/**. Cada push a `main` dispara la GitHub Action `.github/workflows/publicar-libro.yml`, que renderiza el libro con Quarto y sube el resultado a la rama `gh-pages`. También se puede ejecutar a mano desde la pestaña *Actions*.
