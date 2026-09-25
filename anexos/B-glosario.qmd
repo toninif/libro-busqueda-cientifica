@@ -1,0 +1,102 @@
+# Anexo B. Glosario
+
+Entre paréntesis, el término equivalente en inglés cuando se usa con frecuencia.
+
+**Acceso abierto** (*open access*). Disponibilidad gratuita en línea de la literatura científica, sin barreras de pago. Puede ser por vía dorada (revistas de acceso abierto) o verde (depósito en repositorios).
+
+**Alucinación** (*hallucination*). Respuesta de un modelo de lenguaje que parece verosímil pero es falsa, por ejemplo una referencia bibliográfica inexistente.
+
+**Antecedentes.** Investigaciones previas que abordaron el mismo problema de investigación o problemas cercanos.
+
+**Artículo perla** (*pearl*). Artículo muy relevante que se usa como punto de partida para descubrir términos, descriptores y otras referencias (*pearl growing*).
+
+**Artículo semilla** (*seed*). Artículo desde el cual se inicia una búsqueda por citas o un mapa de citas.
+
+**Base de datos bibliográfica.** Colección organizada de registros que describen documentos (título, autores, resumen, descriptores) y permite buscarlos.
+
+**Bitácora de búsqueda** (*search log*). Registro de cada búsqueda realizada: fecha, base, cadena, filtros y resultados.
+
+**Búsqueda por citas** (*citation searching*, *snowballing*). Estrategia que sigue las referencias de un artículo (hacia atrás) y los trabajos que lo citan (hacia adelante).
+
+**Búsqueda semántica.** Búsqueda que recupera documentos por similitud de significado con la consulta, y no solo por coincidencia de palabras.
+
+**Cadena de búsqueda** (*search string*). Combinación de términos, operadores y campos que se ejecuta en una base de datos.
+
+**Comodín** (*wildcard*). Símbolo que reemplaza uno o más caracteres dentro de una palabra (`wom?n`).
+
+**Conjunto de validación** (*gold standard set*, *validation set*). Grupo de artículos que se sabe que son relevantes y que se usa para comprobar si una cadena los recupera.
+
+**Cribado** (*screening*). Proceso de selección de estudios aplicando criterios de inclusión y exclusión, primero por título y resumen y después por texto completo.
+
+**Cuartil** (*quartile*). Posición de una revista dentro de su área según una métrica de citas (Q1 es el 25 % superior).
+
+**DeCS.** Descriptores en Ciencias de la Salud; tesauro multilingüe de BIREME/OPS basado en MeSH.
+
+**Descriptor** (*subject heading*, *index term*). Término de un vocabulario controlado que se asigna a un documento para describir su contenido.
+
+**DOI** (*Digital Object Identifier*). Identificador permanente de un documento digital. Se resuelve anteponiendo `https://doi.org/`.
+
+**Explosión** (*explode*). En un tesauro, buscar un descriptor junto con todos sus términos más específicos.
+
+**Factor de impacto** (*Journal Impact Factor*). Métrica de Clarivate que expresa el promedio de citas recibidas por los artículos recientes de una revista.
+
+**Falso amigo.** Palabra que se parece a otra de otro idioma pero tiene un significado distinto (*actual* / *current*).
+
+**GRADE.** Sistema para calificar la certeza de la evidencia y la fuerza de las recomendaciones.
+
+**Literatura gris** (*grey literature*). Documentos producidos fuera de los circuitos editoriales comerciales: tesis, informes, documentos de trabajo, actas, documentos oficiales.
+
+**Metaanálisis** (*meta-analysis*). Técnica estadística que combina los resultados de varios estudios para obtener una estimación conjunta.
+
+**MeSH** (*Medical Subject Headings*). Tesauro de la Biblioteca Nacional de Medicina de EE. UU., usado en PubMed/MEDLINE.
+
+**Operador booleano.** `AND`, `OR`, `NOT`: operadores que combinan términos de búsqueda.
+
+**Operador de proximidad.** Operador que busca términos a una distancia máxima de *n* palabras (`NEAR/3`, `W/3`, `N3`).
+
+**ORCID.** Identificador único y permanente para investigadores.
+
+**PICO.** Formato para estructurar preguntas: Población, Intervención, Comparación, Resultado (*Outcome*). Tiene variantes como PICOC, PEO, SPIDER y PCC.
+
+**Precisión** (*precision*). Proporción de documentos relevantes entre los recuperados por una búsqueda.
+
+**Preprint.** Versión de un artículo difundida antes de la revisión por pares.
+
+**PRESS.** Guía para la revisión por pares de estrategias de búsqueda electrónica.
+
+**PRISMA.** Guía para el reporte de revisiones sistemáticas y metaanálisis. Su versión vigente es PRISMA 2020. Tiene extensiones (PRISMA-S, PRISMA-P, PRISMA-ScR, entre otras).
+
+**Protocolo.** Documento escrito antes de una revisión que describe su pregunta, criterios y métodos.
+
+**PROSPERO.** Registro internacional de protocolos de revisiones sistemáticas con resultados relacionados con la salud.
+
+**Repositorio.** Plataforma que almacena y difunde en acceso abierto la producción de una institución o disciplina.
+
+**Retractación** (*retraction*). Retiro formal de un artículo publicado por errores graves, fraude o problemas éticos.
+
+**Revisión de alcance** (*scoping review*). Revisión que mapea la literatura sobre un tema amplio para identificar conceptos, evidencia disponible y vacíos.
+
+**Revisión por pares** (*peer review*). Evaluación de un manuscrito por especialistas antes de su publicación.
+
+**Revisión sistemática** (*systematic review*). Revisión que responde una pregunta precisa mediante un método explícito, reproducible y con evaluación de la calidad de los estudios.
+
+**Revisión sistematizada** (*systematized review*). Revisión que incorpora elementos del método sistemático sin cumplir todos sus requisitos; frecuente en trabajos de grado y posgrado.
+
+**Revista depredadora** (*predatory journal*). Publicación que cobra a los autores sin ofrecer un proceso editorial genuino.
+
+**Riesgo de sesgo** (*risk of bias*). Probabilidad de que el diseño o la conducción de un estudio distorsionen sus resultados.
+
+**Saturación.** Momento en que nuevas búsquedas devuelven casi exclusivamente documentos ya conocidos.
+
+**Sensibilidad** (*recall*, *sensitivity*). Proporción de los documentos relevantes existentes que recupera una búsqueda.
+
+**Sesgo de idioma** (*language bias*). Distorsión de las conclusiones de una revisión por incluir estudios en un solo idioma.
+
+**Sesgo de publicación** (*publication bias*). Tendencia a que se publiquen más los estudios con resultados positivos o significativos.
+
+**Tesauro** (*thesaurus*). Vocabulario controlado y jerárquico que normaliza la forma de nombrar los conceptos de un área.
+
+**Truncamiento** (*truncation*). Uso de un símbolo (generalmente `*`) al final de una raíz para recuperar todas sus terminaciones.
+
+**Vocabulario controlado.** Conjunto cerrado de términos autorizados para describir documentos; el tesauro es su forma más común.
+

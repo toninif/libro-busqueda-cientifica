@@ -1,0 +1,199 @@
+# Capítulo 4. Búsqueda por términos: palabras clave y vocabulario controlado
+
+**En este capítulo vas a aprender:**
+
+- la diferencia entre lenguaje natural y vocabulario controlado;
+- cómo funcionan los tesauros (MeSH, DeCS, APA, ERIC, UNESCO);
+- a buscar en campos específicos, por frase exacta y con truncamientos;
+- dónde encontrar los términos que usa la literatura.
+
+---
+
+## 4.1 Dos maneras de nombrar las cosas
+
+Cuando un artículo entra en una base de datos, queda descrito de dos maneras:
+
+1. **Con las palabras de los autores (lenguaje natural).** Título, resumen y palabras clave que eligieron quienes escribieron el artículo. Cada autor usa las suyas: uno escribe *mindfulness*, otro *atención plena*, otro *conciencia plena*.
+2. **Con los descriptores de la base (vocabulario controlado).** Especialistas —o sistemas automáticos supervisados— asignan términos de una lista oficial, el **tesauro**. Todos los artículos sobre atención plena reciben el mismo descriptor, sin importar cómo lo haya llamado el autor.
+
+| | Lenguaje natural (palabras clave) | Vocabulario controlado (descriptores) |
+|---|---|---|
+| **Ventaja** | Encuentra artículos nuevos que todavía no fueron indizados y conceptos muy recientes. | Resuelve sinónimos, variantes e idiomas; agrupa lo que trata el mismo tema. |
+| **Desventaja** | Hay que pensar todos los sinónimos y variantes. | No todos los artículos están indizados; los descriptores cambian lentamente; cada base tiene el suyo. |
+| **Dónde se busca** | Título, resumen, palabras clave de autor. | Campo de descriptores o materias (*MeSH*, *Subject*, *DE*). |
+
+::: {.callout-important}
+Las búsquedas de calidad **combinan ambas estrategias**: para cada concepto se unen con `OR` el descriptor del tesauro y las palabras clave en título y resumen. Así se aprovecha la precisión del vocabulario controlado sin perder lo que no está indizado.
+:::
+
+## 4.2 Cómo funciona un tesauro
+
+Un tesauro es un vocabulario organizado jerárquicamente. Cada entrada suele incluir:
+
+- **Descriptor (término preferido).** La forma oficial de nombrar el concepto.
+- **Términos de entrada (sinónimos, *entry terms*).** Formas alternativas que remiten al descriptor. Son una fuente excelente de palabras clave.
+- **Nota de alcance (*scope note*).** Define qué abarca el descriptor y desde cuándo se usa.
+- **Términos más amplios y más específicos.** La posición del término en el árbol.
+- **Términos relacionados.**
+
+Ejemplo simplificado de una rama del árbol de MeSH (la ubicación completa de cada término se consulta en el *MeSH Browser*; un mismo descriptor puede aparecer en más de una rama):
+
+```text
+Therapeutics
+  └─ Complementary Therapies
+       └─ Mind-Body Therapies
+            ├─ Meditation
+            └─ Mindfulness
+```
+
+### Explosión y foco
+
+- **Explotar** (*explode*) un descriptor significa buscarlo **junto con todos los términos más específicos** que cuelgan de él. En PubMed, la explosión es automática al buscar un término MeSH; para evitarla se usa `[Mesh:NoExp]`.
+- **Foco o tema principal** (*major topic*) restringe a los artículos donde el descriptor es un tema central y no secundario. En PubMed: `[Majr]`. Aumenta la precisión, pero puede hacer perder estudios.
+
+### Principales tesauros
+
+| Tesauro | Base de datos | Idiomas | Área |
+|---|---|---|---|
+| **MeSH** (*Medical Subject Headings*) | PubMed/MEDLINE, Cochrane | Inglés | Ciencias de la salud |
+| **DeCS** (Descriptores en Ciencias de la Salud) | LILACS, BVS | Español, portugués, inglés y francés | Ciencias de la salud (basado en MeSH, con categorías propias, por ejemplo de salud pública) |
+| **Emtree** | Embase | Inglés | Biomedicina y farmacología |
+| **APA Thesaurus of Psychological Index Terms** | APA PsycInfo | Inglés | Psicología |
+| **ERIC Thesaurus** | ERIC | Inglés | Educación |
+| **Tesauro de la UNESCO** | Varios catálogos y repositorios | Español, inglés, francés, ruso y árabe | Educación, ciencia, cultura, comunicación, ciencias sociales |
+| **Art & Architecture Thesaurus** | Avery, catálogos de arte | Inglés (con equivalentes en otros idiomas) | Arte, arquitectura, diseño |
+
+::: {.callout-tip title="DeCS es un diccionario técnico trilingüe"}
+Aunque no busques en LILACS, podés usar DeCS para averiguar cómo se dice un concepto de salud en inglés y en portugués, y cuál es su descriptor MeSH equivalente. Es una de las herramientas más útiles para la búsqueda bilingüe (capítulo 6).
+:::
+
+## 4.3 Cómo encontrar los descriptores
+
+1. **Buscá en el tesauro directamente.** Casi todas las bases tienen un enlace (*MeSH Database*, *Thesaurus*, *Subject Terms*). Escribí tu concepto y leé la nota de alcance.
+2. **Mirá los descriptores de un artículo perla.** Abrí el registro completo de un artículo muy relevante: verás los descriptores que le asignaron. Esos son buenos candidatos.
+3. **Usá herramientas de apoyo.** En salud, **MeSH on Demand** sugiere descriptores a partir de un texto (por ejemplo, tu pregunta o un resumen) y el **Yale MeSH Analyzer** compara los descriptores de varios artículos a la vez.
+4. **Revisá la cadena de una revisión sistemática.** Las revisiones publicadas suelen incluir su estrategia completa en un anexo: es una fuente excelente de términos ya probados.
+
+::: {.callout-warning title="Error frecuente: inventar descriptores"}
+Escribir `"academic stress"[Mesh]` en PubMed no funciona porque ese descriptor no existe (el más cercano es *Stress, Psychological*). Verificá siempre en el tesauro que el término exista tal como lo escribiste. Esto es especialmente importante si una herramienta de IA te sugirió los términos (capítulo 10).
+:::
+
+## 4.4 Buscar con palabras clave
+
+Para el lenguaje natural, cuatro técnicas cubren la mayoría de los casos.
+
+### a) Buscar en campos específicos
+
+Por defecto, muchas bases buscan en "todos los campos", incluidos la afiliación de los autores, las referencias o el nombre de la revista. Eso trae mucho ruido. Lo habitual es buscar en **título, resumen y palabras clave**:
+
+| Base | Título + resumen + palabras clave |
+|---|---|
+| Scopus | `TITLE-ABS-KEY(mindfulness)` |
+| Web of Science | `TS=(mindfulness)` (*Topic*: título, resumen, palabras clave de autor y *Keywords Plus*) |
+| PubMed | `mindfulness[tiab]` (título y resumen) |
+| EBSCOhost | `TI mindfulness OR AB mindfulness` |
+
+Buscar **solo en el título** (`TITLE()`, `TI=`, `[ti]`) da resultados muy precisos pero deja afuera muchos estudios relevantes. Es útil en la exploración o cuando un término es muy frecuente.
+
+### b) Frase exacta
+
+Las comillas obligan a buscar las palabras juntas y en ese orden:
+
+```text
+"estrés académico"      → recupera "estrés académico"
+estrés académico        → recupera documentos con ambas palabras en cualquier lugar
+```
+
+Cuidado: las comillas también pueden dejar afuera variantes (*estrés de tipo académico*, *academic-related stress*). En esos casos sirven los operadores de proximidad (capítulo 5).
+
+::: {.callout-note}
+En **Scopus**, las comillas (`"academic stress"`) buscan una frase "flexible" que tolera plurales y signos de puntuación; las llaves (`{academic stress}`) buscan la cadena exacta, carácter por carácter.
+:::
+
+### c) Truncamiento
+
+El **truncamiento** reemplaza el final de una palabra por un símbolo, casi siempre el asterisco `*`, para recuperar todas sus terminaciones:
+
+```text
+educa*     → educación, educativo, educativa, educador, education, educational...
+student*   → student, students, student's
+alumn*     → alumno, alumna, alumnos, alumnas
+```
+
+Reglas prácticas:
+
+- **No trunques demasiado pronto.** `ed*` recupera miles de palabras irrelevantes; `cat*` recupera *cat*, *catalog*, *category*, *catholic*...
+- **Revisá qué recupera.** Algunas bases muestran las variantes; si no, mirá los primeros resultados.
+- **El truncamiento es muy útil en español** para cubrir género y número: `niñ*` recupera *niño, niña, niños, niñas, niñez*.
+- **Truncar puede desactivar otras funciones.** En PubMed, un término truncado no se asigna automáticamente a MeSH (*Automatic Term Mapping*).
+
+### d) Comodines
+
+Los **comodines** reemplazan uno o más caracteres dentro de una palabra. Su funcionamiento varía mucho entre bases:
+
+| Base | Símbolo | Ejemplo |
+|---|---|---|
+| Scopus | `?` = exactamente un carácter | `wom?n` → *woman, women* |
+| Web of Science | `?` = un carácter; `$` = cero o un carácter | `behavio$r` → *behavior, behaviour* |
+| EBSCOhost | `?` = un carácter; `#` = cero o un carácter | `colo#r` → *color, colour* |
+| PubMed | No admite comodines internos | Escribí ambas formas: `behavior OR behaviour` |
+
+::: {.callout-tip}
+Si no estás seguro de cómo funciona un comodín en una base, **escribí las variantes explícitamente con `OR`**. Es más largo pero no falla y funciona en todas partes: `(behavior OR behaviour)`, `(organization OR organisation)`, `(pediatric OR paediatric)`.
+:::
+
+## 4.5 Dónde encontrar palabras clave
+
+Una lista de términos no se inventa: se construye leyendo. Buenas fuentes:
+
+- **Títulos y resúmenes** de los artículos relevantes que ya encontraste.
+- **Palabras clave de autor** de esos artículos.
+- **Términos de entrada** de los tesauros.
+- **Cadenas de búsqueda** publicadas en revisiones sistemáticas sobre temas similares.
+- **Diccionarios y glosarios especializados** de la disciplina.
+- **Colegas, docentes y bibliotecarios.**
+- **Herramientas de IA**, como generadoras de ideas que después se verifican (capítulo 10).
+
+Al armar la lista, tené en cuenta:
+
+- **Sinónimos y cuasisinónimos:** *estrés, distrés, tensión, agotamiento*.
+- **Siglas y su desarrollo:** *TDAH* y *trastorno por déficit de atención con hiperactividad*; *ADHD* y *attention deficit hyperactivity disorder*.
+- **Variantes ortográficas:** británico y estadounidense (*behaviour/behavior*); con y sin guion (*self-esteem, self esteem*).
+- **Términos más amplios y más específicos:** si buscás *redes sociales*, quizás también *Instagram*, *TikTok*, *social media*, *social networking sites*.
+- **Cambios históricos de terminología:** algunos términos cayeron en desuso o se consideran hoy inadecuados, pero aparecen en la literatura anterior y pueden ser necesarios para encontrarla.
+- **Variantes regionales:** *computadora/ordenador*, *celular/móvil*, *colegio/escuela/instituto* (capítulo 6).
+
+::: {.callout-warning title="Error frecuente: palabras vacías"}
+Las bases ignoran o tratan de manera especial palabras muy frecuentes (*the, of, in, el, la, de*). Además, términos como *efecto*, *estudio*, *análisis*, *relación* o *impacto* aparecen en casi todos los resúmenes y no ayudan a filtrar. No los incluyas como conceptos.
+:::
+
+## 4.6 El caso guía, término por término
+
+Tabla de términos para el concepto *intervención*, combinando vocabulario controlado y palabras clave:
+
+| Fuente | Términos |
+|---|---|
+| MeSH (PubMed) | `"Mindfulness"[Mesh]`, `"Meditation"[Mesh]` |
+| APA Thesaurus (PsycInfo) | `DE "Mindfulness"`, `DE "Meditation"` |
+| DeCS (LILACS) | *Atención Plena* / *Mindfulness* / *Atenção Plena*; *Meditación* |
+| Palabras clave en inglés | `mindfulness`, `mindful*`, `meditat*`, `MBSR`, `"mindfulness-based stress reduction"`, `MBCT`, `"mindfulness-based cognitive therapy"` |
+| Palabras clave en español | `mindfulness`, `"atención plena"`, `"conciencia plena"`, `meditación` |
+
+En el próximo capítulo vamos a combinar estas columnas en una cadena de búsqueda.
+
+---
+
+## Resumen
+
+- Los artículos se describen con las palabras de los autores (lenguaje natural) y con descriptores de un tesauro (vocabulario controlado). Una buena búsqueda combina ambos.
+- Los tesauros tienen jerarquías, sinónimos y notas de alcance. Explotar un descriptor incluye sus términos más específicos.
+- Buscá en título, resumen y palabras clave; usá comillas para frases, asterisco para truncar y verificá cómo funcionan los comodines en cada base.
+- Las palabras clave se encuentran leyendo: artículos perla, tesauros, revisiones publicadas.
+
+## Actividad
+
+1. Para cada concepto de tu pregunta, buscá si existe un descriptor en el tesauro de tu disciplina (MeSH, DeCS, APA, ERIC o UNESCO). Anotá el descriptor, su nota de alcance y tres términos de entrada.
+2. Buscá un artículo muy relevante para tu tema en una base con tesauro y copiá los descriptores que le asignaron.
+3. Hacé la misma búsqueda simple en "todos los campos" y en "título, resumen y palabras clave". Compará la cantidad y la pertinencia de los primeros veinte resultados.
+4. Probá un truncamiento en tu tema y anotá qué variantes recupera. ¿Alguna es irrelevante?
+

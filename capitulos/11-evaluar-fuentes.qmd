@@ -1,0 +1,143 @@
+# Capítulo 11. Evaluar lo que encontramos
+
+**En este capítulo vas a aprender:**
+
+- a decidir rápido si un documento merece una lectura completa;
+- a evaluar la confiabilidad de una revista y a reconocer revistas depredadoras;
+- qué dicen (y qué no dicen) las métricas como el factor de impacto o los cuartiles;
+- a detectar artículos retractados;
+- a leer un artículo científico de manera eficiente.
+
+---
+
+## 11.1 Encontrar no es lo mismo que confiar
+
+Una buena búsqueda devuelve decenas o cientos de documentos. No todos son igual de confiables ni igual de útiles. Evaluar las fuentes tiene tres niveles:
+
+1. **Pertinencia**: ¿responde a mi pregunta? (Se decide en el cribado con los criterios de inclusión; capítulo 8.)
+2. **Confiabilidad del canal**: ¿dónde se publicó? ¿Hubo revisión por pares? ¿La revista es seria?
+3. **Calidad del estudio**: ¿el diseño y la ejecución permiten sostener las conclusiones? (En revisiones sistemáticas, con herramientas formales de riesgo de sesgo; capítulo 8.)
+
+## 11.2 Un primer filtro rápido
+
+Para documentos que no vienen de una base de datos académica (sitios web, informes, documentos encontrados en Google), un criterio clásico es el **test CRAAP** (Blakeslee, 2004):
+
+| Criterio | Preguntas |
+|---|---|
+| **C**urrency (actualidad) | ¿Cuándo se publicó? ¿Es suficientemente reciente para mi tema? |
+| **R**elevance (pertinencia) | ¿Responde a mi pregunta? ¿Para qué público fue escrito? |
+| **A**uthority (autoría) | ¿Quién lo escribió? ¿Qué formación y afiliación tiene? ¿Quién lo publica? |
+| **A**ccuracy (exactitud) | ¿Cita sus fuentes? ¿Los datos se pueden verificar? ¿Tuvo revisión? |
+| **P**urpose (propósito) | ¿Busca informar, vender, persuadir? ¿Hay conflictos de interés? |
+
+::: {.callout-tip title="Lectura lateral"}
+Ante una fuente desconocida, los verificadores profesionales no se quedan leyendo la página: abren otras pestañas para averiguar **qué dicen otros** sobre esa fuente, esa organización o ese autor (Wineburg y McGrew, 2019). Es más rápido y más confiable que analizar el documento en sí.
+:::
+
+## 11.3 ¿Es confiable la revista?
+
+### Señales positivas
+
+- Está indizada en bases con criterios de selección exigentes (Scopus, Web of Science, MEDLINE, SciELO, Redalyc) o figura en el **Catálogo de Latindex** o en **DOAJ**.
+- Tiene un **comité editorial** identificable, con personas reales y afiliaciones verificables.
+- Describe con claridad su **proceso de revisión por pares**, sus políticas éticas y sus costos (si los hay).
+- Asigna **DOI** a sus artículos y tiene **ISSN**.
+- Su historial y sus números anteriores están disponibles.
+
+### Señales de alerta: revistas depredadoras
+
+Las **revistas depredadoras** cobran por publicar pero no ofrecen una revisión editorial genuina. Un grupo internacional de especialistas las definió como entidades que "priorizan el interés propio a expensas de la academia" y se caracterizan por información falsa o engañosa, desvío de las buenas prácticas editoriales, falta de transparencia y solicitudes agresivas e indiscriminadas (Grudniewicz et al., 2019). Señales típicas:
+
+- **Correos masivos** invitando a publicar o a integrar el comité editorial.
+- Promesa de **publicación en pocos días**.
+- Títulos muy amplios ("*International Journal of Advanced Research in Science, Humanities and Engineering*").
+- Nombres que imitan a revistas prestigiosas.
+- Métricas de impacto **inventadas** o de servicios desconocidos.
+- Comité editorial inexistente, sin afiliaciones o con personas que no saben que figuran allí.
+- Errores de edición graves en los artículos publicados.
+
+La iniciativa **Think. Check. Submit.** ofrece una lista de control para evaluar revistas, pensada para autores, que también sirve a los lectores.
+
+::: {.callout-warning title="Acceso abierto no es sinónimo de depredadora"}
+Muchas de las mejores revistas del mundo, y la gran mayoría de las revistas latinoamericanas de calidad, son de acceso abierto. Lo que define a una revista depredadora es la falta de un proceso editorial genuino, no el modelo de acceso.
+:::
+
+## 11.4 Métricas: qué miden y qué no
+
+| Métrica | Qué es | Dónde se consulta |
+|---|---|---|
+| **Factor de impacto** (JIF) | Promedio de citas que reciben los artículos recientes de una revista, calculado por Clarivate. | *Journal Citation Reports* (suscripción) |
+| **SJR y cuartiles (Q1-Q4)** | Indicador de prestigio de las revistas de Scopus que pondera de dónde vienen las citas. Las revistas se ordenan por área en cuatro cuartiles. | **Scimago Journal & Country Rank** (gratuito) |
+| **CiteScore** | Promedio de citas por documento en Scopus. | Scopus (gratuito en su sitio de fuentes) |
+| **Índice h** | Para un autor o revista: *h* trabajos con al menos *h* citas cada uno. | Google Académico, Scopus, Web of Science |
+| **Cantidad de citas de un artículo** | Cuántas veces fue citado. | Google Académico, Scopus, Web of Science |
+
+Estas métricas son útiles para orientarse, pero tienen límites importantes:
+
+- **Miden a la revista, no al artículo.** Una revista Q1 publica artículos débiles y una revista Q3 publica artículos excelentes.
+- **Dependen del área.** Las citas son mucho más frecuentes en biomedicina que en humanidades; no se pueden comparar entre disciplinas.
+- **Penalizan a la ciencia regional y en español**, que circula menos en las bases que calculan estas métricas.
+- **Una cita no es un aval.** Un artículo puede ser muy citado porque se lo critica.
+- **Los artículos recientes todavía no tuvieron tiempo** de ser citados.
+
+Por estas razones, iniciativas internacionales como la **Declaración de San Francisco sobre la Evaluación de la Investigación (DORA)** y el **Manifiesto de Leiden** (Hicks et al., 2015) recomiendan no usar las métricas de una revista para juzgar la calidad de un artículo individual.
+
+::: {.callout-important}
+El mejor indicador de la calidad de un estudio es **el estudio mismo**: su pregunta, su diseño, su muestra, sus instrumentos, su análisis y la coherencia entre resultados y conclusiones. Las métricas no reemplazan la lectura.
+:::
+
+## 11.5 Artículos retractados
+
+Una **retractación** es el retiro formal de un artículo publicado, por errores graves, fraude, plagio o problemas éticos. Los artículos retractados siguen circulando y siguen siendo citados, a veces durante años. Para no apoyarte en uno:
+
+- Fijate si el registro en la base o en la revista muestra un aviso de **retractación**, **expresión de preocupación** o **corrección**. PubMed, Scopus y Web of Science lo indican.
+- Consultá la **base de datos de Retraction Watch**, hoy de acceso abierto a través de Crossref.
+- Algunos gestores bibliográficos (como Zotero) avisan automáticamente si un artículo de tu biblioteca fue retractado.
+- Herramientas como Scite también señalan retractaciones y avisos editoriales.
+
+## 11.6 Preprints
+
+Los **preprints** son versiones de artículos difundidas **antes** de la revisión por pares. Son valiosos porque aceleran la circulación del conocimiento, pero:
+
+- pueden contener errores que la revisión habría detectado;
+- pueden cambiar sustancialmente en la versión publicada;
+- a veces nunca llegan a publicarse.
+
+Si usás un preprint, **indicalo explícitamente** en el texto y en la referencia, y verificá si ya existe una versión publicada (muchos servidores lo enlazan).
+
+## 11.7 Leer un artículo de manera eficiente
+
+No hace falta leer cada artículo de principio a fin la primera vez. Una estrategia en tres pasadas (adaptada de Keshav, 2007):
+
+1. **Primera pasada (5-10 minutos).** Título, resumen, introducción (último párrafo: los objetivos), encabezados, figuras y tablas, conclusiones. Decidís si el artículo es pertinente y qué tipo de estudio es.
+2. **Segunda pasada (una hora).** Lectura completa sin detenerte en los detalles técnicos. Anotás la pregunta, el método, la muestra, los resultados principales y las limitaciones. Completás la matriz de antecedentes (capítulo 12).
+3. **Tercera pasada (varias horas).** Solo para los artículos centrales: lectura crítica en profundidad, revisando cada decisión metodológica y sus consecuencias.
+
+Preguntas para la lectura crítica:
+
+- ¿La pregunta está clara? ¿El diseño es adecuado para responderla?
+- ¿Quiénes participaron? ¿Cómo se los seleccionó? ¿Cuántos abandonaron?
+- ¿Los instrumentos son válidos y confiables en esa población y en ese idioma?
+- ¿Los resultados se informan completos, con tamaños de efecto e intervalos de confianza, y no solo con valores *p*?
+- ¿Las conclusiones se desprenden de los resultados o van más allá?
+- ¿Qué limitaciones reconocen los autores? ¿Hay otras que no mencionan?
+- ¿Quién financió el estudio? ¿Hay conflictos de interés declarados?
+
+---
+
+## Resumen
+
+- Evaluar una fuente implica juzgar su pertinencia, la confiabilidad del canal y la calidad del estudio.
+- El test CRAAP y la lectura lateral sirven para fuentes fuera de las bases académicas.
+- Las revistas depredadoras se reconocen por la falta de un proceso editorial genuino, no por ser de acceso abierto.
+- Las métricas de revistas (factor de impacto, cuartiles) no miden la calidad de un artículo individual y penalizan a la ciencia regional.
+- Verificá si un artículo fue retractado y tratá los preprints con cautela.
+- Leé en tres pasadas: para decidir, para comprender y, en los artículos centrales, para criticar.
+
+## Actividad
+
+1. Elegí tres revistas en las que aparecieron artículos de tu búsqueda. Para cada una, verificá: indización, comité editorial, proceso de revisión, ISSN y DOI. Buscá sus métricas en Scimago.
+2. Buscá en la base de Retraction Watch si hay artículos retractados sobre tu tema.
+3. Aplicá la primera pasada de lectura a cinco artículos y decidí cuáles merecen la segunda.
+4. Hacé una lectura crítica completa de un artículo central, respondiendo las preguntas de la sección 11.7.
+
