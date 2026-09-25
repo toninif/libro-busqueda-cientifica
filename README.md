@@ -47,7 +47,9 @@ Para agregar PDF, sumá `pdf:` en la sección `format` de `_quarto.yml` y ejecut
 
 ## Publicar
 
-Para tener el libro en línea con GitHub Pages: `quarto publish gh-pages`. Ver la [guía de Quarto](https://quarto.org/docs/publishing/github-pages.html).
+El libro se publica solo en **https://toninif.github.io/libro-busqueda-cientifica/**. Cada push a `main` dispara la GitHub Action `.github/workflows/publicar-libro.yml`, que renderiza el libro con Quarto y sube el resultado a la rama `gh-pages`. También se puede ejecutar a mano desde la pestaña *Actions*.
+
+En *Settings → Pages*, la fuente tiene que ser **Deploy from a branch → `gh-pages` / `(root)`**.
 
 ## Estado
 
