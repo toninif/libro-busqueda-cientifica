@@ -23,12 +23,15 @@ jobs:
         with:
           version: 1.10.18
 
-      - name: Renderizar y publicar en gh-pages
+      # Solo la versión web: la de Word necesita un navegador para
+      # convertir los diagramas en imágenes y se genera localmente.
+      - name: Renderizar la versión web
+        run: quarto render --to html
+
+      - name: Publicar en gh-pages
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
+          render: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Navegador para convertir los diagramas Mermaid en imágenes
-          # dentro de la versión Word (viene instalado en el runner).
-          QUARTO_CHROMIUM: /usr/bin/google-chrome
