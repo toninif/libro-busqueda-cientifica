@@ -4,12 +4,25 @@ project:
 
 lang: es
 
+# Títulos por defecto de los recuadros, con el vocabulario del "caso"
+language:
+  callout-tip-title: "Pista"
+  callout-note-title: "Nota al margen"
+  callout-important-title: "Clave del caso"
+  callout-warning-title: "Cuidado"
+  callout-caution-title: "Atención"
+
 book:
   title: "Buscar antecedentes"
   subtitle: "Guía para estudiantes: de la búsqueda por términos a la inteligencia artificial"
   date: "2026-09"
   date-format: "MMMM YYYY"
   search: true
+  cover-image: images/portada.svg
+  cover-image-alt: "Una lupa de latón sobre una ficha mecanografiada con una cadena de búsqueda"
+  favicon: images/favicon.svg
+  page-footer:
+    center: "Buscar antecedentes · un caso a la vez"
   repo-url: https://github.com/toninif/libro-busqueda-cientifica
   chapters:
     - index.qmd
@@ -46,8 +59,8 @@ number-sections: false
 format:
   html:
     theme:
-      light: cosmo
-      dark: darkly
+      light: [cosmo, theme/detective.scss]
+      dark: [darkly, theme/detective.scss, theme/detective-dark.scss]
     toc: true
     toc-depth: 3
     code-copy: true
